@@ -1,0 +1,1089 @@
+Metrolinx CADD/BIM Standards 
+Manual
+MX-ALM-STD-004
+Revision 003
+Date: March 2023
+Metrolinx CADD/BIM Standards Manual
+MX-ALM-STD-004
+Publication Date: September 2014
+Revision Dates: January 2018, April 2021, March 2023
+COPYRIGHT © 2014
+Metrolinx,
+an Agency of the Government of Ontario
+The contents of this publication may be used solely as required for services performed on behalf of 
+Metrolinx or for and during preparing a response to a Metrolinx procurement request. Otherwise, this 
+publication or any part thereof shall not be reproduced, re-distributed, stored in an electronic database 
+or transmitted in any form by any means, electronic, photocopying or otherwise, without written 
+permission of the copyright holder. In no event shall this publication or any part thereof be sold or used 
+for commercial purposes.
+The information contained herein or otherwise provided or made available ancillary hereto is 
+provided “as is” without warranty or guarantee of any kind as to accuracy, completeness, fitness for 
+use, purpose, non-infringement of third party rights or any other warranty, express or implied. 
+Metrolinx is not responsible and has no liability for any damages, losses, expenses or claims arising or 
+purporting to arise from use of or reliance on the information contained herein.
+Preface
+This is the 4th edition of the Metrolinx CADD/BIM Standards Manual (also referred to as the Manual) and 
+supersedes all the previous editions. Submission deliverables, drawing standards and the CADD 
+requirements sections were updated. This edition of the Manual has also been restructured and 
+renumbered to follow the Metrolinx Requirements for Writing Technical Standards. 
+This standard is directed at Metrolinx’s Project Delivery Teams (PDT), Consultants and Designers. 
+The Metrolinx CADD/BIM Standards Manual is available for external users to download via the Metrolinx 
+public download site at http://www.gosite.ca/engineering_public/
+Suggestions for revision or improvements can be sent to Metrolinx Asset Lifecycle Management, 
+Attention: Senior Manager of Asset Lifecycle Management. The Senior Manager of Asset Lifecycle 
+Management ultimately authorizes the changes. A description of the proposed change shall be 
+included along with information on the background of the application and any other useful rationale or 
+justification. Proposals for revisions or improvements shall also include your name, company affiliation 
+(if applicable), e-mail address, and phone number.
+March 2023
+Contents
+Section Page
+References .......................................................................................................................................................... 7
+Acronyms and Abbreviations ........................................................................................................................... 7
+Definitions........................................................................................................................................................... 9
+1. Purpose.................................................................................................................................................11
+2. Objectives.............................................................................................................................................11
+3. Scope.....................................................................................................................................................12
+4. Submission Deliverables ....................................................................................................................12
+4.1 Software Requirements .......................................................................................................... 12
+4.2 CADD/BIM Information Package........................................................................................... 12
+4.3 Submission Format.................................................................................................................. 12
+4.4 CADD Data Submission.......................................................................................................... 13
+4.5 As-Built Information Submissions.......................................................................................... 13
+5. File Naming Convention.....................................................................................................................14
+5.1 Project File Naming Conventions.......................................................................................... 14
+5.2 File Titles................................................................................................................................... 14
+5.3 Logical File Names .................................................................................................................. 15
+5.4 Nomenclature of the Serial Number..................................................................................... 15
+6. BIM Standards......................................................................................................................................15
+6.1 Context ..................................................................................................................................... 15
+6.2 BIM Object Standards and Interoperability ......................................................................... 15
+6.3 BIM Utilization.......................................................................................................................... 16
+6.4 BIM-based Analyses & Uses ................................................................................................... 17
+6.5 3D Existing Condition Models ............................................................................................... 17
+6.6 Model Files............................................................................................................................... 17
+6.7 Specific Software Standards – Bentley OpenBuildings Designer...................................... 18
+6.8 Specific Software Standards – Autodesk Revit..................................................................... 18
+6.9 Automation of model data to machines ............................................................................... 19
+7. CADD Requirements...........................................................................................................................19
+7.1 Autodesk AutoCAD and Civil 3D Standards........................................................................ 19
+7.2 Bentley MicroStation............................................................................................................... 20
+8. Drawing Standards..............................................................................................................................21
+8.1 Title Block /Seed Files............................................................................................................. 21
+8.2 Cover Page & Signature Page................................................................................................ 21
+8.3 Drawing Scale & Model Units ................................................................................................ 21
+8.4 Orientation............................................................................................................................... 22
+8.5 Revision Cloud and Delta....................................................................................................... 22
+8.6 Subsequent Revisions............................................................................................................. 23
+8.7 Hold Clouds ............................................................................................................................. 23
+8.8 Drawing Number..................................................................................................................... 23
+8.9 Title Block................................................................................................................................. 24
+8.10 Standard Graphical Elements ................................................................................................ 32
+CONTENTS, CONTINUED
+MX-ALM-STD-004 v Revision 003
+Revision Date: March 2023 
+8.11 Plotting ..................................................................................................................................... 37
+8.12 Geodetic Coordinate System (GCS) ..................................................................................... 37
+8.13 Local Coordinate System........................................................................................................ 38
+CONTENTS, CONTINUED
+MX-ALM-STD-004 vi Revision 003
+Revision Date: March 2023 
+Tables
+Table 0-1 References ......................................................................................................................................... 7
+Table 0-2 Acronyms and Abbreviations .......................................................................................................... 7
+Table 0-3 Definitions.......................................................................................................................................... 9
+Figures
+Figure 8.8-1 Drawing Numbering .................................................................................................................24
+Figure 8.9-1 Standard Title Block for AutoCAD Drawings ..........................................................................25
+Figure 8.9-2 Project Title .................................................................................................................................25
+Figure 8.9-3 File Creation and Checked Field..............................................................................................26
+Figure 8.9-4 Drawing Scales ...........................................................................................................................27
+Figure 8.9-5 Standard Title Block for MicroStation Drawings:....................................................................28
+Figure 8.9-6 Main Project Single Location ....................................................................................................28
+Figure 8.9-7 Main Project Multiple Location.................................................................................................29
+Figure 8.9-8 Bar Scale (Single Scale Drawings) ............................................................................................30
+Figure 8.9-9 Bar Scale (Dual Scale Drawings)...............................................................................................30
+Figure 8.9-10 Bar Scale (Multiple Scale Drawings).......................................................................................31
+Figure 8.9-11 Standard Progress Stamps......................................................................................................32
+Figure 8.10-1 Standard Elements...................................................................................................................33
+Figure 8.10-2 Section Callouts........................................................................................................................35
+Figure 8.10-3 Elevation Callouts.....................................................................................................................36
+Figure 8.10-4 Plan Enlargement Callouts......................................................................................................36
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 7 Revision 003
+Revision Date: March 2023 
+References
+TABLE 0-1 REFERENCES
+Reference Title
+MX-ALM-TMP-001 BIM Execution Plan Template 
+MX-ALM-TMP-002 Master Information Delivery Plan Template
+CIP – AutoCAD CADD Information Package – AutoCAD Users
+CIP- Microstation CADD Information Package – Microstation Users
+MTO, January 2016 Engineering Survey Manual
+Acronyms and Abbreviations
+TABLE 0-2 ACRONYMS AND ABBREVIATIONS
+Acronym or 
+Abbreviation
+Definition
+*.DGN Bentley MicroStation drawing file
+*.DGNLib Bentley MicroStation drawing library file
+*.DTM Bentley InRoads digital terrain model
+*.DWG AutoCAD drawing file
+° degree
+2D Two-dimensional
+3D Three-dimensional
+AFP Alternative Financing and Procurement
+BEP BIM Execution Plan
+BIM Building Information Modelling
+CADD Computer-aided Drafting and Design
+CCTV Closed Circuit Television
+CGVD Canadian Geodetic Vertical Datum 
+CPG Capital Projects Group 
+CSD Combined Service Drawings
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 8 Revision 003
+Revision Date: March 2023 
+TABLE 0-2 ACRONYMS AND ABBREVIATIONS
+Acronym or 
+Abbreviation
+Definition
+DTM Digital Terrain Model
+GCS Geodetic Coordinate System 
+HVAC Heating, Ventilation, and Air Conditioning
+IFT Issued for Tender 
+IFC Industry Foundation Classes (File type) – See Definitions
+LCS Local Coordinate System 
+LOD Level of Graphical Detail
+LOI Level of Information
+m metre
+Manual Metrolinx CADD/BIM Standards Manual 
+MCC Motor Control Centre 
+MIDP Master Information Delivery Plan
+mm millimetre
+MS Microsoft
+MTM z10 3 Degree Modified Transverse Mercator Zone 10
+MTO Ministry of Transportation Ontario
+NBS National Building Standard (UK)
+NCR Noncompliance Report
+OAA Ontario Association of Architects
+PA Public Address
+PAI Passenger Assistance Intercom 
+PDF Portable Document Format 
+PEO Professional Engineers Ontario
+PLC Programmable Logic Controller 
+PSF Project Scale Factor 
+RCD Reference Concept Design 
+RQQ Request to Qualify and Quote 
+SCADA Supervisory Control and Data Acquisition 
+SEM Structural Electrical and Mechanical 
+TPSS Traction Power Substation
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 9 Revision 003
+Revision Date: March 2023 
+TABLE 0-2 ACRONYMS AND ABBREVIATIONS
+Acronym or 
+Abbreviation
+Definition
+UTM z17 Universal Transverse Mercator Zone 17
+Definitions
+TABLE 0-3 DEFINITIONS
+Term Definition
+As-built Drawings PEO defines as follows: 
+A document created by or based solely on information provided by a third 
+party that reflects the installed, constructed, or commissioned conditions of a 
+device, machine, equipment, apparatus, structure, system, or other outcome 
+of an engineering project. Since the engineer has not reviewed and verified 
+that the information is complete or accurate, as-built drawings must not be 
+sealed.
+Design Review 
+Package
+Full contents of the design package to be submitted to, and reviewed by, 
+Metrolinx.
+GO Transit A division of Metrolinx; the regional public transit service for the Greater 
+Toronto and Hamilton Areas.
+COBie Construction Operations Building Information Exchange (COBie). An 
+international standard relating to managed asset information including 
+space and equipment. It is closely associated with Building Information 
+Modeling (BIM) approaches to design, construction and management of 
+built assets.
+Common Data 
+Environment
+Means several connected systems that provide a method to create and 
+manage information throughout the project lifecycle. The connectivity of 
+these systems is driven by a common approach to terminology, naming and 
+data schemas, which allow information to be created and managed in 
+separate systems that are suitable to the type of information created but with 
+the ability to connect and flow data between as required. Common Data 
+Environment shall further be referred to as CDE throughout this document.
+IFC (File type) Industry Foundation Classes: Open vendor-independent neutral file format 
+that defines an extendable set of consistent data representing building 
+information for exchange and interoperability between AEC software 
+applications. The IFC specification is developed and maintained by 
+BuildingSMART International as its “Data standard”. It is registered with ISO 
+as ISO16739. (Reference: National BIM Library – UK).
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 10 Revision 003
+Revision Date: March 2023 
+TABLE 0-3 DEFINITIONS
+Term Definition
+OpenBIM The BuildingSMART definition of openBIM is: “openBIM extends the benefits 
+of BIM (Building Information Modeling) by improving the accessibility, 
+usability, management and sustainability of digital data in the built asset 
+industry. At its core, openBIM is a collaborative process that is vendor 
+neutral. openBIM processes can be defined as sharable project information 
+that supports seamless collaboration for all project participants. openBIM 
+facilitates interoperability to benefit projects and assets throughout their 
+lifecycle.”
+Record Drawings PEO defines as follows: 
+Documents created to accurately reflect as-constructed, as-built or asfabricated conditions and that have been sealed by a professional engineer 
+after verifying that the documents are accurate.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 11 Revision 003
+Revision Date: March 2023 
+1. Purpose
+1.1.1 The purpose of this Metrolinx CADD/BIM Standards Manual (Manual) is to provide a 
+standard for consistently developing, maintaining, managing, monitoring, and 
+controlling Metrolinx design and construction information including drawings and 
+BIM/Asset Management deliverables.
+1.1.2 This Manual also defines the processes and procedures involved in managing Program 
+and Project design drawings throughout the Program and Project life cycle, and the 
+responsibilities of the stakeholders involved in the process.
+1.1.3 The technologies and processes associated with this standards manual will develop and 
+evolve over time. This document will be regularly updated to capture any improved 
+processes or new technologies. Do not make copies locally, or for distribution. It is the 
+responsibility of the author to ensure that the document used correlates with the 
+document referenced in the specific agreement under which the work is being 
+delivered. 
+1.1.4 It is important that all parties raise and communicate any risks or opportunities identified 
+in association with the use of these standards. As technology and production processes 
+evolve, this standard will require regular updates to ensure that the use of digital tools 
+and data can be harnessed within the Metrolinx ecosystem.
+1.1.5 This document is a living document and will evolve. 
+2. Objectives
+2.1.1 The objective of these standards is to drive value within Metrolinx through the creation of 
+digital assets which can be re-used throughout the asset lifecycle to enhance the end 
+user experience. These standards aim to:
+1) Drive consistency in the creation of CADD/BIM information;
+2) Bring transparency to quality expectations and the associated assurance processes;
+3) Drive data integration between information production, cost planning, estimating, 
+scheduling and carbon analysis;
+4) Ensure re-use of information throughout the asset lifecycle as part of the Asset 
+Information Model;
+5) Support efficient capital delivery; and
+6) Drive best value through Innovation and optimization based on the latest 
+technologies.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 12 Revision 003
+Revision Date: March 2023 
+3. Scope
+3.1.1 This Manual applies to all Consultants and Contractors supplying BIM models, CADD
+files, and PDF drawings to Metrolinx. 
+3.1.2 This Manual shall be followed for all design, construction, and commissioning and asbuilt drawings prepared for Projects being implemented by Metrolinx. 
+4. Submission Deliverables
+4.1 Software Requirements 
+4.1.1 Metrolinx adopts a software agnostic approach to information production. Project 
+specific requirements for information delivery and exchange is set out in the contractual 
+documents.
+4.1.2 Metrolinx will manage a list of approved software applications on the Project to be used 
+by Metrolinx and file types submitted shall be compatible with the Metrolinx adopted 
+software platforms for viewing, editing and coordination.
+4.2 CADD/BIM Information Package 
+4.2.1 At project inception, Metrolinx will provide standardized seed/template and reference 
+files for the creation and transfer of CADD digital design and drawing files. Contact 
+should be made with Metrolinx to obtain the latest templates as outlined in the 
+contractual documents. These templates include, but are not limited to, the following: 
+BIM Execution Plan template, MIDP Template, Drawing Border template, among others.
+4.2.2 The standard CADD Information Package is available for external users to download via 
+the Metrolinx public download site at http://www.gosite.ca/engineering_public/.
+4.3 Submission Format
+4.3.1 The following exchange file formats shall be accepted for federated BIM model 
+deliverables:
+1) Navisworks (.nwd); and 
+2) Industry Foundation Class (.ifc).
+4.3.2 CADD files developed for Metrolinx are subject to the standards and procedures 
+detailed herein. 
+4.3.3 All CADD drawing files shall be submitted in .PDF and native file format.
+4.3.4 Submission milestones are defined in the project specific contractual documents.
+4.3.5 For Station Facilities and Rail drawings AutoCAD R2018 is the preferred software for 
+milestone CADD Submissions.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 13 Revision 003
+Revision Date: March 2023 
+4.3.6 CADD files developed for other Project stakeholders are subject to their standards and 
+procedures. 
+4.3.7 Each contract drawing shall be a unique and separate file and also be submitted in PDF 
+file format meeting the following requirements:
+1) The name of each digital CADD file and .PDF file shall match the contract drawing 
+number;
+2) PDF files may contain vector or raster data;
+3) Each PDF file shall be identical to the hard copy and/or the electronic CADD file of 
+the submitted drawing; and
+4) The drawing number and the file number must match and be as per the naming 
+standard.
+4.3.8 All models, CADD files, PDF drawings must all be named as per the naming standard.
+4.3.9 2D PDF drawings shall be extracted from models wherever possible and shall include a 
+reference to the model file within the PDF drawing.
+4.3.10 PDF drawings that have been formed from static CADD files must be submitted with the 
+native CADD file attached.
+4.4 CADD Data Submission
+4.4.1 CADD data files submitted to Metrolinx shall meet the following conditions:
+1) All drawing packages shall be submitted with an extract of the MIDP; and
+2) All reference information required to produce the drawing package shall be 
+included in the submission.
+4.4.2 All milestone submissions must include a complete set of digital and PDF files developed 
+by the Consultant or Contractor, including files relevant to the package that have not 
+been modified since the previous submissions.
+4.4.3 Submissions failing to meet requirements will be returned to the Consultant or 
+Contractor with a listing of non-compliances that need to be addressed, corrected, 
+before the submission is resubmitted.
+4.4.4 All submissions will be subject to an automated standards compliance check depending 
+on the type of information. The specific Metrolinx CDE workflow and checking 
+requirements will be released as part of the CADD/BIM Information Package.
+4.5 As-Built Information Submissions
+4.5.1 As-built information and drawings provide a record of what was constructed, 
+incorporating changes made during construction, so that future work may be designed 
+and built with a full understanding of the existing situation to avoid encountering 
+unforeseen situations. This information can also be re-used throughout the operation of 
+the asset to inform maintenance, operation and future enhancements.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 14 Revision 003
+Revision Date: March 2023 
+4.5.2 After review by Metrolinx, the Consultant or Contractor shall submit all associated 
+electronic CADD/BIM files in their native format used in the creation and validation of 
+drawing and model information.
+4.5.3 Section 8, Drawing Standards, contains additional Drawings Submissions requirements 
+that apply to all Building Permit, Tender, Construction, as well as As-built, Submissions. 
+Exact deliverables are set out in the contractual documents.
+4.5.4 When preparing as-built drawings, the following procedure shall be followed for As-built 
+and Record drawings only:
+1) Verify that all change information (captured on site during construction including 
+field instructions) is included in the electronic files;
+2) Remove all revision deltas and clouds;
+3) Delete all miscellaneous information or graphics outside the border that are not 
+required;
+4) Detach all reference files that are not displayed or required;
+5) Ensure the As-Built Drawing stamp is visible in the title block;
+6) Remove all revision notes and dates that are in the Title Block Revisions section; 
+and
+7) Create PDF files (full-size) of each sheet file with their Contract Drawing Number for 
+submission. 
+5. File Naming Convention
+5.1 Project File Naming Conventions
+5.1.1 Naming conventions allow project users to quickly determine the contents of a drawing 
+without displaying the file. They also provide a convenient and clear structure for 
+organizing drawings such that they can be easily retrievable. A single naming convention 
+will be used for all project files. 
+5.1.2 For more information on the project file naming convention reference should be made to 
+the CPG Numbering Guide CKH-DMC-GDE-001.
+5.2 File Titles
+5.2.1 File names shall be limited to a maximum 32 characters (before .ext).
+5.2.2 A-Z Latin alphabet characters in lower case only shall be used to avoid confusion among 
+the uppercase letters O and I.
+5.2.3 Numerical characters shall be used.
+5.2.4 A hyphen is acceptable between the Discipline Series and the drawing number field.
+5.2.5 Do not use spaces or special characters in the file name. Underscore shall be used as 
+field separators ( _ ).
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 15 Revision 003
+Revision Date: March 2023 
+5.3 Logical File Names 
+5.3.1 All model attachments to drawings shall contain logical names. All reference attachments 
+to drawings shall be logical to the drawing view, ie Section A, Plan on Deck etc. 
+5.4 Nomenclature of the Serial Number 
+5.4.1 The ISO19650 naming convention serial number ensures that the file name is unique. In 
+addition, the serial number can be used to categorize the file name to improve the 
+accessibility of the file during searching. 
+5.4.2 It is recommended that consideration is given to the structure of this number and how 
+this number might be able to give additional classification to the type of drawing, the 
+importance of the sequence of drawings on site as well as the need to ensure that the 
+approach is sufficiently scalability through the lifecycle of the project. 
+6. BIM Standards
+6.1 Context
+6.1.1 Use of BIM in planning, design, construction, maintenance, and operations provides 
+tangible benefits and significant cost savings, and supports Metrolinx’s core values of 
+accountability, efficiency, collaboration, communication, and excellence.
+6.1.2 Designers using BIM will comply with this Manual and the contractual documents.
+6.2 BIM Object Standards and Interoperability
+6.2.1 The National Building Specification (NBS) defines BIM as “the means by which everyone 
+can understand a building through the use of a digital model”. According to NBS, 
+“Modelling an asset in digital form enables those who interact with the building to 
+optimise their actions, resulting in a greater whole life value for the asset.”
+6.2.2 Given that each BIM platform vendor has their own approach to information handling, it 
+is important to set minimum requirements for information transfer to ensure that the 
+content in the database is useful at all points from initial design through construction to 
+maintenance and operations regardless of the selected platform. Ultimately, 
+standardization of BIM objects is essential to achieve the level of collaboration and 
+interoperability that makes the use of BIM worthwhile for the complete lifecycle.
+6.2.3 Principles of Interoperability
+1) Readability – As a basic requirement, it is essential to package information such that 
+it is possible to hold and exchange relevant data between different software 
+applications;
+2) Consistency - creating digital assets using a consistent kit of parts will yield all of 
+the benefits that standardization brings, thus it is important that a standardized
+approach be considered; and
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 16 Revision 003
+Revision Date: March 2023 
+3) Relevance – In order for the digital model to remain relevant throughout the 
+lifecycle, it must be updated so that the legacy data does not become obsolete 
+and un-usable. In other words, it must be possible to update the model/database.
+6.2.4 Compliance with Industry Foundation Classes (IFC) and Construction Operations 
+Building Information Exchange (COBie):
+1) Model data shall be provided to Metrolinx in IFC 2x3 Basic FM Handover View by 
+default and the COBie data, in either excel or CSV format, regardless of design 
+authoring software used; and
+2) Contractor and/or Consultant(s) shall confirm specific Interoperability requirements 
+(if any) with the Metrolinx Project Team prior to beginning work as part of the BEP 
+process.
+6.2.5 Reference Standards for Interoperability:
+1) IFC is the leading interoperability standard, supported by all major BIM vendors 
+and supported by approximately 150 software applications worldwide. It is 
+developed and maintained by BuildingSMART International as its “data standard.” 
+As a data format, IFC is neutral (not the product of or favouring any particular 
+vendor) and non-proprietary;
+2) COBie is a subset of the IFC standard that was selected as the model for the NBS 
+BIM Object standard. It is a simplified, non-geometric subset of IFC. This is a 
+relational database that, in its most simple form, can be a spreadsheet; and
+3) NBS BIM Object Standard v1.3 – A standard that defines how objects are created 
+and named to ensure interoperability of objects in the BIM environment.
+6.2.6 Open Standards and Collaboration:
+1) Metrolinx encourages the use of open standards and collaboration tools to 
+facilitate interoperability among designers, between designers and contractors, 
+and between designers and the Owner.
+6.3 BIM Utilization 
+6.3.1 Contractor and Consultant and their Sub-Consultants shall use BIM authoring software to 
+generate BIM models that include all geometry, physical characteristics, and data 
+needed to describe the design and construction work of the project. The level of 
+development definition for each BIM shall be captured in the respective discipline 
+component catalogues. 
+6.3.2 The BIM content is the geometric, physical characteristics, and data needed to describe 
+the design and construction work of the project. The Project Team shall identify the BIM 
+content required to meet the project needs and the deliverable requirements at each 
+design phase in the BIM Execution Plan.
+6.3.3 Contractor and Consultants shall refer to executed component catalogue templates as 
+stipulated in the Contract or Project Agreement for each project as a plan for developing 
+the model.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 17 Revision 003
+Revision Date: March 2023 
+6.4 BIM-based Analyses & Uses
+6.4.1 Unless otherwise noted and captured in the BEP, all analyses are to be based on the BIM. 
+During the project, the BIM models developed by Contractor/Consultant and their SubConsultants shall be used to:
+1) Perform program validation – Designers shall use the Space Inventory to validate 
+that the design complies with the general requirements of the Owner's Program as 
+set out in the project agreement and/or the project specific output specifications;
+2) Where applicable, generate input for energy modelling/analysis;
+3) Identify and resolve clashes between disciplines and provide clash reports to 
+support clash identification and resolution; and
+4) Where applicable, generate schedules and inventories including: space 
+inventories, equipment schedules, etc.
+6.4.2 For the Design Development and Construction Documents phases, the designer and the 
+designer’s Consultants shall use an automated interference checking application to 
+identify and resolve interferences among all of the disciplines creating BIMs and submit a 
+report summarizing the status of the 3D building systems coordination effort. Description 
+of the automated interference checking process shall be included in the BIM Execution 
+Plan developed by Contractor/Consultant and reviewed by Metrolinx.
+6.4.3 Parametric links shall be maintained within the models to ensure the automatic extraction 
+of Plans, Sections, Elevations, Schedules, and 3D views. 
+6.4.4 Use correct object and spatial classifications that support the IFC format, extraction of 
+COBie data, and energy analysis, if required.
+6.5 3D Existing Condition Models
+6.5.1 Existing condition models must be developed to LOD300 minimum and contain model 
+elements feature-coded to Metrolinx BIM standards. The exact approach, based on the 
+risks and interfaces will be defined by the Consultant or Contractor within the BEP. All 
+submitted data shall be viewable and compatible with the current version of Metrolinx 
+Design review software.
+6.6 Model Files
+6.6.1 A Model file is a unique file type used on a BIM Project; it contains 3D graphical data, as 
+well as the attribute data associated with each element. 
+6.6.2 Model files shall be created at full scale (1:1).
+6.6.3 Model files have no limits to the extent of the area they encompass however their 
+accuracy decreases when moving away from the centre of the model file. Careful 
+consideration must be given to the management of modelled items within the centre of 
+the file 
+6.6.4 Each discipline will have discipline-specific Model files, containing the data associated 
+with their respective discipline. The breakdown of these disciplines will be aligned to the 
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 18 Revision 003
+Revision Date: March 2023 
+naming convention, the project packaging strategy and defined in the federation 
+strategy within the BEP.
+6.6.5 Depending on the size of the project, each discipline will have several Model files that 
+they are responsible to create. This will be defined by the Consultants or Contractors
+within their zoning strategy.
+6.7 Specific Software Standards – Bentley OpenBuildings
+Designer
+6.7.1 Model Structure:
+1) All model levels will adhere to the Bentley dataset standards as delivered with 
+Bentley OpenBuildings Designer;
+2) Modification of a dataset within the standard are not automatically permitted and 
+must be justified and approved by Metrolinx;
+3) The approach to link discipline models to the composition models will be defined 
+in the BEP;
+4) Sheet models are then created using a referenced saved view from the 
+Composition model; and
+5) Sheet files will be generated at 1:1 scale and referencing the model view at the 
+desired scale followed by referencing the Border File at the correct drawing plot 
+scale.
+6.7.2 Cells and Cell Libraries:
+1) A cell is a combination of elements linked together as one symbol that can be 
+placed into a drawing;
+2) These standard cells are grouped in specific discipline cell libraries (with a .CEL file 
+extension);
+3) The most current cell libraries will be provided by Metrolinx as part of the CADD 
+Information Package;
+4) Do not make any changes to the existing symbols or cell libraries;
+5) General rules to follow when using cells include:
+a. Only use cells contained in the approved cell libraries or located in the righthand side of the Title Block file;
+b. Do not use shared cells; and
+c. It is recommended not to drop cells.
+6.8 Specific Software Standards – Autodesk Revit
+6.8.1 For files originating from the Autodesk Revit platform:
+1) Provide all linked support models;
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 19 Revision 003
+Revision Date: March 2023 
+2) All linked reference files shall (including .dwg if used) are submitted at each 
+submission stage;
+3) Models shall be compacted and purged of unused elements;
+4) All families and parameters shall be tested prior to submission:
+a. This shall be done as the model is developed to ensure that model behaves 
+correctly when modified;
+b. Where real world examples come in typical sizes, pre-defined types shall be 
+generated; and
+c. Standard parameter names shall be used whenever possible.
+5) Ensure compliance with industry best practices for Revit modelling.
+6) Consultants and/or Contractors shall identify and define project base point and 
+survey point in the BIM Execution Plan and ensure that an explanation of the 
+method for linking models is provided, for example shared coordinates may be 
+used to establish the positions of the files in relation to each other.
+6.9 Automation of model data to machines 
+6.9.1 Further information will be added to this standards manual in future revisions to capture 
+recommended standards to facilitate the flow of digital data from BIM/CADD information 
+through to site to optimise the construction process. 
+7. CADD Requirements 
+7.1 Autodesk AutoCAD and Civil 3D Standards
+7.1.1 For files originating from Autodesk AutoCAD or Civil 3D platform:
+1) All design work including dimensions and annotations shall be created in model 
+space;
+2) Dimensions are not permitted to be exploded;
+3) Use of external reference files (XRefs) should be minimized wherever possible;
+4) XRefs, shall be overlaid, not attached. Insertion point is to be at 0, 0;
+5) Include all files, both graphic and non-graphic, required for accessing (e.g., raster 
+files, plot style, text styles, etc.);
+6) Submitted AutoCAD drawings shall be purged of all un-referenced data and 
+elements including: line types, blocks, layers, shapes and text styles;
+7) The colour of all drawing elements should be set to BYLAYER, colour shall not be 
+set by object;
+8) Blocks shall be created on Layer 0, and shall not be mirrored, or inserted with scale 
+factor; and
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 20 Revision 003
+Revision Date: March 2023 
+9) Limit excessive use of hatch patterns to avoid unnecessarily large files. Using dense 
+hatch patterns to create solid fill shall not be permitted in the drawing set.
+7.2 Bentley MicroStation 
+7.2.1 Global Origin:
+1) For projects in Toronto, Global Origin = -316474 East, -846474 North and 0 
+Elevation (as reported within MicroStation V8i Version);
+2) For projects in other locations, Global Origin = 0, 0, 0 (as reported within 
+MicroStation V8i Version) or as per municipal requirements; and
+3) Consultant or Contractor shall not change or work to a different Global Origin for 
+Metrolinx Program or Project drawings.
+7.2.2 Levels
+1) Each element of a design shall be placed on the corresponding level according to 
+the structure in place for each discipline as delivered in the DGNLib files.
+2) Elements shall either be placed with their own independent symbol properties 
+(colour, weight, style, independent of the level library) or placed to use the 
+symbology defined by the level library (placement ByLevel). The ByLevel option for 
+placing elements is the most effective way to ensure file contents conform to the 
+level standards.
+3) Modification of levels within the standard drawing library is not permitted. If 
+additional levels are required, create an appropriate DGNLib file and submit for 
+approval before using.
+4) Any additional level requirements shall be submitted to Metrolinx for approval and 
+possible inclusion into the standard drawing library files.
+5) Level structures for new drawings are supplied by drawing library files. These files 
+contain standardized, preset level names and numbers, level descriptions, and 
+graphical attributes (colour, weight, and style).
+7.2.3 Metrolinx will provide the standard drawing libraries, as well as the SPG drawing library 
+for the drawing border file (*.dgn).
+7.2.4 Master Files -‘m’ and ‘mx’
+1) A Master file contains all graphical data for a specific area of a Project and is drawn 
+at full scale (scale 1:1). All geometry representing an asset shall be geospatially 
+correct and accurate. 
+2) Master files have no limits as to the extent of area they encompass. Modelling must 
+be within the Solid Working Area of the file.
+3) Whenever possible, draw graphic elements within the Master file and then 
+reference them into various Sheet files to create the ‘ready-to-plot’ file. 
+4) Each discipline shall have their own Master files, which will contain the data 
+associated with their respective discipline.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 21 Revision 003
+Revision Date: March 2023 
+5) Depending on the size of the Project, each discipline shall have a number of Master
+files that they are responsible to create.
+6) Rules to follow when creating Master files include: 
+a. The Seed file (MX_Seed2d.dgn) shall be used to create all Master files. 
+b. The ‘m’ (master) or ‘mx’ (master existing) designation shall be included when 
+naming Master files.
+7.2.5 Orientation 
+1) The CADD files shall not be rotated. The views may be rotated to orient the 
+drawing horizontally or vertically.
+2) The plan view data shall not be moved, scaled or rotated in MicroStation files.
+3) Do not move away from proper World Coordinates or Global Origin.
+4) All elevation drawings and longitudinal sections shall not be rotated (set View 
+Rotation setting to Top), except for plan or part plan drawings that can be rotated 
+to align with the station layout or alignment drawings.
+8. Drawing Standards
+8.1 Title Block /Seed Files
+8.1.1 All CADD files must be created using the project seed/template file as described in 
+Section 8.9 and agreed with Metrolinx.
+8.2 Cover Page & Signature Page
+8.2.1 Metrolinx Signature Page and Cover Page templates provided in CAD Information 
+Package shall be used as default and edited as needed. 
+8.3 Drawing Scale & Model Units
+8.3.1 All CADD files shall reference the Geodetic Coordinate System (GCS) or the Local 
+Coordinate System (LCS) using metric units unless unique circumstances dictate the use 
+of imperial. Any variation from metric shall be approved by Metrolinx. 
+1) All MicroStation-based CADD and BIM files shall use Units of Resolution according 
+to the Seed file unless specified otherwise:
+a. Master/Project Units = metres (m);
+b. Sub-units = millimetres (mm);
+c. CADD Advanced Units of Resolution = 100,000 per m; and
+d. BIM Advanced Units of Resolution = 1,000,000 per m.
+2) Autodesk Revit Units
+a. All CADD and BIM files shall use metric working units according to the project 
+template files. In addition, all files shall be drawn within the Project GCS as 
+outlined in Section 8.12. The DWG CAD files shall be drawn in metres (m).
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 22 Revision 003
+Revision Date: March 2023 
+b. All content shall be produced/drawn at 1:1.
+c. Sheet files that utilize scaled viewports, commonly accepted scales include: 
+1:1, 1:5, 1:10, 1:20, 1:25, 1:50, 1:75, 1:100, 1:125, 1:200, 1:250, 1:300, 1:400, 
+1:500, 1:750, 1:1000, 1:1200, 1:5000, and their 10x multiplications.
+d. Whenever possible, users should avoid creating drawing sheets which contain 
+multiple scales. If multiple scales on one sheet is needed, users shall ensure 
+they include both scale bars within the title block.
+8.3.2 General requirements
+1) All scale drawings shall be drawn to scale.
+2) If multiple scales are used on the same drawing sheet, the drawing shall be 
+subdivided into separate areas by the scale being used, and bar scales shall be 
+included for each different scale.
+8.4 Orientation
+8.4.1 General requirements for the orientation of drawings include:
+1) Plans shall be oriented so that stationing (when apply) progresses from left to right
+across the sheet;
+2) Rail platform shall be oriented from left-hand to right-hand of the sheet whenever 
+possible;
+3) North shall point to the top of the sheet whenever possible; 
+4) All plan views shall be oriented in the same direction; 
+5) The standard north arrow shall be displayed in the upper right-hand corner of all plan 
+drawings. The small north arrow shall be provided on the key plan; and
+6) Notes and dimensions shall be read from bottom or right left-hand side of the sheet.
+8.5 Revision Cloud and Delta
+8.5.1 Revisions must be identified by a delta and a cloud encompassing the extent of the 
+revision.
+8.5.2 Each version will have only the current revision number of the drawings, thereafter, 
+making sure the first Issued for Construction (IFC) A Suitability Status version is cloud 
+free.
+8.5.3 Revisions shall be recorded in the appropriate location in the Drawing Identification 
+Block and added to the appropriate level/layer. All amendments or revisions to 
+preliminary, contract or standard drawings shall be recorded in the revision column as 
+follows:
+1) All revisions to preliminary drawings and sketches shall be recorded, initialled, and 
+dated in the revision column. 
+2) Each revision shall be numbered sequentially starting with number one (1). Should a 
+preliminary drawing become a contract drawing, all noted revisions shall be removed 
+from the revision column; and
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 23 Revision 003
+Revision Date: March 2023 
+3) All amendments or revisions to contract drawings shall be recorded, initialled, and 
+dated in the revision column. 
+4) Amendments made during the tender period (by addendum) or revisions made 
+afterward during construction (by change order) shall be numbered sequentially 
+starting with number one (1) and shall be clearly marked to identify the change. 
+5) The revision number shall be placed directly below the revision cloud in the bottom 
+border to highlight the change location. 
+6) Description of the change, in the revisions column shall be brief, and should include 
+the change order number. 
+7) Amendments made during the tender period need not be described, but reference 
+to the “Addenda No” should be indicated. 
+8) When a drawing is redrawn or a new drawing added, the revision column should 
+indicate “Redrawn” or “New Drawing,” respectively. 
+9) If there are previous revisions on a drawing to be redrawn, then the next sequential 
+revision number shall be used on the redrawn drawing.
+8.6 Subsequent Revisions
+8.6.1 If a drawing has several revisions, the following must occur:
+1) Remove the previous cloud, leaving only the delta and revision number as an 
+indicator of the previous revision;
+2) Place a new cloud around the revised area with the next consecutive revision 
+numbered delta;
+3) Enter the change information into the Drawing Border revision box; and
+4) The Consultant or Contractor shall submit all digital files (native and PDF), along 
+with the plotted files, to Metrolinx. 
+8.7 Hold Clouds
+8.7.1 In abeyance/hold clouds shall be placed as an inverted cloud with annotation for the 
+abeyance. Alternatively, where there are multiple holds or abeyance clouds these can be 
+shown as HOLD 1, HOLD 2 etc then a list of these denoted in the notes area.
+8.8 Drawing Number
+8.8.1 The Metrolinx drawing number shall contain the following distinctive fields:
+1) Discipline – Letter identifying the design discipline. See Table 8-1 Discipline 
+Designators;
+2) Sub-Discipline Series – Number identifying the design discipline drawing series (0-
+9). This number is used to help partition drawing sets;
+3) Sheet Number – Sequential numerical value identifying the drawing sheet in five
+digits. Additional fields shall be confirmed with Metrolinx.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 24 Revision 003
+Revision Date: March 2023 
+Figure 8.8-1 Drawing Numbering
+8.8.2 Requirements for assigning drawing numbers include: 
+1) Letters I, O, and X shall not be used to avoid confusion between upper case letters 
+and numbers;
+2) Once a drawing number has been assigned and issued, it shall not be modified;
+3) If a drawing is retired from a submission set, its number shall not be re-used;
+4) If a new drawing is inserted into a submission set, the drawing number shall be 
+appended with an alpha character (for example, 10000, 10001, 10001A, 10001B, 
+10002).
+8.9 Title Block 
+8.9.1 Standard Title Block for AutoCAD Drawings
+1) All drawings shall contain a title block ( MX_Title_Block.dwg ) attached as a 
+reference file. In AutoCAD, the title block shall reside in ‘Paperspace’, not in ‘Model 
+Space’. Figure 8.9-1shows corresponding fields. 
+TABLE8-1: DISCIPLINE DESIGNATORS
+ARC – Architectural FLS – Fire and Life Safety STR –Structures
+BST – Building Structures GEO - Geotechnical SUR - Survey
+CIV – Civil IFM – Information 
+Management
+TCS – Traffic Control System
+COM – Communications 
+(I&IT, Facilities)
+LND - Landscaping TRK – Track
+CMS – Communications 
+System (Signaling)
+MEC – Mechanical TUN – Tunnel & Underground 
+Structure
+ELE – Electrical ROL – Rolling Stock - Fleet UTL – Utilities
+ELN – Electrification SIG – Signaling WAY – Wayfinding & Signage
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 25 Revision 003
+Revision Date: March 2023 
+Figure 8.9-1 Standard Title Block for AutoCAD Drawings
+2) Project Number - Metrolinx Project Number shall be in this area of the Title Block.
+3) Project Title - The Project Title area in the Title Block file contains the following 
+information fields:
+a. Project Location or Facility Name;
+b. Type of Work; and
+c. Description.
+Figure 8.9-2 Project Title
+ 
+4) Drawing Number and Sheet Number – See section for detailed description for 
+Drawing Number. Sheet Number in the contract book shall be established by 
+numbering (1, 2, 3 of total sheet, e.g. 1/150) each sheet, in the box adjacent to the 
+Drawing Number.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 26 Revision 003
+Revision Date: March 2023 
+5) Contract Number
+a. Metrolinx Contract Number shall be in this area of the Title Block.
+6) Consultant’s Identification Box 
+a. The Consultant’s name, logo, and contact information shall be in this area of 
+the Title Block. 
+b. The Subconsultant’s logo shall be included within the Title Block if required. 
+7) Professional Seal(s) 
+c. Architectural -
+An Architect’s seal shall be provided in accordance with Regulation 27 under 
+the Architects Act. 
+d. Engineering -
+Professional Engineers Ontario (PEO) requires final engineering drawings to 
+be sealed by a registered professional engineer; 
+Final drawings shall be sealed with the engineer’s P.Eng. stamp and signature 
+for Building Permit Applications, Issued for Tender (IFT), Issued for 
+Construction, and Record drawings.
+8) File Creation and Checked Field
+a. This area of the Title Block file contains the names of the individuals 
+responsible for the Designed, Drawn, Checked, and Approved tasks, and the 
+dates these tasks were performed.
+b. Names shall be entered as first name initial (period) last name (for example, 
+J.SMITH). 
+c. Dates shall be entered as YY/MM/DD (for example, 21/01/01).
+Figure 8.9-3 File Creation and Checked Field
+9) Drawing Scales 
+a. The basic scale used on each drawing shall be noted numerically and shown 
+graphically where indicated in the title block, unless noted otherwise. Scale 
+shall be indicated on all scale drawings. 
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 27 Revision 003
+Revision Date: March 2023 
+Figure 8.9-4 Drawing Scales
+ 
+b. If the information placed on the drawing sheet uses multiple scales, an “AS 
+SHOWN” shall be entered in the border area and the appropriate bar scales 
+shall be placed under the title marker for each drawing.
+c. For sheets that contain drawings that are not all to scale and do not have a 
+numeric dimension value, an “N.T.S.” shall be entered in the border area in 
+place of “AS SHOWN.” 
+10) Revision Box Data Fields 
+a. Revisions made after tender shall be tracked in the Revision Box area of the 
+Title Block file.
+b. Revision shall be numbered, dated, and briefly described by an Addendum 
+number or Contract Change number. 
+11) Issue Box Data Fields 
+a. All the issues shall be tracked in the Issue Box area of the Title Block file with 
+the issued dates and description. 
+12) Reference Drawings
+a. Reference drawings may be recorded in the Reference Drawings area of the 
+Title Block file with the drawing number and drawing title.
+8.9.2 Standard Title Block for MicroStation Drawings
+1) The title block file (MX_EngBord1.dgn) contains elements, such as text and data 
+fields with preset attributes, which may be copied into the active design file and 
+then edited as required.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 28 Revision 003
+Revision Date: March 2023 
+Figure 8.9-5 Standard Title Block for MicroStation Drawings: 
+2) Project Title: 
+a. For Projects involving single locations, the Main Project Title area in the Title 
+Block file shall contain the following information fields (Figure 8.9-6):
+Project Location or Facility Name;
+Main Project Title; and
+Drawing Title.
+Figure 8.9-6 Main Project Single Location
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 29 Revision 003
+Revision Date: March 2023 
+b. For Projects involving multiple locations, the Main Project Title area in the Title 
+Block file shall contain the following information fields (Figure8.9-7):
+Main Project Title; and
+Project Location or Facility Name.
+3) Drawing Title 
+Figure 8.9-7 Main Project Multiple Location
+4) Drawing Number – See section 8.8 for detailed description. 
+5) Sheet Number –Sheet Number in the contract book shall be established by 
+numbering (1, 2, 3 of total sheet, e.g. 1/150) each sheet, in the box adjacent to the 
+Drawing Number.
+6) File Creation and Checked Field 
+a. This area of the Title Block file contains the names of the individuals 
+responsible for the Designed, Drawn, Checked, and Approved tasks, and the 
+dates these tasks were performed. 
+b. The name shall be entered as first name initial (period) last name (for example, 
+J. SMITH). 
+c. The date shall be entered as YYYY/MM/DD (for example, 2021/01/01).
+7) Professional Seal(s) 
+a. Architectural 
+An Architect’s seal is required in accordance with Regulation 27 under the 
+Architects Act.
+b. Engineering 
+Professional Engineers Ontario (PEO) requires final engineering drawings to 
+be sealed by a registered professional engineer.
+Final drawings shall be sealed with the engineer’s P.Eng. stamp and signature 
+for Reference Concept Design (RCD), Request to Qualify and Quote (RQQ), 
+Building Permit Applications, Issued for Tender (IFT), and Issued for 
+Construction, and Record drawings.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 30 Revision 003
+Revision Date: March 2023 
+8) Consultant’s Identification Box 
+a. Consultant’s name, logo, and contact information shall be placed in this area of 
+the Title Block file. 
+b. The Subconsultant’s logo shall be included within the Title Block if required. 
+9) Bar Scales 
+a. The basic scale used on each drawing shall be noted numerically and shown 
+graphically where indicated in the title block, unless noted otherwise. Scale 
+shall be indicated on all scale drawings. 
+b. Single Bar Scale - The Bar Scale area of the Title Block file contains a graphical 
+bar and corresponding numerical value that represents the drafting scale used 
+when plotted at a full drawing size. 
+Figure 8.9-8 Bar Scale (Single Scale Drawings)
+c. Dual Bar Scale - If the information placed on the drawing sheet uses vertical 
+and horizontal scales, the level “tc_Border_Scale Text,” shall be turned off and 
+the level “tc_Horiz_Vert_Scales” carried in the title block file shall be turned on. 
+The appropriate bar scales shall be placed accordingly.
+Figure 8.9-9 Bar Scale (Dual Scale Drawings)
+d. If the information placed on the drawing sheet uses multiple scales, an “AS 
+SHOWN” shall be entered in the border area and the appropriate bar scales 
+shall be placed under the title marker for each drawing.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 31 Revision 003
+Revision Date: March 2023 
+e. For sheets that contain drawings that are not all to scale and do not have a 
+numeric dimension value, an “N.T.S.” shall be entered in the border area in 
+place of “AS SHOWN.” 
+Figure 8.9-20 Bar Scale (Multiple Scale Drawings)
+10) Revision Box Data Fields 
+a. Revisions made after tender shall be tracked in the Revision Box area of the 
+Title Block file. 
+b. Revisions shall be numbered, dated, and briefly described by an Addendum 
+number or Contract Change number. 
+11) Progress Stamp
+a. Progress stamps shall be used to identify the Project design stage at each 
+milestone or submission.
+b. At all times, there shall be a progress stamp visible on drawings, and it shall be 
+consistent throughout the entire document set.
+c. Figure 8.9-11 shows standard progress stamps used at Metrolinx.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 32 Revision 003
+Revision Date: March 2023 
+Figure 8.9-31 Standard Progress Stamps
+Level MX_Stamp_1
+ Level MX_Stamp_11_100%
+Level MX_Stamp_11_10% Level MX_Stamp_5
+Level MX_Stamp_11_30% Level MX_Stamp_8
+Level MX_Stamp_11_60% Level MX_Stamp_9
+Level MX_Stamp_11_100% Level MX_Stamp_10
+Level MX_Stamp_6 Level MX_Stamp_12
+Level MX_Stamp_7 Level MX_Stamp_13
+8.10 Standard Graphical Elements
+8.10.1 The Title Block file has the standard graphical elements which shall be placed with 
+proper layers/levels and revised as required.
+1) Elements included are:
+a. Standard North Arrow d. Section Callouts g. Leader Lines and Callouts
+b. Bar Scales e. Text and Font Standards h. Matchlines
+c. Title Headers f. Revision Cloud and Delta
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 33 Revision 003
+Revision Date: March 2023 
+Figure 8.10-1 Standard Elements
+Symbols and Callouts 
+for AutoCAD users
+Standard Elements for MicroStation Users
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 34 Revision 003
+Revision Date: March 2023 
+8.10.2 Line Work
+1) Line Weights: Line weights shall show a clearly visible difference in plotted line 
+weights on both full- and half- size plots
+2) Line Styles / Line Type - General requirements for line styles include:
+a. Line styles, like line weights, aid in communicating different elements in a 
+drawing. The standard line styles, shipped with AutoCAD, or MicroStation shall
+be used. Include legends where required to aid clarity; and
+b. If a custom line style is used, a legend shall be included, and a digital file 
+containing the definition of the line style shall be included with each digital 
+data submission.
+8.10.3 Text Settings
+1) General requirements for text settings include:
+a. The Metrolinx standard font for the annotation of drawings shall be:
+RomanS for AutoCAD drawings; and
+True Type Font Arial for MicroStation drawings.
+b. Annotations, including general notes, data fields, and tags, shall all be capital 
+letters.
+c. The following text heights shall be used:
+2.5 mm –where the default text size does not fit (avoid this situation, if 
+possible);
+3.0 mm –default size for notes, dimensions, and common body text;
+4.0 mm –subtitles and minor titles; and
+6.0 mm –major titles.
+d. All text shall be placed with left justification.
+e. All annotations (including dimensions, notes, and titles) shall be legible and 
+fully readable when plotted at half size.
+f. Title Block text width may be reduced if required to fit within the Title Block 
+box.
+8.10.4 Dimension Settings
+1) General requirements for dimension settings include:
+a) All dimensions shall be shown in millimetres (mm), except for elevations, 
+chainages, alignments, and site drawings, which shall be shown in metres (m);
+b) Automatic (true) dimensioning I.e real measurements shall be used; Manual 
+input or override is not permitted; and
+c) Filled arrowheads shall be used for dimension terminators.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 35 Revision 003
+Revision Date: March 2023 
+8.10.5 Callouts
+1) Callouts are symbols placed in a drawing to direct the reader to another location in 
+the document package. Do not drop callouts.
+2) General requirements for callouts include:
+d) Sections: 
+Sections shall be identified with Letters omitting the letters “O” and “I.” Details 
+shall be identified by Numbers; and
+The drawing number where the section can be located shall be identified in 
+the bottom portion of the callout.
+Figure 8.10-2 Section Callouts
+ 
+e) Elevations: Elevation callouts using numbers direct the reader to drawings of 
+both interior and exterior elevations.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 36 Revision 003
+Revision Date: March 2023 
+Figure 8.10-3 Elevation Callouts
+ 
+f) Enlargement plans: To clarify design intent, plan enlargements and details 
+shall be used and identified using a callout similar to that shown in: Figure 
+8.10-4 Plan Enlargement Callouts.
+Figure 8.10-4 Plan Enlargement Callouts
+8.10.6 Annotations
+1) General rules to follow for annotations include:
+a. Annotations shall not obscure other graphics; and
+b. Do not underline notes.
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 37 Revision 003
+Revision Date: March 2023 
+8.11 Plotting
+8.11.1 Autodesk AutoCAD
+1) Plotting files (.ctb) shall be submitted with each digital drawing submission.
+2) For Consultants preparing work for GO Transit, the standard Drawing size shall be 
+‘ANSI D’ 558.8 mm x 863.6 mm (22” x 34”) Plot to limits.
+3) Layer: ‘BORDER_NOT_PLOT’ plotting function has been disabled; Do not change 
+the setting. 
+8.11.2 Bentley MicroStation
+1) The following modified pen tables shall be used for large-format and tabloid-size 
+devices:
+a. tds600.pen: Pen table for full-size plotting; and
+b. Vhalf.pen: Pen table for half-size plotting.
+2) The Title Block file (MX_EngBord1.dgn) contains non-print plotting guides, as 
+follows:
+a. Outer border 867 mm x 563 mm (solid line, non-printable); and
+b. Inner border 863 mm x 559 mm (dashed line, printable 34 inches x 22 inches 
+ANSI D).
+8.12 Geodetic Coordinate System (GCS) 
+8.12.1 Unless otherwise approved by Metrolinx, all CADD positional coordinates shall be 
+referenced to the Metrolinx geodetic coordinate system (“GCS”) specified in “Metrolinx 
+Survey Control in Transit Corridor Supplement”.
+8.12.2 Project Scale Factor (PSF)
+1) All CADD drawing dimensions and alignment chainages shall be illustrated as 
+ground measurements. For CADD drawings referencing a Geodetic Coordinate 
+System (GCS), the grid distances shall be converted to ground distances by 
+applying the Project Scale Factor (PSF) where. 
+METROLINX CADD/BIM STANDARDS MANUAL
+MX-ALM-STD-004 38 Revision 003
+Revision Date: March 2023 
+Ground Distance = Grid Distance / PSF 
+2) The PSF shall be computed based on the GCS. 
+3) The PSF may vary along the extent of the project, in particular when the project 
+extents run in an east / west direction. For projects extending more than 10 km’s 
+east / west then multiple PSF’s shall be provided for designated sections (areas) 
+along the route. The PSF has a minimal effect on short distance measurements. 
+Dimensions not exceeding 150-metre (m) for MTM, or 50-metre (m) for UTM may 
+not require a grid to ground dimension conversion. 
+4) Drawings that have been transformed to a Local Coordinate System (LCS) with a 
+PSF = 1 do not require dimensions to be converted to ground distances. See 
+Section 4. 13.2 for transformation of drawings from GCS to LCS. 
+8.13 Local Coordinate System (LCS)
+8.13.1 Coordinates system and File origin shall be confirmed with Metrolinx Project Team prior 
+to commencement of work. 
+8.13.2 In certain cases, it may be applicable to work in a Local Coordinate System where the PSF 
+is 1.0000 and the drawing is rotated to Site North. The drawing transformation 
+parameters for the transformation of the drawings from GCS to LCS and reverse and 
+including a minimum of two check coordinate located in each coordinate system shall be 
+derived by the Survey Lead and provided by the Metrolinx Project Team. The transform 
+may be performed manually or by using a built-in CADD Helmert 2D Similarity 
+Transformation application. 
+8.13.3 The 2D transformation parameters typically transform the drawing from the large GCS 
+values to smaller LCS values (near 0,0) in order to easily distinguish between the two 
+coordinate systems.
+8.13.4 Transformation Origin Point for Rotation and Scale - Northing, Easting (m)
+Step 1 - Rotation about Transformation Origin Point (Positive rotates drawing clockwise) 
+Decimal Degrees or DD, MM, SS
+Step 2 - Scale using PSF about Transformation Origin Point
+Step 3 - Move - Northing, Easting (m)
+Check Points
+Subsequent to the transformation always confirm that the transformation has been 
+applied correctly by using the Coordinate Check points. 
+Northing, Easting in GCS
+Northing, Easting in LCS
+8.13.5 The transformation may be reversed – LCS to GCS by changing the signs on each 
+parameter and applying the transformation steps in the reverse order (ie Step 3, Step 2, 
+Step 1). Always use the check points to confirm that the reverse transformation has been 
+performed correctly.
