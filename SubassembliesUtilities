@@ -1,0 +1,1428 @@
+// Decompiled with JetBrains decompiler
+// Type: Subassembly.Utilities
+// Assembly: C3DStockSubassemblies, Version=13.2.890.0, Culture=neutral, PublicKeyToken=null
+// MVID: E918659F-4A28-4B46-8972-75FDE266E784
+// Assembly location: F:\ProgramData\Autodesk\C3D 2020\enu\C3DStockSubassemblies.dll
+
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+using Autodesk.Civil;
+using Autodesk.Civil.ApplicationServices;
+using Autodesk.Civil.DatabaseServices;
+using Autodesk.Civil.Runtime;
+using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
+
+namespace Subassembly
+{
+  public class Utilities
+  {
+    public const string R2010 = "R2010";
+    public const string R2009 = "R2009";
+    public const string R2008 = "R2008";
+    public const string R2007 = "R2007";
+    public const string R2006 = "R2006";
+    public const string R2005 = "R2005";
+    public const string Side = "Side";
+    public const int Left = 1;
+    public const int Right = 0;
+    public const int ITrue = 1;
+    public const int IFalse = 0;
+    public const double PI = 3.1415926535897931;
+    public const double BigDistance = 1000000.0;
+
+    public static void RecordError(CorridorState corridorState, Exception e)
+    {
+      if (corridorState == null)
+        throw new ArgumentNullException(nameof (corridorState));
+      if (e == null)
+        throw new ArgumentNullException(nameof (e));
+      corridorState.RecordError((CorridorError) -2147221503, (CorridorErrorLevel) 3, e.Message, e.Source, true);
+    }
+
+    public static void RecordWarning(
+      CorridorState corridorState,
+      CorridorError corridorError,
+      string message,
+      string source)
+    {
+      if (corridorState == null)
+        throw new ArgumentNullException(nameof (corridorState));
+      corridorState.RecordError(corridorError, (CorridorErrorLevel) 2, message, source, true);
+    }
+
+    public static void RecordError(
+      CorridorState corridorState,
+      CorridorError corridorError,
+      string message,
+      string source)
+    {
+      if (corridorState == null)
+        throw new ArgumentNullException(nameof (corridorState));
+      corridorState.RecordError(corridorError, (CorridorErrorLevel) 3, message, source, true);
+    }
+
+    public static void SetSEAORUnsupportedTag(CorridorState corridorState)
+    {
+      IParam iparam = corridorState != null ? (IParam) corridorState.ParamsLong.Add("SE AOR Unsupported", 1) : throw new ArgumentNullException(nameof (corridorState));
+      if (iparam == null)
+        return;
+      iparam.Access = (ParamAccessType) 2;
+    }
+
+    public static void ClearSEAORUnsupportedTag(CorridorState corridorState)
+    {
+      IParam iparam = corridorState != null ? (IParam) corridorState.ParamsLong.Add("SE AOR Unsupported", 0) : throw new ArgumentNullException(nameof (corridorState));
+      if (iparam == null)
+        return;
+      iparam.Access = (ParamAccessType) 2;
+    }
+
+    public static void SetSEAORCrownPointForLayout(CorridorState corridorState, int nCrownPoint)
+    {
+      if (corridorState == null)
+        throw new ArgumentNullException(nameof (corridorState));
+      long num = (long) checked (nCrownPoint - 1);
+      IParam iparam = (IParam) corridorState.ParamsLong.Add("SE AOR Crown Point For Layout", checked ((int) num));
+      if (iparam == null)
+        return;
+      iparam.Access = (ParamAccessType) 2;
+    }
+
+    public static double AdjustOffset(CorridorState oRwyState, double dOffset)
+    {
+      if (oRwyState == null)
+        throw new ArgumentNullException(nameof (oRwyState));
+      return oRwyState.Mode != 1 ? (!(oRwyState.CurrentAlignmentIsOffsetAlignment & oRwyState.CurrentAssemblyOffsetIsFixed) ? dOffset : dOffset + oRwyState.CurrentAssemblyFixedOffset) : dOffset;
+    }
+
+    public static string GetVersion(CorridorState rwState)
+    {
+      ParamStringCollection stringCollection = rwState != null ? rwState.ParamsString : throw new ArgumentNullException(nameof (rwState));
+      string version;
+      try
+      {
+        version = stringCollection.Value("Version");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        version = "R2005";
+        ProjectData.ClearProjectError();
+      }
+      return version;
+    }
+
+    public static int GetVersionInt(CorridorState rwState) => int.Parse(Utilities.GetVersion(rwState).Substring(1));
+
+    public static void GetAlignmentAndOrigin(
+      CorridorState rwState,
+      ref ObjectId oAlignmentId,
+      ref PointInMem oOrigin)
+    {
+      if (rwState == null)
+        throw new ArgumentNullException(nameof (rwState));
+      if (oOrigin == null)
+        oOrigin = new PointInMem();
+      if (rwState.Mode == 1)
+      {
+        oOrigin.Station = 0.0;
+        oOrigin.Offset = 0.0;
+        oOrigin.Elevation = 0.0;
+      }
+      else
+      {
+        int num = rwState.CurrentAlignmentIsOffsetAlignment & rwState.CurrentAssemblyOffsetIsFixed ? 1 : 0;
+        oOrigin.Station = rwState.CurrentStation;
+        if (num != 0)
+        {
+          oAlignmentId = rwState.CurrentBaselineId;
+          oOrigin.Offset = rwState.CurrentOffset + rwState.CurrentAssemblyFixedOffset;
+          oOrigin.Elevation = rwState.CurrentElevation + rwState.CurrentAssemblyFixedElevation;
+        }
+        else
+        {
+          oAlignmentId = rwState.CurrentAlignmentId;
+          oOrigin.Offset = rwState.CurrentOffset;
+          oOrigin.Elevation = rwState.CurrentElevation;
+        }
+      }
+    }
+
+    public static void CalcElevationOnSurface(
+      ObjectId surfaceId,
+      ObjectId alignmentId,
+      double stationOnAlignment,
+      double offsetToAlignment,
+      ref double elevationOnSurface)
+    {
+      TransactionManager transactionManager = HostApplicationServices.WorkingDatabase.TransactionManager;
+      Surface surface = (Surface) transactionManager.GetObject(surfaceId, (OpenMode) 0, false, false);
+      double num1;
+      double num2;
+      ((Alignment) transactionManager.GetObject(alignmentId, (OpenMode) 0, false, false)).PointLocation(stationOnAlignment, offsetToAlignment, ref num1, ref num2);
+      elevationOnSurface = surface.FindElevationAtXY(num1, num2);
+    }
+
+    public static bool GetRoundingCurve(
+      IPoint oIntersectPt,
+      double dSlope1,
+      double dSlope2,
+      Utilities.RoundingOption nRoundingOption,
+      Utilities.RoundingBy nRoundingBy,
+      double dRoundingValue,
+      long nRoundingTesselation,
+      double dTangentLength1,
+      double dTangentLength2,
+      bool isRight,
+      ref IPoint[] tesselatedPts)
+    {
+label_0:
+      int num1;
+      bool roundingCurve;
+      int num2;
+      try
+      {
+        ProjectData.ClearProjectError();
+        num1 = 1;
+label_1:
+        int num3 = 2;
+        roundingCurve = false;
+label_2:
+        num3 = 3;
+        if (nRoundingOption == Utilities.RoundingOption.NoneType)
+          goto label_131;
+label_3:
+        num3 = 6;
+        if (nRoundingOption != Utilities.RoundingOption.CircularType)
+          goto label_87;
+label_4:
+        num3 = 7;
+        double num4 = Math.Atan(dSlope1);
+label_5:
+        num3 = 8;
+        if (num4 >= 0.0)
+          goto label_9;
+label_6:
+        num3 = 9;
+        if (!isRight)
+          goto label_8;
+label_7:
+        num3 = 10;
+        num4 = 2.0 * Math.PI + num4;
+        goto label_16;
+label_8:
+        num3 = 12;
+        num4 = Math.PI - num4;
+        goto label_16;
+label_9:
+        num3 = 14;
+        if (num4 <= 0.0)
+          goto label_13;
+label_10:
+        num3 = 15;
+        if (!isRight)
+          goto label_12;
+label_11:
+        num3 = 16;
+        num4 = num4;
+        goto label_16;
+label_12:
+        num3 = 18;
+        num4 = Math.PI - num4;
+        goto label_16;
+label_13:
+        num3 = 20;
+        if (!isRight)
+          goto label_15;
+label_14:
+        num3 = 21;
+        num4 = 0.0;
+        goto label_16;
+label_15:
+        num3 = 23;
+        num4 = Math.PI;
+label_16:
+        num3 = 24;
+        num4 += Math.PI;
+label_17:
+        num3 = 25;
+        if (num4 <= 2.0 * Math.PI)
+          goto label_19;
+label_18:
+        num3 = 26;
+        num4 -= 2.0 * Math.PI;
+label_19:
+        num3 = 27;
+        double num5 = Math.Atan(dSlope2);
+label_20:
+        num3 = 28;
+        if (num5 >= 0.0)
+          goto label_24;
+label_21:
+        num3 = 29;
+        if (!isRight)
+          goto label_23;
+label_22:
+        num3 = 30;
+        num5 = 2.0 * Math.PI + num5;
+        goto label_31;
+label_23:
+        num3 = 32;
+        num5 = Math.PI - num5;
+        goto label_31;
+label_24:
+        num3 = 34;
+        if (num5 <= 0.0)
+          goto label_28;
+label_25:
+        num3 = 35;
+        if (!isRight)
+          goto label_27;
+label_26:
+        num3 = 36;
+        num5 = num5;
+        goto label_31;
+label_27:
+        num3 = 38;
+        num5 = Math.PI - num5;
+        goto label_31;
+label_28:
+        num3 = 40;
+        if (!isRight)
+          goto label_30;
+label_29:
+        num3 = 41;
+        num5 = 0.0;
+        goto label_31;
+label_30:
+        num3 = 43;
+        num5 = Math.PI;
+label_31:
+        num3 = 44;
+        double num6 = Math.Abs(Math.PI - Math.Abs(num4 - num5));
+label_32:
+        num3 = 45;
+        double num7 = dRoundingValue;
+label_33:
+        num3 = 46;
+        if (nRoundingBy != Utilities.RoundingBy.ByLength)
+          goto label_35;
+label_34:
+        num3 = 47;
+        num7 = dRoundingValue / num6;
+label_35:
+        num3 = 48;
+        double num8 = num7 * Math.Tan(num6 / 2.0);
+label_36:
+        num3 = 49;
+        if (dTangentLength1 >= num8)
+          goto label_38;
+label_37:
+        num3 = 50;
+        num8 = dTangentLength1;
+label_38:
+        num3 = 51;
+        if (dTangentLength2 >= num8)
+          goto label_40;
+label_39:
+        num3 = 52;
+        num8 = dTangentLength2;
+label_40:
+        num3 = 53;
+        num7 = num8 / Math.Tan(num6 / 2.0);
+label_41:
+        num3 = 54;
+        double[] numArray1 = new double[3];
+label_42:
+        num3 = 55;
+        numArray1[0] = oIntersectPt.Offset;
+label_43:
+        num3 = 56;
+        numArray1[1] = oIntersectPt.Elevation;
+label_44:
+        num3 = 57;
+        numArray1[2] = 0.0;
+label_45:
+        num3 = 58;
+        double[] numArray2 = Utility.PolarPoint(numArray1, num4, num8);
+label_46:
+        num3 = 59;
+        double[] numArray3 = Utility.PolarPoint(numArray1, num5, num8);
+label_47:
+        num3 = 60;
+        if (Math.Abs(num5 - num4) <= Math.PI)
+          goto label_49;
+label_48:
+        num3 = 61;
+        double num9 = num4 + (num5 - num4) / 2.0 + Math.PI;
+        goto label_50;
+label_49:
+        num3 = 63;
+        num9 = num4 + (num5 - num4) / 2.0;
+label_50:
+        num3 = 64;
+        if (num9 <= 2.0 * Math.PI)
+          goto label_52;
+label_51:
+        num3 = 65;
+        num9 -= 2.0 * Math.PI;
+label_52:
+        num3 = 66;
+        double[] numArray4 = new double[3];
+label_53:
+        num3 = 67;
+        numArray4[0] = oIntersectPt.Offset + num7 / Math.Cos(num6 / 2.0) * Math.Cos(num9);
+label_54:
+        num3 = 68;
+        numArray4[1] = oIntersectPt.Elevation + num7 / Math.Cos(num6 / 2.0) * Math.Sin(num9);
+label_55:
+        num3 = 69;
+        numArray4[2] = 0.0;
+label_56:
+        num3 = 70;
+        if (Math.Abs(numArray2[0] - numArray4[0]) >= 1E-05)
+          goto label_60;
+label_57:
+        num3 = 71;
+        if (numArray2[1] >= numArray4[1])
+          goto label_59;
+label_58:
+        num3 = 72;
+        double num10 = 3.0 * Math.PI / 2.0;
+        goto label_67;
+label_59:
+        num3 = 74;
+        num10 = Math.PI / 2.0;
+        goto label_67;
+label_60:
+        num3 = 76;
+        num10 = Math.Atan((numArray2[1] - numArray4[1]) / (numArray2[0] - numArray4[0]));
+label_61:
+        num3 = 77;
+        if (num10 <= 0.0)
+          goto label_64;
+label_62:
+        num3 = 78;
+        if (numArray2[0] >= numArray4[0])
+          goto label_67;
+label_63:
+        num3 = 79;
+        num10 = Math.PI + num10;
+        goto label_67;
+label_64:
+        num3 = 81;
+        if (numArray2[0] >= numArray4[0])
+          goto label_66;
+label_65:
+        num3 = 82;
+        num10 = Math.PI + num10;
+        goto label_67;
+label_66:
+        num3 = 84;
+        num10 = 2.0 * Math.PI + num10;
+label_67:
+        num3 = 85;
+        if (Math.Abs(numArray3[0] - numArray4[0]) >= 1E-05)
+          goto label_71;
+label_68:
+        num3 = 86;
+        if (numArray3[1] >= numArray4[1])
+          goto label_70;
+label_69:
+        num3 = 87;
+        double num11 = 3.0 * Math.PI / 2.0;
+        goto label_78;
+label_70:
+        num3 = 89;
+        num11 = Math.PI / 2.0;
+        goto label_78;
+label_71:
+        num3 = 91;
+        num11 = Math.Atan((numArray3[1] - numArray4[1]) / (numArray3[0] - numArray4[0]));
+label_72:
+        num3 = 92;
+        if (num11 <= 0.0)
+          goto label_75;
+label_73:
+        num3 = 93;
+        if (numArray3[0] >= numArray4[0])
+          goto label_78;
+label_74:
+        num3 = 94;
+        num11 = Math.PI + num11;
+        goto label_78;
+label_75:
+        num3 = 96;
+        if (numArray3[0] >= numArray4[0])
+          goto label_77;
+label_76:
+        num3 = 97;
+        num11 = Math.PI + num11;
+        goto label_78;
+label_77:
+        num3 = 99;
+        num11 = 2.0 * Math.PI + num11;
+label_78:
+        num3 = 100;
+        double num12 = (num11 - num10) / (double) checked (nRoundingTesselation + 1L);
+label_79:
+        num3 = 101;
+        int num13 = checked ((int) (nRoundingTesselation + 1L));
+        int index1 = 0;
+        goto label_86;
+label_80:
+        num3 = 102;
+        double[] numArray5 = Utility.PolarPoint(numArray4, num10 + (double) index1 * num12, num7);
+label_81:
+        num3 = 103;
+        tesselatedPts[index1] = (IPoint) new PointInMem();
+label_82:
+        num3 = 104;
+        tesselatedPts[index1].Station = oIntersectPt.Station;
+label_83:
+        num3 = 105;
+        tesselatedPts[index1].Offset = numArray5[0];
+label_84:
+        num3 = 106;
+        tesselatedPts[index1].Elevation = numArray5[1];
+label_85:
+        num3 = 107;
+        checked { ++index1; }
+label_86:
+        if (index1 <= num13)
+          goto label_80;
+        else
+          goto label_125;
+label_87:
+        num3 = 109;
+        if (isRight)
+          goto label_94;
+label_88:
+        num3 = 110;
+        double num14 = dSlope2;
+label_89:
+        num3 = 111;
+        dSlope2 = -dSlope1;
+label_90:
+        num3 = 112;
+        dSlope1 = -num14;
+label_91:
+        num3 = 113;
+        num14 = dTangentLength2;
+label_92:
+        num3 = 114;
+        dTangentLength2 = dTangentLength1;
+label_93:
+        num3 = 115;
+        dTangentLength1 = num14;
+label_94:
+        num3 = 116;
+        if (nRoundingBy != Utilities.RoundingBy.ByLength)
+          goto label_97;
+label_95:
+        num3 = 117;
+        double num15 = dRoundingValue;
+label_96:
+        num3 = 118;
+        double num16 = (dSlope2 - dSlope1) / num15;
+        goto label_102;
+label_97:
+        num3 = 120;
+        num16 = dRoundingValue / 100.0;
+label_98:
+        num3 = 121;
+        num15 = (dSlope2 - dSlope1) / num16;
+label_99:
+        num3 = 122;
+        if (num15 >= 0.0)
+          goto label_102;
+label_100:
+        num3 = 123;
+        num16 = -num16;
+label_101:
+        num3 = 124;
+        num15 = -num15;
+label_102:
+        num3 = 125;
+        double num17 = Math.Abs(num15 / 2.0 / Math.Cos(Math.Atan(dSlope1)));
+label_103:
+        num3 = 126;
+        if (dTangentLength1 >= num17)
+          goto label_106;
+label_104:
+        num3 = (int) sbyte.MaxValue;
+        num17 = dTangentLength1;
+label_105:
+        num3 = 128;
+        num15 = num17 * Math.Cos(Math.Atan(dSlope1)) * 2.0;
+label_106:
+        num3 = 129;
+        double num18 = Math.Abs(num15 / 2.0 / Math.Cos(Math.Atan(dSlope2)));
+label_107:
+        num3 = 130;
+        if (dTangentLength2 >= num18)
+          goto label_111;
+label_108:
+        num3 = 131;
+        num18 = dTangentLength2;
+label_109:
+        num3 = 132;
+        num15 = num18 * Math.Cos(Math.Atan(dSlope2)) * 2.0;
+label_110:
+        num3 = 133;
+        num17 = Math.Abs(num15 / 2.0 / Math.Cos(Math.Atan(dSlope1)));
+label_111:
+        num3 = 134;
+        double num19 = num15 / (double) checked (nRoundingTesselation + 1L);
+label_112:
+        num3 = 135;
+        int num20 = checked ((int) (nRoundingTesselation + 1L));
+        int num21 = 0;
+        goto label_124;
+label_113:
+        num3 = 136;
+        double num22 = (double) num21 * num19;
+label_114:
+        num3 = 137;
+        if (!isRight)
+          goto label_116;
+label_115:
+        num3 = 138;
+        int index2 = num21;
+        goto label_117;
+label_116:
+        num3 = 140;
+        index2 = checked ((int) (nRoundingTesselation + 1L - (long) num21));
+label_117:
+        num3 = 141;
+        tesselatedPts[index2] = (IPoint) new PointInMem();
+label_118:
+        num3 = 142;
+        tesselatedPts[index2].Station = oIntersectPt.Station;
+label_119:
+        num3 = 143;
+        tesselatedPts[index2].Offset = oIntersectPt.Offset + (num22 - num15 / 2.0);
+label_120:
+        num3 = 144;
+        if (num22 >= num15 / 2.0)
+          goto label_122;
+label_121:
+        num3 = 145;
+        tesselatedPts[index2].Elevation = oIntersectPt.Elevation - (num15 / 2.0 - num22) * dSlope1 + num16 / 2.0 * num22 * num22;
+        goto label_123;
+label_122:
+        num3 = 147;
+        tesselatedPts[index2].Elevation = oIntersectPt.Elevation + (num22 - num15 / 2.0) * dSlope2 + num16 / 2.0 * (num15 * num15 + num22 * num22) - num15 * num16 * num22;
+label_123:
+        num3 = 148;
+        checked { ++num21; }
+label_124:
+        if (num21 <= num20)
+          goto label_113;
+label_125:
+        num3 = 149;
+        roundingCurve = true;
+        goto label_131;
+label_127:
+        num2 = num3;
+        switch (num1)
+        {
+          case 1:
+            int num23 = num2 + 1;
+            num2 = 0;
+            switch (num23)
+            {
+              case 1:
+                goto label_0;
+              case 2:
+                goto label_1;
+              case 3:
+                goto label_2;
+              case 4:
+              case 150:
+                goto label_131;
+              case 5:
+              case 108:
+              case 149:
+                goto label_125;
+              case 6:
+                goto label_3;
+              case 7:
+                goto label_4;
+              case 8:
+                goto label_5;
+              case 9:
+                goto label_6;
+              case 10:
+                goto label_7;
+              case 11:
+              case 13:
+              case 17:
+              case 19:
+              case 22:
+              case 24:
+                goto label_16;
+              case 12:
+                goto label_8;
+              case 14:
+                goto label_9;
+              case 15:
+                goto label_10;
+              case 16:
+                goto label_11;
+              case 18:
+                goto label_12;
+              case 20:
+                goto label_13;
+              case 21:
+                goto label_14;
+              case 23:
+                goto label_15;
+              case 25:
+                goto label_17;
+              case 26:
+                goto label_18;
+              case 27:
+                goto label_19;
+              case 28:
+                goto label_20;
+              case 29:
+                goto label_21;
+              case 30:
+                goto label_22;
+              case 31:
+              case 33:
+              case 37:
+              case 39:
+              case 42:
+              case 44:
+                goto label_31;
+              case 32:
+                goto label_23;
+              case 34:
+                goto label_24;
+              case 35:
+                goto label_25;
+              case 36:
+                goto label_26;
+              case 38:
+                goto label_27;
+              case 40:
+                goto label_28;
+              case 41:
+                goto label_29;
+              case 43:
+                goto label_30;
+              case 45:
+                goto label_32;
+              case 46:
+                goto label_33;
+              case 47:
+                goto label_34;
+              case 48:
+                goto label_35;
+              case 49:
+                goto label_36;
+              case 50:
+                goto label_37;
+              case 51:
+                goto label_38;
+              case 52:
+                goto label_39;
+              case 53:
+                goto label_40;
+              case 54:
+                goto label_41;
+              case 55:
+                goto label_42;
+              case 56:
+                goto label_43;
+              case 57:
+                goto label_44;
+              case 58:
+                goto label_45;
+              case 59:
+                goto label_46;
+              case 60:
+                goto label_47;
+              case 61:
+                goto label_48;
+              case 62:
+              case 64:
+                goto label_50;
+              case 63:
+                goto label_49;
+              case 65:
+                goto label_51;
+              case 66:
+                goto label_52;
+              case 67:
+                goto label_53;
+              case 68:
+                goto label_54;
+              case 69:
+                goto label_55;
+              case 70:
+                goto label_56;
+              case 71:
+                goto label_57;
+              case 72:
+                goto label_58;
+              case 73:
+              case 75:
+              case 80:
+              case 83:
+              case 85:
+                goto label_67;
+              case 74:
+                goto label_59;
+              case 76:
+                goto label_60;
+              case 77:
+                goto label_61;
+              case 78:
+                goto label_62;
+              case 79:
+                goto label_63;
+              case 81:
+                goto label_64;
+              case 82:
+                goto label_65;
+              case 84:
+                goto label_66;
+              case 86:
+                goto label_68;
+              case 87:
+                goto label_69;
+              case 88:
+              case 90:
+              case 95:
+              case 98:
+              case 100:
+                goto label_78;
+              case 89:
+                goto label_70;
+              case 91:
+                goto label_71;
+              case 92:
+                goto label_72;
+              case 93:
+                goto label_73;
+              case 94:
+                goto label_74;
+              case 96:
+                goto label_75;
+              case 97:
+                goto label_76;
+              case 99:
+                goto label_77;
+              case 101:
+                goto label_79;
+              case 102:
+                goto label_80;
+              case 103:
+                goto label_81;
+              case 104:
+                goto label_82;
+              case 105:
+                goto label_83;
+              case 106:
+                goto label_84;
+              case 107:
+                goto label_85;
+              case 109:
+                goto label_87;
+              case 110:
+                goto label_88;
+              case 111:
+                goto label_89;
+              case 112:
+                goto label_90;
+              case 113:
+                goto label_91;
+              case 114:
+                goto label_92;
+              case 115:
+                goto label_93;
+              case 116:
+                goto label_94;
+              case 117:
+                goto label_95;
+              case 118:
+                goto label_96;
+              case 119:
+              case 125:
+                goto label_102;
+              case 120:
+                goto label_97;
+              case 121:
+                goto label_98;
+              case 122:
+                goto label_99;
+              case 123:
+                goto label_100;
+              case 124:
+                goto label_101;
+              case 126:
+                goto label_103;
+              case (int) sbyte.MaxValue:
+                goto label_104;
+              case 128:
+                goto label_105;
+              case 129:
+                goto label_106;
+              case 130:
+                goto label_107;
+              case 131:
+                goto label_108;
+              case 132:
+                goto label_109;
+              case 133:
+                goto label_110;
+              case 134:
+                goto label_111;
+              case 135:
+                goto label_112;
+              case 136:
+                goto label_113;
+              case 137:
+                goto label_114;
+              case 138:
+                goto label_115;
+              case 139:
+              case 141:
+                goto label_117;
+              case 140:
+                goto label_116;
+              case 142:
+                goto label_118;
+              case 143:
+                goto label_119;
+              case 144:
+                goto label_120;
+              case 145:
+                goto label_121;
+              case 146:
+              case 148:
+                goto label_123;
+              case 147:
+                goto label_122;
+            }
+            break;
+        }
+      }
+      catch (Exception ex) when (ex is Exception & num1 != 0 & num2 == 0)
+      {
+        ProjectData.SetProjectError(ex);
+        goto label_127;
+      }
+      throw ProjectData.CreateProjectError(-2146828237);
+label_131:
+      if (num2 != 0)
+        ProjectData.ClearProjectError();
+      return roundingCurve;
+    }
+
+    public static AlignmentSide GetSide(int vSide)
+    {
+      AlignmentSide side;
+      switch (vSide)
+      {
+        case 0:
+          side = (AlignmentSide) 2;
+          break;
+        case 1:
+          side = (AlignmentSide) 1;
+          break;
+        default:
+          side = (AlignmentSide) 0;
+          break;
+      }
+      return side;
+    }
+
+    public static void AddCodeToLink(
+      int i,
+      LinkCollection iLinks,
+      long linkIndex,
+      string[,] strArrCode)
+    {
+      if (iLinks == null)
+        throw new ArgumentNullException(nameof (iLinks));
+      if (i < 0 | i > Information.UBound((Array) strArrCode))
+        throw new ArgumentOutOfRangeException(nameof (i));
+      int index = 0;
+      while (index <= Information.UBound((Array) strArrCode, 2) && Operators.CompareString(strArrCode[i, index], "", false) != 0)
+      {
+        iLinks[checked ((int) linkIndex)].Codes.TryAdd(strArrCode[i, index]);
+        checked { ++index; }
+      }
+    }
+
+    public static void AddCodeToPoint(
+      int i,
+      PointCollection iPoints,
+      long pointIndex,
+      string[,] strArrCode)
+    {
+      if (iPoints == null)
+        throw new ArgumentNullException(nameof (iPoints));
+      if (i < 0 | i > Information.UBound((Array) strArrCode))
+        throw new ArgumentOutOfRangeException(nameof (i));
+      int index = 0;
+      while (index <= Information.UBound((Array) strArrCode, 2) && Operators.CompareString(strArrCode[i, index], "", false) != 0)
+      {
+        iPoints[checked ((int) pointIndex)].Codes.TryAdd(strArrCode[i, index]);
+        checked { ++index; }
+      }
+    }
+
+    public static bool IsProjectUnitsFeet() => CivilApplication.ActiveDocument.Settings.DrawingSettings.UnitZoneSettings.DrawingUnits == 30;
+
+    public static double GetProjectUnitsDivisor() => !Utilities.IsProjectUnitsFeet() ? 1000.0 : 12.0;
+
+    public static double GetSlope(
+      string strShoulderSlope,
+      CorridorState rwState,
+      Utilities.ShoulderSubbaseType shoulderSubbaseType,
+      bool blnInsertLeft)
+    {
+      if (rwState == null)
+        throw new ArgumentNullException(nameof (rwState));
+      double slope;
+      if (Versioned.IsNumeric((object) strShoulderSlope))
+      {
+        slope = Conversion.Val(strShoulderSlope) / 100.0;
+      }
+      else
+      {
+        Alignment alignment = (Alignment) HostApplicationServices.WorkingDatabase.TransactionManager.GetObject(!(rwState.CurrentAlignmentIsOffsetAlignment & rwState.CurrentAssemblyOffsetIsFixed) ? rwState.CurrentAlignmentId : rwState.CurrentBaselineId, (OpenMode) 0, false);
+        string Left = Strings.UCase(strShoulderSlope);
+        switch (shoulderSubbaseType)
+        {
+          case Utilities.ShoulderSubbaseType.Shoulder:
+            if (blnInsertLeft)
+            {
+              if (Operators.CompareString(Left, "SI", false) != 0)
+              {
+                if (Operators.CompareString(Left, "SO", false) != 0)
+                {
+                  if (Operators.CompareString(Left, "LI", false) != 0)
+                  {
+                    if (Operators.CompareString(Left, "LO", false) == 0)
+                    {
+                      slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 1, true);
+                      break;
+                    }
+                    break;
+                  }
+                  slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 3, true);
+                  break;
+                }
+                slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 0, true);
+                break;
+              }
+              slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 2, true);
+              break;
+            }
+            if (Operators.CompareString(Left, "SI", false) != 0)
+            {
+              if (Operators.CompareString(Left, "SO", false) != 0)
+              {
+                if (Operators.CompareString(Left, "LI", false) != 0)
+                {
+                  if (Operators.CompareString(Left, "LO", false) == 0)
+                  {
+                    slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 257, true);
+                    break;
+                  }
+                  break;
+                }
+                slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 259, true);
+                break;
+              }
+              slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 256, true);
+              break;
+            }
+            slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 258, true);
+            break;
+          case Utilities.ShoulderSubbaseType.Subbase:
+            if (blnInsertLeft)
+            {
+              if (Operators.CompareString(Left, "SI", false) != 0)
+              {
+                if (Operators.CompareString(Left, "SO", false) != 0)
+                {
+                  if (Operators.CompareString(Left, "LI", false) != 0)
+                  {
+                    if (Operators.CompareString(Left, "LO", false) == 0)
+                    {
+                      slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 1, true);
+                      break;
+                    }
+                    break;
+                  }
+                  slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 3, true);
+                  break;
+                }
+                slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 0, true);
+                break;
+              }
+              slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 2, true);
+              break;
+            }
+            if (Operators.CompareString(Left, "SI", false) != 0)
+            {
+              if (Operators.CompareString(Left, "SO", false) != 0)
+              {
+                if (Operators.CompareString(Left, "LI", false) != 0)
+                {
+                  if (Operators.CompareString(Left, "LO", false) == 0)
+                  {
+                    slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 257, true);
+                    break;
+                  }
+                  break;
+                }
+                slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 259, true);
+                break;
+              }
+              slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 256, true);
+              break;
+            }
+            slope = alignment.GetCrossSlopeAtStation(rwState.CurrentStation, (SuperelevationCrossSegmentType) 258, true);
+            break;
+        }
+      }
+      return slope;
+    }
+
+    public static void AddPoints(
+      int size,
+      PointCollection points,
+      Point[] pointArray,
+      double[] dXArray,
+      double[] dYArray,
+      string[] sCodeArray)
+    {
+      if (pointArray == null)
+        throw new ArgumentNullException(nameof (pointArray));
+      if (points == null)
+        throw new ArgumentNullException(nameof (points));
+      int num = size;
+      int index = 1;
+      while (index <= num)
+      {
+        pointArray[index] = points.Add(dXArray[index], dYArray[index], sCodeArray[index]);
+        checked { ++index; }
+      }
+    }
+
+    public static ParamPoint GetMarkedPoint(string strMarkedPointName, CorridorState corridorState)
+    {
+      ParamPointCollection paramPointCollection = corridorState != null ? corridorState.ParamsPoint : throw new ArgumentNullException(nameof (corridorState));
+      ParamPoint markedPoint = (ParamPoint) null;
+      if (paramPointCollection != null)
+        markedPoint = paramPointCollection[Strings.UCase(strMarkedPointName)];
+      return markedPoint;
+    }
+
+    public static bool CalcAlignmentOffsetToThisAlignment(
+      ObjectId thisAlignmentId,
+      double stationOnThisAlignment,
+      ref WidthOffsetTarget offsetTarget,
+      ref double offsetToThisAlignment,
+      ref double xOnTarget,
+      ref double yOnTarget)
+    {
+      return Utilities.CalcAlignmentOffsetToThisAlignment(thisAlignmentId, stationOnThisAlignment, ref offsetTarget, (AlignmentSide) 0, ref offsetToThisAlignment, ref xOnTarget, ref yOnTarget);
+    }
+
+    public static bool CalcAlignmentOffsetToThisAlignment(
+      ObjectId thisAlignmentId,
+      double stationOnThisAlignment,
+      ref WidthOffsetTarget offsetTarget,
+      AlignmentSide enumSide,
+      ref double offsetToThisAlignment,
+      ref double xOnTarget,
+      ref double yOnTarget)
+    {
+      TransactionManager transactionManager = HostApplicationServices.WorkingDatabase.TransactionManager;
+      bool thisAlignment;
+      try
+      {
+        Alignment alignment = (Alignment) transactionManager.GetObject(thisAlignmentId, (OpenMode) 0, false, false);
+        offsetToThisAlignment = offsetTarget.GetDistanceToAlignment(thisAlignmentId, stationOnThisAlignment, enumSide, ref xOnTarget, ref yOnTarget);
+        thisAlignment = true;
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        thisAlignment = false;
+        ProjectData.ClearProjectError();
+      }
+      return thisAlignment;
+    }
+
+    public static Point2d GetIntersectionOf_Point1Slope1_Point2Slope2(
+      double Point1X,
+      double Point1Y,
+      double Slope1,
+      double vFlip,
+      double Point2X,
+      double Point2Y,
+      double Slope2,
+      double Distance)
+    {
+      Point2d point2d1;
+      // ISSUE: explicit constructor call
+      ((Point2d) ref point2d1).\u002Ector(Point1X, Point1Y);
+      Point2d point2d2;
+      // ISSUE: explicit constructor call
+      ((Point2d) ref point2d2).\u002Ector(Point1X + vFlip * Distance, Point1Y + Distance * Slope1);
+      Point2d point2d3;
+      // ISSUE: explicit constructor call
+      ((Point2d) ref point2d3).\u002Ector(Point2X, Point2Y);
+      Point2d point2d4;
+      // ISSUE: explicit constructor call
+      ((Point2d) ref point2d4).\u002Ector(Point2X + vFlip * Distance, Point2Y + Distance * Slope2);
+      Point2d[] point2dArray = ((LinearEntity2d) new Line2d(point2d1, point2d2)).IntersectWith((LinearEntity2d) new Line2d(point2d3, point2d4));
+      double num1 = Math.Max(((Point2d) ref point2d1).X, ((Point2d) ref point2d2).X);
+      double num2 = Math.Max(((Point2d) ref point2d1).Y, ((Point2d) ref point2d2).Y);
+      double num3 = Math.Max(((Point2d) ref point2d3).X, ((Point2d) ref point2d4).X);
+      double num4 = Math.Max(((Point2d) ref point2d3).Y, ((Point2d) ref point2d4).Y);
+      double num5 = Math.Min(((Point2d) ref point2d1).X, ((Point2d) ref point2d2).X);
+      double num6 = Math.Min(((Point2d) ref point2d1).Y, ((Point2d) ref point2d2).Y);
+      double num7 = Math.Min(((Point2d) ref point2d3).X, ((Point2d) ref point2d4).X);
+      double num8 = Math.Min(((Point2d) ref point2d3).Y, ((Point2d) ref point2d4).Y);
+      return point2dArray == null ? new Point2d() : (!(((Point2d) ref point2dArray[0]).X >= num5 & ((Point2d) ref point2dArray[0]).X <= num1 & ((Point2d) ref point2dArray[0]).Y >= num6 & ((Point2d) ref point2dArray[0]).Y <= num2 & ((Point2d) ref point2dArray[0]).X >= num7 & ((Point2d) ref point2dArray[0]).X <= num3 & ((Point2d) ref point2dArray[0]).Y >= num8 & ((Point2d) ref point2dArray[0]).Y <= num4) ? new Point2d() : point2dArray[0]);
+    }
+
+    public static Utilities.ControlPointPosition GetControlPointByLowPoint(
+      PointInMem ptFlappingFrom,
+      double minSlope,
+      double maxSlope,
+      ref PointInMem[] pointArray,
+      ref PointInMem controlPoint)
+    {
+      Utilities.ControlPointPosition controlPointPosition = Utilities.ControlPointPosition.Above;
+      double num1 = maxSlope + 0.1;
+      PointInMem[] pointInMemArray = pointArray;
+      int index = 0;
+      Utilities.ControlPointPosition controlPointByLowPoint;
+      while (index < pointInMemArray.Length)
+      {
+        PointInMem pointInMem = pointInMemArray[index];
+        if (Math.Abs(pointInMem.Offset - ptFlappingFrom.Offset) < 1E-05)
+        {
+          if (ptFlappingFrom.Elevation - pointInMem.Elevation > 1E-05)
+          {
+            controlPoint = pointInMem;
+            controlPointByLowPoint = Utilities.ControlPointPosition.Below;
+            goto label_12;
+          }
+        }
+        else
+        {
+          double num2 = (pointInMem.Elevation - ptFlappingFrom.Elevation) / Math.Abs(pointInMem.Offset - ptFlappingFrom.Offset);
+          if (num2 < maxSlope & num2 < num1)
+          {
+            num1 = num2;
+            controlPoint = pointInMem;
+          }
+        }
+        checked { ++index; }
+      }
+      if (num1 < maxSlope)
+      {
+        controlPointPosition = Utilities.ControlPointPosition.Inside;
+        if (num1 < minSlope)
+          controlPointPosition = Utilities.ControlPointPosition.Below;
+      }
+      controlPointByLowPoint = controlPointPosition;
+label_12:
+      return controlPointByLowPoint;
+    }
+
+    public static Utilities.ControlPointPosition GetControlPointByHighPoint(
+      PointInMem ptFlappingFrom,
+      double minSlope,
+      double maxSlope,
+      ref PointInMem[] pointArray,
+      ref PointInMem controlPoint)
+    {
+      Utilities.ControlPointPosition controlPointPosition = Utilities.ControlPointPosition.Below;
+      double num1 = minSlope - 0.1;
+      PointInMem[] pointInMemArray = pointArray;
+      int index = 0;
+      Utilities.ControlPointPosition pointByHighPoint;
+      while (index < pointInMemArray.Length)
+      {
+        PointInMem pointInMem = pointInMemArray[index];
+        if (Math.Abs(pointInMem.Offset - ptFlappingFrom.Offset) < 1E-05)
+        {
+          if (ptFlappingFrom.Elevation - pointInMem.Elevation < -1E-05)
+          {
+            controlPoint = pointInMem;
+            pointByHighPoint = Utilities.ControlPointPosition.Above;
+            goto label_12;
+          }
+        }
+        else
+        {
+          double num2 = (pointInMem.Elevation - ptFlappingFrom.Elevation) / Math.Abs(pointInMem.Offset - ptFlappingFrom.Offset);
+          if (num2 > minSlope & num2 > num1)
+          {
+            num1 = num2;
+            controlPoint = pointInMem;
+          }
+        }
+        checked { ++index; }
+      }
+      if (num1 > minSlope)
+      {
+        controlPointPosition = Utilities.ControlPointPosition.Inside;
+        if (num1 > maxSlope)
+          controlPointPosition = Utilities.ControlPointPosition.Above;
+      }
+      pointByHighPoint = controlPointPosition;
+label_12:
+      return pointByHighPoint;
+    }
+
+    public static double GetDesignSlopeFromEGHighLowPoint(
+      PointInMem ptFlappingFrom,
+      double minSlope,
+      double maxSlope,
+      ref PointInMem[] pointArray,
+      bool bHighPt)
+    {
+      PointInMem controlPoint = new PointInMem();
+      double fromEgHighLowPoint;
+      switch (!bHighPt ? Utilities.GetControlPointByLowPoint(ptFlappingFrom, minSlope, maxSlope, ref pointArray, ref controlPoint) : Utilities.GetControlPointByHighPoint(ptFlappingFrom, minSlope, maxSlope, ref pointArray, ref controlPoint))
+      {
+        case Utilities.ControlPointPosition.Inside:
+          fromEgHighLowPoint = (controlPoint.Elevation - ptFlappingFrom.Elevation) / Math.Abs(controlPoint.Offset - ptFlappingFrom.Offset);
+          break;
+        case Utilities.ControlPointPosition.Below:
+          fromEgHighLowPoint = minSlope;
+          break;
+        default:
+          fromEgHighLowPoint = maxSlope;
+          break;
+      }
+      return fromEgHighLowPoint;
+    }
+
+    public static bool GetControlPointByPointAndSlope(
+      PointInMem referencePoint,
+      double slope,
+      ref PointInMem[] pointArray,
+      bool bLevel,
+      ref PointInMem controlPoint)
+    {
+      bool flag1 = true;
+      bool pointByPointAndSlope;
+      if (pointArray.Length == 0)
+      {
+        pointByPointAndSlope = flag1;
+      }
+      else
+      {
+        double num1 = 99999.0;
+        bool flag2 = true;
+        PointInMem[] pointInMemArray = pointArray;
+        int index = 0;
+        while (index < pointInMemArray.Length)
+        {
+          PointInMem pointInMem = pointInMemArray[index];
+          double num2 = referencePoint.Elevation + Math.Abs(pointInMem.Offset - referencePoint.Offset) * slope - pointInMem.Elevation;
+          if (!bLevel)
+            num2 = -num2;
+          if (!flag2)
+          {
+            if (flag1 & num2 * num1 < -1E-05)
+              flag1 = false;
+          }
+          else
+            flag2 = false;
+          if (num2 < num1)
+          {
+            controlPoint.Offset = pointInMem.Offset;
+            controlPoint.Elevation = pointInMem.Elevation;
+            num1 = num2;
+          }
+          checked { ++index; }
+        }
+        pointByPointAndSlope = flag1;
+      }
+      return pointByPointAndSlope;
+    }
+
+    public enum FoundOrNotFound
+    {
+      NotFoundSituation,
+      FoundSituation,
+      UndefinedSituation,
+    }
+
+    public enum FillOrCut
+    {
+      FillSituation,
+      CutSituation,
+      UndefinedSituation,
+    }
+
+    public enum ShoulderSubbaseType
+    {
+      Shoulder,
+      Subbase,
+    }
+
+    public enum RoundingOption
+    {
+      NoneType,
+      CircularType,
+      ParabolicType,
+    }
+
+    public enum SideOption
+    {
+      Inside,
+      Outside,
+    }
+
+    public enum SlopeDirection
+    {
+      AwayFromCrown,
+      TowardsCrown,
+    }
+
+    public enum SuperelevationSlope
+    {
+      LeftInsideLane,
+      LeftOutsideLane,
+      LeftInsideShoulder,
+      LeftOutsideShoulder,
+      RightInsideLane,
+      RightOutsideLane,
+      RightInsideShoulder,
+      RightOutsideShoulder,
+    }
+
+    public enum RoundingBy
+    {
+      ByLength,
+      ByRadius,
+    }
+
+    public enum ControlPointPosition
+    {
+      Above,
+      Inside,
+      Below,
+    }
+  }
+}
