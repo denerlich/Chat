@@ -1,0 +1,804 @@
+// Decompiled with JetBrains decompiler
+// Type: Subassembly.Ditch
+// Assembly: C3DStockSubassemblies, Version=13.2.890.0, Culture=neutral, PublicKeyToken=null
+// MVID: E918659F-4A28-4B46-8972-75FDE266E784
+// Assembly location: F:\ProgramData\Autodesk\C3D 2020\enu\C3DStockSubassemblies.dll
+
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.Civil.DatabaseServices;
+using Autodesk.Civil.Runtime;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
+
+namespace Subassembly
+{
+  public class Ditch : SATemplate
+  {
+    private const int SideDefault = 0;
+    private const int IncludeDitchDefault = 0;
+    private const int DitchWidthDefault = 3;
+    private const int DitchDepthDefault = 3;
+    private const double ForeslopeSlopeDefault = 0.25;
+    private const int ForeslopeBufferWidthDefault = 3;
+    private const double ForeslopeBufferSlopeDefault = -0.1667;
+    private const double BackslopeSlopeDefault = 0.25;
+    private const int BackslopeBufferWidthDefault = 3;
+    private const double BackslopeBufferSlopeDefault = 0.1667;
+    private const int PlaceMaterialDefault = 1;
+    private const double SlopeLimit1Default = 1.0;
+    private const double MaterialThickness1Default = 1.0;
+    private const string sMaterialName1Default = "Rip Rap";
+    private const double SlopeLimit2Default = 0.5;
+    private const double MaterialThickness2Default = 0.5;
+    private const string MaterialName2Default = "Rip Rap";
+    private const double SlopeLimit3Default = 0.25;
+    private const double MaterialThickness3Default = 0.33333333333333331;
+    private const string MaterialName3Default = "Seeded Grass";
+
+    protected override void GetLogicalNamesImplement(CorridorState corridorState)
+    {
+      base.GetLogicalNamesImplement(corridorState);
+      ParamLongCollection paramsLong = corridorState.ParamsLong;
+      paramsLong.Add("DitchInnerEdgeAlignment", 4).DisplayName = "10590";
+      paramsLong.Add("DitchOuterEdgeAlignment", 4).DisplayName = "10591";
+      paramsLong.Add("DitchBottomProfile", 5).DisplayName = "10592";
+      paramsLong.Add("TargetSurface", 1).DisplayName = "10593";
+    }
+
+    protected override void GetInputParametersImplement(CorridorState corridorState)
+    {
+      base.GetInputParametersImplement(corridorState);
+      ParamDoubleCollection paramsDouble = corridorState.ParamsDouble;
+      ParamLongCollection paramsLong = corridorState.ParamsLong;
+      ParamStringCollection paramsString = corridorState.ParamsString;
+      paramsLong.Add("Side", 0);
+      paramsLong.Add("IncludeDitch", 0);
+      paramsDouble.Add("DitchWidth", 3.0);
+      paramsDouble.Add("DitchDepth", 3.0);
+      paramsDouble.Add("ForeslopeSlope", 0.25);
+      paramsDouble.Add("ForeslopeBufferWidth", 3.0);
+      paramsDouble.Add("ForeslopeBufferSlope", -0.1667);
+      paramsDouble.Add("BackslopeSlope", 0.25);
+      paramsDouble.Add("BackslopeBufferWidth", 3.0);
+      paramsDouble.Add("BackslopeBufferSlope", 0.1667);
+      paramsLong.Add("PlaceMaterial", 1);
+      paramsDouble.Add("SlopeLimit1", 1.0);
+      paramsDouble.Add("MaterialThickness1", 1.0);
+      paramsDouble.Add("SlopeLimit2", 0.5);
+      paramsDouble.Add("MaterialThickness2", 0.5);
+      paramsDouble.Add("SlopeLimit3", 0.25);
+      paramsDouble.Add("MaterialThickness3", 1.0 / 3.0);
+      paramsString.Add("MaterialName1", "Rip Rap");
+      paramsString.Add("MaterialName2", "Rip Rap");
+      paramsString.Add("MaterialName3", "Seeded Grass");
+    }
+
+    protected override void DrawImplement(CorridorState corridorState)
+    {
+      ParamSurfaceCollection paramsSurface1 = corridorState.ParamsSurface;
+      ParamLongCollection paramsLong = corridorState.ParamsLong;
+      ParamDoubleCollection paramsDouble = corridorState.ParamsDouble;
+      ParamStringCollection paramsString = corridorState.ParamsString;
+      ParamSurfaceCollection paramsSurface2 = corridorState.ParamsSurface;
+      ParamOffsetTargetCollection paramsOffsetTarget = corridorState.ParamsOffsetTarget;
+      ParamElevationTargetCollection paramsElevationTarget = corridorState.ParamsElevationTarget;
+      object Left;
+      try
+      {
+        Left = (object) paramsLong.Value("Side");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        Left = (object) 0;
+        ProjectData.ClearProjectError();
+      }
+      double num1 = 1.0;
+      if (Operators.ConditionalCompareObjectEqual(Left, (object) 1, false))
+        num1 = -1.0;
+      int num2;
+      try
+      {
+        num2 = paramsLong.Value("IncludeDitch");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num2 = 0;
+        ProjectData.ClearProjectError();
+      }
+      double num3;
+      try
+      {
+        num3 = paramsDouble.Value("DitchWidth");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num3 = 3.0;
+        ProjectData.ClearProjectError();
+      }
+      double num4;
+      try
+      {
+        num4 = paramsDouble.Value("DitchDepth");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num4 = 3.0;
+        ProjectData.ClearProjectError();
+      }
+      double d1;
+      try
+      {
+        d1 = paramsDouble.Value("ForeslopeSlope");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        d1 = 0.25;
+        ProjectData.ClearProjectError();
+      }
+      double num5;
+      try
+      {
+        num5 = paramsDouble.Value("ForeslopeBufferWidth");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num5 = 3.0;
+        ProjectData.ClearProjectError();
+      }
+      double d2;
+      try
+      {
+        d2 = paramsDouble.Value("ForeslopeBufferSlope");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        d2 = -0.1667;
+        ProjectData.ClearProjectError();
+      }
+      double d3;
+      try
+      {
+        d3 = paramsDouble.Value("BackslopeSlope");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        d3 = 0.25;
+        ProjectData.ClearProjectError();
+      }
+      double num6;
+      try
+      {
+        num6 = paramsDouble.Value("BackslopeBufferWidth");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num6 = 3.0;
+        ProjectData.ClearProjectError();
+      }
+      double d4;
+      try
+      {
+        d4 = paramsDouble.Value("BackslopeBufferSlope");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        d4 = 0.1667;
+        ProjectData.ClearProjectError();
+      }
+      int num7;
+      try
+      {
+        num7 = paramsLong.Value("PlaceMaterial");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num7 = 1;
+        ProjectData.ClearProjectError();
+      }
+      double num8;
+      try
+      {
+        num8 = paramsDouble.Value("SlopeLimit1");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num8 = 1.0;
+        ProjectData.ClearProjectError();
+      }
+      double num9;
+      try
+      {
+        num9 = paramsDouble.Value("SlopeLimit2");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num9 = 0.5;
+        ProjectData.ClearProjectError();
+      }
+      double num10;
+      try
+      {
+        num10 = paramsDouble.Value("SlopeLimit3");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num10 = 0.25;
+        ProjectData.ClearProjectError();
+      }
+      if (num10 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221484, "SlopeLimit3", nameof (Ditch));
+        num10 = 0.25;
+      }
+      if (num9 < num10)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221481, "SlopeLimit2", nameof (Ditch));
+        num9 = num10;
+      }
+      if (num8 < num9)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221481, "SlopeLimit1", nameof (Ditch));
+        num8 = num9;
+      }
+      double num11;
+      try
+      {
+        num11 = paramsDouble.Value("MaterialThickness1");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num11 = 1.0;
+        ProjectData.ClearProjectError();
+      }
+      double num12;
+      try
+      {
+        num12 = paramsDouble.Value("MaterialThickness2");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num12 = 0.5;
+        ProjectData.ClearProjectError();
+      }
+      double num13;
+      try
+      {
+        num13 = paramsDouble.Value("MaterialThickness3");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num13 = 1.0 / 3.0;
+        ProjectData.ClearProjectError();
+      }
+      if (num11 - 1E-05 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "MaterialThickness1", nameof (Ditch));
+        num11 = 1.0;
+      }
+      if (num12 - 1E-05 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "MaterialThickness2", nameof (Ditch));
+        num12 = 0.5;
+      }
+      if (num13 - 1E-05 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "MaterialThickness3", nameof (Ditch));
+        num13 = 1.0 / 3.0;
+      }
+      string str1;
+      try
+      {
+        str1 = paramsString.Value("MaterialName1");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        str1 = "Rip Rap";
+        ProjectData.ClearProjectError();
+      }
+      string str2;
+      try
+      {
+        str2 = paramsString.Value("MaterialName2");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        str2 = "Rip Rap";
+        ProjectData.ClearProjectError();
+      }
+      string str3;
+      try
+      {
+        str3 = paramsString.Value("MaterialName3");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        str3 = "Seeded Grass";
+        ProjectData.ClearProjectError();
+      }
+      if (num3 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221484, "vDitchWidth", nameof (Ditch));
+        num3 = 3.0;
+      }
+      if (num4 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221484, "vDitchDepth", nameof (Ditch));
+        num4 = 3.0;
+      }
+      if (d1 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vForeslopeSlope", nameof (Ditch));
+        d1 = 0.25;
+      }
+      if (num5 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221484, "vForeslopeBufferWidth", nameof (Ditch));
+        num5 = 3.0;
+      }
+      if (d2 == 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221483, "vForeslopeBufferSlope", nameof (Ditch));
+        d2 = -0.1667;
+      }
+      if (d3 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vBackslopeSlope", nameof (Ditch));
+        d3 = 0.25;
+      }
+      if (num6 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221484, "vBackslopeBufferWidth", nameof (Ditch));
+        num6 = 3.0;
+      }
+      if (d4 == 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221483, "vBackslopeBufferSlope", nameof (Ditch));
+        d4 = 0.1667;
+      }
+      if (num8 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vSlopeLimit1", nameof (Ditch));
+        num8 = 1.0;
+      }
+      if (num11 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vMaterialThickness1", nameof (Ditch));
+        num11 = 1.0;
+      }
+      if (num9 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vSlopeLimit2", nameof (Ditch));
+        num9 = 0.5;
+      }
+      if (num12 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vMaterialThickness2", nameof (Ditch));
+        num12 = 0.5;
+      }
+      if (num10 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vSlopeLimit3", nameof (Ditch));
+        num10 = 0.25;
+      }
+      if (num13 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "vMaterialThickness3", nameof (Ditch));
+        num13 = 1.0 / 3.0;
+      }
+      PointInMem oOrigin = new PointInMem();
+      ObjectId oAlignmentId;
+      Utilities.GetAlignmentAndOrigin(corridorState, ref oAlignmentId, ref oOrigin);
+      ObjectId objectId;
+      if (corridorState.Mode != 1)
+      {
+        try
+        {
+          objectId = paramsSurface2.Value("TargetSurface");
+        }
+        catch (Exception ex)
+        {
+          ProjectData.SetProjectError(ex);
+          objectId = new ObjectId();
+          ProjectData.ClearProjectError();
+        }
+      }
+      WidthOffsetTarget offsetTarget1 = (WidthOffsetTarget) null;
+      bool flag1 = true;
+      double offsetToThisAlignment;
+      double xOnTarget;
+      double yOnTarget;
+      if (corridorState.Mode != 1)
+      {
+        try
+        {
+          WidthOffsetTarget offsetTarget2 = paramsOffsetTarget.Value("DitchInnerEdgeAlignment");
+          if (Utilities.CalcAlignmentOffsetToThisAlignment(oAlignmentId, oOrigin.Station, ref offsetTarget2, Utilities.GetSide(Conversions.ToInteger(Left)), ref offsetToThisAlignment, ref xOnTarget, ref yOnTarget))
+          {
+            if (Conversions.ToBoolean(Operators.OrObject(Operators.AndObject(Operators.CompareObjectEqual(Left, (object) 0, false), (object) (offsetToThisAlignment > oOrigin.Offset)), Operators.AndObject(Operators.CompareObjectEqual(Left, (object) 1, false), (object) (offsetToThisAlignment < oOrigin.Offset)))))
+            {
+              double num14 = offsetToThisAlignment - oOrigin.Offset;
+              if (num14 > 0.0)
+                num5 = num14;
+              else
+                Utilities.RecordWarning(corridorState, (CorridorError) -2147221482, "DitchInnerEdgeAlignment", nameof (Ditch));
+            }
+            else
+              Utilities.RecordWarning(corridorState, (CorridorError) -2147221482, "DitchInnerEdgeAlignment", nameof (Ditch));
+          }
+        }
+        catch (Exception ex)
+        {
+          ProjectData.SetProjectError(ex);
+          ProjectData.ClearProjectError();
+        }
+        try
+        {
+          offsetTarget1 = paramsOffsetTarget.Value("DitchOuterEdgeAlignment");
+          flag1 = false;
+        }
+        catch (Exception ex)
+        {
+          ProjectData.SetProjectError(ex);
+          ProjectData.ClearProjectError();
+        }
+      }
+      if (corridorState.Mode != 1)
+      {
+        SlopeElevationTarget slopeElevationTarget;
+        try
+        {
+          slopeElevationTarget = paramsElevationTarget.Value("DitchBottomProfile");
+        }
+        catch (Exception ex)
+        {
+          ProjectData.SetProjectError(ex);
+          slopeElevationTarget = (SlopeElevationTarget) null;
+          ProjectData.ClearProjectError();
+        }
+        if (slopeElevationTarget != null)
+        {
+          try
+          {
+            double elevation = slopeElevationTarget.GetElevation(oAlignmentId, oOrigin.Station, Utilities.GetSide(Conversions.ToInteger(Left)));
+            double num15 = oOrigin.Elevation - elevation + num5 * d2;
+            if (num15 > 0.0)
+              num4 = num15;
+            else
+              Utilities.RecordWarning(corridorState, (CorridorError) -2147221482, "DitchBottomProfile", nameof (Ditch));
+          }
+          catch (Exception ex)
+          {
+            ProjectData.SetProjectError(ex);
+            Utilities.RecordWarning(corridorState, (CorridorError) -2147221500, "DitchBottomProfile", nameof (Ditch));
+            ProjectData.ClearProjectError();
+          }
+        }
+      }
+      if (!flag1 && Utilities.CalcAlignmentOffsetToThisAlignment(oAlignmentId, oOrigin.Station, ref offsetTarget1, Utilities.GetSide(Conversions.ToInteger(Left)), ref offsetToThisAlignment, ref xOnTarget, ref yOnTarget))
+      {
+        if (Conversions.ToBoolean(Operators.OrObject(Operators.AndObject(Operators.CompareObjectEqual(Left, (object) 0, false), (object) (offsetToThisAlignment > oOrigin.Offset)), Operators.AndObject(Operators.CompareObjectEqual(Left, (object) 1, false), (object) (offsetToThisAlignment < oOrigin.Offset)))))
+        {
+          double num16 = offsetToThisAlignment - oOrigin.Offset - num5 - num4 / d1 - num4 / d3 - num3;
+          if (num16 > 0.0)
+            num6 = num16;
+          else
+            Utilities.RecordWarning(corridorState, (CorridorError) -2147221482, "DitchOuterEdgeAlignment", nameof (Ditch));
+        }
+        else
+          Utilities.RecordWarning(corridorState, (CorridorError) -2147221482, "DitchOuterEdgeAlignment", nameof (Ditch));
+      }
+      PointInMem pointInMem = new PointInMem();
+      pointInMem.Station = oOrigin.Station;
+      pointInMem.Offset = num1 * (num5 + num4 / d1) + oOrigin.Offset;
+      pointInMem.Elevation = num5 * d2 - num4 + oOrigin.Elevation;
+      Utilities.FillOrCut fillOrCut = Utilities.FillOrCut.UndefinedSituation;
+      if (corridorState.Mode != 1)
+      {
+        if (!ObjectId.op_Equality(objectId, new ObjectId()))
+        {
+          try
+          {
+            fillOrCut = !corridorState.IsAboveSurface(objectId, oAlignmentId, (IPoint) pointInMem) ? Utilities.FillOrCut.CutSituation : Utilities.FillOrCut.FillSituation;
+          }
+          catch (Exception ex)
+          {
+            ProjectData.SetProjectError(ex);
+            ProjectData.ClearProjectError();
+          }
+        }
+        bool flag2 = true;
+        if (fillOrCut == Utilities.FillOrCut.CutSituation & num2 == 2 | fillOrCut == Utilities.FillOrCut.FillSituation & num2 == 1)
+          flag2 = false;
+        if (!flag2)
+        {
+          num5 = 0.0;
+          num4 = 0.0;
+          num3 = 0.0;
+          num6 = 0.0;
+        }
+      }
+      PointCollection points = corridorState.Points;
+      LinkCollection links = corridorState.Links;
+      ShapeCollection shapes = corridorState.Shapes;
+      IPoint[] ipointArray = new IPoint[2];
+      Point[] pointArray = new Point[7];
+      Link[] linkArray1 = new Link[5];
+      Link[] linkArray2 = new Link[4];
+      double[] numArray1 = new double[7];
+      double[] numArray2 = new double[7];
+      string str4 = (string) null;
+      numArray1[1] = 0.0;
+      numArray2[1] = 0.0;
+      pointArray[1] = points.Add(numArray1[1], numArray2[1], "");
+      numArray1[2] = numArray1[1] + num1 * num5;
+      numArray2[2] = numArray2[1] - num5 * Math.Abs(d2);
+      pointArray[2] = points.Add(numArray1[2], numArray2[2], CodesSpecific.Codes.Hinge.Code);
+      ipointArray[0] = (IPoint) pointArray[1];
+      ipointArray[1] = (IPoint) pointArray[2];
+      linkArray1[0] = links.Add(ipointArray, CodesSpecific.Codes.Top.Code);
+      if (corridorState.Mode != 1 & num7 == 0 & num5 > 0.0)
+      {
+        double num17;
+        if (Math.Abs(d2) + 1E-06 > num8)
+        {
+          num17 = num11 / Math.Cos(Math.Atan(d2));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num17 = num11;
+          str4 = str1;
+        }
+        else if (Math.Abs(d2) + 1E-06 > num9)
+        {
+          num17 = num12 / Math.Cos(Math.Atan(d2));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num17 = num12;
+          str4 = str2;
+        }
+        else if (Math.Abs(d2) + 1E-06 > num10)
+        {
+          num17 = num13 / Math.Cos(Math.Atan(d2));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num17 = num13;
+          str4 = str3;
+        }
+        else
+          num17 = -1.0;
+        if (num17 > 0.0)
+        {
+          Point point1 = points.Add(pointArray[1].Offset, pointArray[1].Elevation - num17, "");
+          Point point2 = points.Add(pointArray[2].Offset, pointArray[2].Elevation - num17, "");
+          linkArray2[0] = linkArray1[0];
+          ipointArray[0] = (IPoint) pointArray[2];
+          ipointArray[1] = (IPoint) point2;
+          linkArray2[1] = links.Add(ipointArray, "");
+          ipointArray[0] = (IPoint) point2;
+          ipointArray[1] = (IPoint) point1;
+          linkArray2[2] = links.Add(ipointArray, CodesSpecific.Codes.Datum.Code);
+          ipointArray[0] = (IPoint) point1;
+          ipointArray[1] = (IPoint) pointArray[1];
+          linkArray2[3] = links.Add(ipointArray, "");
+          shapes.Add(linkArray2, str4);
+        }
+        else
+          linkArray1[0].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      }
+      else
+        linkArray1[0].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      numArray1[3] = numArray1[2] + num1 * num4 / d1;
+      numArray2[3] = numArray2[2] - num4;
+      pointArray[3] = points.Add(numArray1[3], numArray2[3], CodesSpecific.Codes.DitchIn.Code);
+      ipointArray[0] = (IPoint) pointArray[2];
+      ipointArray[1] = (IPoint) pointArray[3];
+      linkArray1[1] = links.Add(ipointArray, CodesSpecific.Codes.Top.Code);
+      linkArray1[1].Codes.TryAdd(CodesSpecific.Codes.Slope_Link.Code);
+      if (corridorState.Mode != 1 & num7 == 0 & num4 > 0.0)
+      {
+        double num18;
+        if (Math.Abs(d1) + 1E-06 > num8)
+        {
+          num18 = num11 / Math.Cos(Math.Atan(d1));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num18 = num11;
+          str4 = str1;
+        }
+        else if (Math.Abs(d1) + 1E-06 > num9)
+        {
+          num18 = num12 / Math.Cos(Math.Atan(d1));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num18 = num12;
+          str4 = str2;
+        }
+        else if (Math.Abs(d1) + 1E-06 > num10)
+        {
+          num18 = num13 / Math.Cos(Math.Atan(d1));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num18 = num13;
+          str4 = str3;
+        }
+        else
+          num18 = -1.0;
+        if (num18 > 0.0)
+        {
+          Point point3 = points.Add(pointArray[2].Offset, pointArray[2].Elevation - num18, "");
+          Point point4 = points.Add(pointArray[3].Offset, pointArray[3].Elevation - num18, "");
+          linkArray2[0] = linkArray1[1];
+          ipointArray[0] = (IPoint) pointArray[3];
+          ipointArray[1] = (IPoint) point4;
+          linkArray2[1] = links.Add(ipointArray, "");
+          ipointArray[0] = (IPoint) point4;
+          ipointArray[1] = (IPoint) point3;
+          linkArray2[2] = links.Add(ipointArray, CodesSpecific.Codes.Datum.Code);
+          ipointArray[0] = (IPoint) point3;
+          ipointArray[1] = (IPoint) pointArray[2];
+          linkArray2[3] = links.Add(ipointArray, "");
+          shapes.Add(linkArray2, str4);
+        }
+        else
+          linkArray1[1].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      }
+      else
+        linkArray1[1].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      numArray1[4] = numArray1[3] + num1 * num3;
+      numArray2[4] = numArray2[3];
+      pointArray[4] = points.Add(numArray1[4], numArray2[4], CodesSpecific.Codes.DitchOut.Code);
+      ipointArray[0] = (IPoint) pointArray[3];
+      ipointArray[1] = (IPoint) pointArray[4];
+      linkArray1[2] = links.Add(ipointArray, CodesSpecific.Codes.Top.Code);
+      linkArray1[2].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      linkArray1[2].Codes.TryAdd(CodesSpecific.Codes.Ditch.Code);
+      numArray1[5] = numArray1[4] + num1 * num4 / d3;
+      numArray2[5] = numArray2[4] + num4;
+      pointArray[5] = points.Add(numArray1[5], numArray2[5], CodesSpecific.Codes.Hinge.Code);
+      ipointArray[0] = (IPoint) pointArray[4];
+      ipointArray[1] = (IPoint) pointArray[5];
+      linkArray1[3] = links.Add(ipointArray, CodesSpecific.Codes.Top.Code);
+      linkArray1[3].Codes.TryAdd(CodesSpecific.Codes.Slope_Link.Code);
+      if (corridorState.Mode != 1 & num7 == 0 & num4 > 0.0)
+      {
+        double num19;
+        if (Math.Abs(d3) + 1E-06 > num8)
+        {
+          num19 = num11 / Math.Cos(Math.Atan(d3));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num19 = num11;
+          str4 = str1;
+        }
+        else if (Math.Abs(d3) + 1E-06 > num9)
+        {
+          num19 = num12 / Math.Cos(Math.Atan(d3));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num19 = num12;
+          str4 = str2;
+        }
+        else if (Math.Abs(d3) + 1E-06 > num10)
+        {
+          num19 = num13 / Math.Cos(Math.Atan(d3));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num19 = num13;
+          str4 = str3;
+        }
+        else
+          num19 = -1.0;
+        if (num19 > 0.0)
+        {
+          Point point5 = points.Add(pointArray[4].Offset, pointArray[4].Elevation - num19, "");
+          Point point6 = points.Add(pointArray[5].Offset, pointArray[5].Elevation - num19, "");
+          linkArray2[0] = linkArray1[3];
+          ipointArray[0] = (IPoint) pointArray[5];
+          ipointArray[1] = (IPoint) point6;
+          linkArray2[1] = links.Add(ipointArray, "");
+          ipointArray[0] = (IPoint) point6;
+          ipointArray[1] = (IPoint) point5;
+          linkArray2[2] = links.Add(ipointArray, CodesSpecific.Codes.Datum.Code);
+          ipointArray[0] = (IPoint) point5;
+          ipointArray[1] = (IPoint) pointArray[4];
+          linkArray2[3] = links.Add(ipointArray, "");
+          shapes.Add(linkArray2, str4);
+        }
+        else
+          linkArray1[3].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      }
+      else
+        linkArray1[3].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      numArray1[6] = numArray1[5] + num1 * num6;
+      numArray2[6] = numArray2[5] + num6 * Math.Abs(d4);
+      pointArray[6] = points.Add(numArray1[6], numArray2[6], "");
+      ipointArray[0] = (IPoint) pointArray[5];
+      ipointArray[1] = (IPoint) pointArray[6];
+      linkArray1[4] = links.Add(ipointArray, CodesSpecific.Codes.Top.Code);
+      if (corridorState.Mode != 1 & num7 == 0 & num6 > 0.0)
+      {
+        double num20;
+        if (Math.Abs(d4) + 1E-06 > num8)
+        {
+          num20 = num11 / Math.Cos(Math.Atan(d4));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num20 = num11;
+          str4 = str1;
+        }
+        else if (Math.Abs(d4) + 1E-06 > num9)
+        {
+          num20 = num12 / Math.Cos(Math.Atan(d4));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num20 = num12;
+          str4 = str2;
+        }
+        else if (Math.Abs(d4) + 1E-06 > num10)
+        {
+          num20 = num13 / Math.Cos(Math.Atan(d4));
+          if (Utilities.GetVersionInt(corridorState) < 2011)
+            num20 = num13;
+          str4 = str3;
+        }
+        else
+          num20 = -1.0;
+        if (num20 > 0.0)
+        {
+          Point point7 = points.Add(pointArray[5].Offset, pointArray[5].Elevation - num20, "");
+          Point point8 = points.Add(pointArray[6].Offset, pointArray[6].Elevation - num20, "");
+          linkArray2[0] = linkArray1[4];
+          ipointArray[0] = (IPoint) pointArray[6];
+          ipointArray[1] = (IPoint) point8;
+          linkArray2[1] = links.Add(ipointArray, "");
+          ipointArray[0] = (IPoint) point8;
+          ipointArray[1] = (IPoint) point7;
+          linkArray2[2] = links.Add(ipointArray, CodesSpecific.Codes.Datum.Code);
+          ipointArray[0] = (IPoint) point7;
+          ipointArray[1] = (IPoint) pointArray[5];
+          linkArray2[3] = links.Add(ipointArray, "");
+          shapes.Add(linkArray2, str4);
+        }
+        else
+          linkArray1[4].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      }
+      else
+        linkArray1[4].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      paramsLong.Add("Side", Conversions.ToInteger(Left));
+      paramsLong.Add("IncludeDitch", num2);
+      paramsDouble.Add("DitchWidth", num3);
+      paramsDouble.Add("DitchDepth", num4);
+      paramsDouble.Add("ForeslopeSlope", d1);
+      paramsDouble.Add("ForeslopeBufferWidth", num5);
+      paramsDouble.Add("ForeslopeBufferSlope", d2);
+      paramsDouble.Add("BackslopeSlope", d3);
+      paramsDouble.Add("BackslopeBufferWidth", num6);
+      paramsDouble.Add("BackslopeBufferSlope", d4);
+      paramsLong.Add("PlaceMaterial", num7);
+      paramsDouble.Add("MaterialThickness1", num11);
+      paramsDouble.Add("MaterialThickness2", num12);
+      paramsDouble.Add("MaterialThickness3", num13);
+      paramsString.Add("MaterialName1", str1);
+      paramsString.Add("MaterialName2", str2);
+      paramsString.Add("MaterialName3", str3);
+      paramsDouble.Add("SlopeLimit1", num8);
+      paramsDouble.Add("SlopeLimit2", num9);
+      paramsDouble.Add("SlopeLimit3", num10);
+    }
+
+    private enum IncludeDitchTypes
+    {
+      kCutFill,
+      kCut,
+      kFill,
+    }
+  }
+}
