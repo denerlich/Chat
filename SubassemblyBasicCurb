@@ -1,0 +1,309 @@
+// Decompiled with JetBrains decompiler
+// Type: Subassembly.BasicCurb
+// Assembly: C3DStockSubassemblies, Version=13.2.890.0, Culture=neutral, PublicKeyToken=null
+// MVID: E918659F-4A28-4B46-8972-75FDE266E784
+// Assembly location: F:\ProgramData\Autodesk\C3D 2020\enu\C3DStockSubassemblies.dll
+
+using Autodesk.Civil.DatabaseServices;
+using Autodesk.Civil.Runtime;
+using Microsoft.VisualBasic.CompilerServices;
+using System;
+
+namespace Subassembly
+{
+  public class BasicCurb : SATemplate
+  {
+    private const int SideDefault = 0;
+    private const double CurbWidthDefault = 0.75;
+    private const double CurbDepthDefault = 1.5;
+    private const int FrontFaceDefault = 1;
+    private const double DepthBelowDefault = 1.0;
+    private const double BackHeightDefault = 0.0;
+    private const double Deflection = 0.0;
+    private const int ApplyDeflection = 1;
+
+    protected override void GetInputParametersImplement(CorridorState corridorState)
+    {
+      ParamLongCollection paramsLong = corridorState.ParamsLong;
+      ParamDoubleCollection paramsDouble = corridorState.ParamsDouble;
+      paramsLong.Add("Side", 0);
+      paramsLong.Add("AttachmentPoint", 1);
+      paramsLong.Add("TopApplyDeflection", 1);
+      paramsDouble.Add("Width", 0.75);
+      paramsDouble.Add("Depth", 1.5);
+      paramsDouble.Add("DepthBelow", 1.0);
+      paramsDouble.Add("BackHeight", 0.0);
+      paramsDouble.Add("Deflection", 0.0);
+    }
+
+    protected override void DrawImplement(CorridorState corridorState)
+    {
+      ParamLongCollection paramsLong = corridorState.ParamsLong;
+      ParamDoubleCollection paramsDouble = corridorState.ParamsDouble;
+      long num1;
+      try
+      {
+        num1 = (long) paramsLong.Value("Side");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num1 = 0L;
+        ProjectData.ClearProjectError();
+      }
+      double num2 = 1.0;
+      if (num1 == 1L)
+        num2 = -1.0;
+      long num3;
+      try
+      {
+        num3 = (long) paramsLong.Value("AttachmentPoint");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num3 = 1L;
+        ProjectData.ClearProjectError();
+      }
+      bool flag1 = num3 == 1L;
+      double num4;
+      try
+      {
+        num4 = paramsDouble.Value("Deflection");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num4 = 0.0;
+        ProjectData.ClearProjectError();
+      }
+      if (num4 < 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221484, "Deflection", nameof (BasicCurb));
+        num4 = 0.0;
+      }
+      else if (num4 > Math.PI / 2.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221480, "Deflection", nameof (BasicCurb));
+        num4 = Math.PI / 2.0;
+      }
+      double num5 = num4;
+      long num6;
+      try
+      {
+        num6 = (long) paramsLong.Value("TopApplyDeflection");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        long num7;
+        num6 = num7;
+        ProjectData.ClearProjectError();
+      }
+      bool flag2 = num6 == 1L;
+      double num8;
+      try
+      {
+        num8 = paramsDouble.Value("Width");
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num8 = 0.75;
+        ProjectData.ClearProjectError();
+      }
+      if (num8 <= 0.0)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221485, "Width", nameof (BasicCurb));
+        num8 = 0.75;
+      }
+      double num9;
+      try
+      {
+        num9 = paramsDouble.Value("Depth");
+        if (num9 <= 0.0)
+        {
+          Utilities.RecordError(corridorState, (CorridorError) -2147221485, "Depth", nameof (BasicCurb));
+          num9 = 1.5;
+        }
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num9 = 1.5;
+        ProjectData.ClearProjectError();
+      }
+      double num10;
+      try
+      {
+        num10 = paramsDouble.Value("DepthBelow");
+        if (num10 < 0.0)
+        {
+          Utilities.RecordError(corridorState, (CorridorError) -2147221484, "DepthBelow", nameof (BasicCurb));
+          num10 = 1.5;
+        }
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num10 = 1.0;
+        ProjectData.ClearProjectError();
+      }
+      if (num10 > num9)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221480, "DepthBelow", nameof (BasicCurb));
+        num10 = num9;
+      }
+      double num11;
+      try
+      {
+        num11 = paramsDouble.Value("BackHeight");
+        if (num11 < 0.0)
+        {
+          Utilities.RecordError(corridorState, (CorridorError) -2147221484, "BackHeight", nameof (BasicCurb));
+          num11 = 0.0;
+        }
+      }
+      catch (Exception ex)
+      {
+        ProjectData.SetProjectError(ex);
+        num11 = 0.0;
+        ProjectData.ClearProjectError();
+      }
+      if (num11 > num9)
+      {
+        Utilities.RecordError(corridorState, (CorridorError) -2147221480, "BackHeight", nameof (BasicCurb));
+        num11 = num9;
+      }
+      PointCollection points = corridorState.Points;
+      double num12 = 0.0;
+      double num13 = 0.0;
+      Point point1;
+      Point point2;
+      Point point3;
+      Point point4;
+      if (flag1)
+      {
+        double num14 = num12;
+        double num15 = num13;
+        if (num5 > 1E-05)
+        {
+          double num16 = num12 - num2 * num10 * Math.Sin(num5);
+          double num17 = num13 - num10 * Math.Cos(num5);
+          point1 = points.Add(num16, num17, CodesSpecific.Codes.BottomCurb.Code);
+          double num18 = num16 + num2 * num9 * Math.Sin(num5);
+          double num19 = num17 + num9 * Math.Cos(num5);
+          point2 = points.Add(num18, num19, CodesSpecific.Codes.TopCurb.Code);
+        }
+        else
+        {
+          double num20 = num12 - num2 * 0.001 * num10 / num9;
+          double num21 = num13 - num10;
+          point1 = points.Add(num20, num21, CodesSpecific.Codes.BottomCurb.Code);
+          double num22 = num20 + num2 * 0.001;
+          double num23 = num21 + num9;
+          point2 = points.Add(num22, num23, CodesSpecific.Codes.TopCurb.Code);
+        }
+        if (flag2)
+        {
+          double num24 = point2.Offset + num2 * num8 * Math.Cos(num5);
+          double num25 = point2.Elevation - num8 * Math.Sin(num5);
+          point3 = points.Add(num24, num25, CodesSpecific.Codes.BackCurb.Code);
+          double num26 = point1.Offset + num2 * num8 * Math.Cos(num5);
+          double num27 = point1.Elevation - num8 * Math.Sin(num5);
+          point4 = points.Add(num26, num27, "");
+        }
+        else
+        {
+          double num28 = point2.Offset + num2 * num8;
+          double elevation1 = point2.Elevation;
+          point3 = points.Add(num28, elevation1, CodesSpecific.Codes.BackCurb.Code);
+          double num29 = point1.Offset + num2 * num8;
+          double elevation2 = point1.Elevation;
+          point4 = points.Add(num29, elevation2, "");
+        }
+        points.Add(num14, num15, "");
+        double num30 = point3.Offset + (point4.Offset - point3.Offset) * num11 / num9;
+        double num31 = point3.Elevation + (point4.Elevation - point3.Elevation) * num11 / num9;
+        points.Add(num30, num31, "");
+      }
+      else
+      {
+        double num32 = num12;
+        double num33 = num13;
+        if (num5 > 1E-05)
+        {
+          double num34 = num12 + num2 * num11 * Math.Sin(num5);
+          double num35 = num13 + num11 * Math.Cos(num5);
+          point3 = points.Add(num34, num35, CodesSpecific.Codes.BackCurb.Code);
+          double num36 = num34 - num2 * num9 * Math.Sin(num5);
+          double num37 = num35 - num9 * Math.Cos(num5);
+          point4 = points.Add(num36, num37, "");
+        }
+        else
+        {
+          double num38 = num12 + num2 * 0.001 * num11 / num9;
+          double num39 = num13 + num11;
+          point3 = points.Add(num38, num39, CodesSpecific.Codes.BackCurb.Code);
+          double num40 = num38 - num2 * 0.001;
+          double num41 = num39 - num9;
+          point4 = points.Add(num40, num41, "");
+        }
+        if (flag2)
+        {
+          double num42 = point3.Offset + num2 * num8 * Math.Cos(num5);
+          double num43 = point3.Elevation - num8 * Math.Sin(num5);
+          point2 = points.Add(num42, num43, CodesSpecific.Codes.TopCurb.Code);
+          double num44 = point4.Offset + num2 * num8 * Math.Cos(num5);
+          double num45 = point4.Elevation - num8 * Math.Sin(num5);
+          point1 = points.Add(num44, num45, CodesSpecific.Codes.BottomCurb.Code);
+        }
+        else
+        {
+          double num46 = point3.Offset + num2 * num8;
+          double elevation3 = point3.Elevation;
+          point2 = points.Add(num46, elevation3, CodesSpecific.Codes.TopCurb.Code);
+          double num47 = point4.Offset + num2 * num8;
+          double elevation4 = point4.Elevation;
+          point1 = points.Add(num47, elevation4, CodesSpecific.Codes.BottomCurb.Code);
+        }
+        points.Add(num32, num33, "");
+        double num48 = point1.Offset + (point2.Offset - point1.Offset) * num10 / num9;
+        double num49 = point1.Elevation + (point2.Elevation - point1.Elevation) * num10 / num9;
+        points.Add(num48, num49, "");
+      }
+      LinkCollection links = corridorState.Links;
+      Point[] pointArray = new Point[2];
+      Link[] linkArray = new Link[4];
+      pointArray[0] = point1;
+      pointArray[1] = point2;
+      linkArray[0] = links.Add((IPoint[]) pointArray, "");
+      if (!string.IsNullOrEmpty(""))
+        linkArray[0].Codes.TryAdd("");
+      pointArray[0] = point2;
+      pointArray[1] = point3;
+      linkArray[1] = links.Add((IPoint[]) pointArray, CodesSpecific.Codes.Curb.Code);
+      if (!string.IsNullOrEmpty(CodesSpecific.Codes.Top.Code))
+        linkArray[1].Codes.TryAdd(CodesSpecific.Codes.Top.Code);
+      pointArray[0] = point3;
+      pointArray[1] = point4;
+      linkArray[2] = links.Add((IPoint[]) pointArray, "");
+      if (!string.IsNullOrEmpty(""))
+        linkArray[2].Codes.TryAdd("");
+      pointArray[0] = point4;
+      pointArray[1] = point1;
+      linkArray[3] = links.Add((IPoint[]) pointArray, "");
+      if (!string.IsNullOrEmpty(CodesSpecific.Codes.Datum.Code))
+        linkArray[3].Codes.TryAdd(CodesSpecific.Codes.Datum.Code);
+      corridorState.Shapes.Add(linkArray, CodesSpecific.Codes.Curb.Code);
+      paramsLong.Add("Side", checked ((int) num1));
+      paramsLong.Add("AttachmentPoint", checked ((int) num3));
+      paramsLong.Add("TopApplyDeflection", checked ((int) num6));
+      paramsDouble.Add("Width", num8);
+      paramsDouble.Add("Depth", num9);
+      paramsDouble.Add("DepthBelow", num10);
+      paramsDouble.Add("BackHeight", num11);
+      paramsDouble.Add("Deflection", num5);
+    }
+  }
+}
