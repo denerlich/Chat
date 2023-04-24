@@ -1,0 +1,3562 @@
+﻿Basis of Design – Corridors – Cable Containment Design Criteria
+
+
+
+
+
+
+04/12/2023
+D02.01
+DDD Interdisciplinary Review
+HY. Ng
+P. Berry
+J. Gimon
+J. Malik
+R. Orsi 
+03/20/2023
+D01
+CJV Review
+HY. Ng
+P. Berry
+HY. Ng
+Not Required
+Date
+Rev.
+Status
+Prepared By
+Checked By
+Reviewed By
+Approved By
+MM/DD/YYYY
+
+
+
+
+DISCLAIMER
+© 2022. This document has been produced and distributed for members of ONXPRESS CIVILS CONTRACTOR GP’s purposes in respect of the GO Rail Expansion – On Corridor (RER Package 3) project only. No part of this document may be reproduced, published, converted, or stored in any data retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording or otherwise) without the prior written permission of the Designers, ONXPRESS CJV ENGINEERING. This document must not be used by the ONXPRESS CIVILS CONTRACTOR GP (or any of its constituent members) for any other purpose, or provided to, relied upon or used by any other person without ONXPRESS CJV ENGINEERING’s prior written consent.
+All Confidential Information shall remain the sole property of the applicable Sponsor or the ONXPRESS CIVILS CONTRACTOR GP or ONXPRESS CJV ENGINEERING and each party shall treat it as confidential. Confidential Information shall not be used by for any purpose other than for performing their respective duties on the GO Rail Expansion – On Corridor (RER Package 3) Project.
+This report contains the expression of the opinion of, ONXPRESS CJV ENGINEERING using its professional judgment and reasonable care based on information available and conditions existing at the time of preparation. The use of, or reliance upon this report is subject to the relevant Design Services Agreement between ONXPRESS CJV ENGINEERING and the ONXPRESS CIVILS CONTRACTOR GP (the “DSA”) and the following:
+This report is to be read in the context of and subject to the terms of the DSA, including any methodologies, procedures, techniques, assumptions and other relevant terms or conditions specified in the DSA.
+This report is meant to be read as a whole, and sections of the report must not be read or relied upon out of context. This report is meant to be used in its unaltered form, as delivered by ONXPRESS CJV ENGINEERING, and any modifications to the report, or the methodologies, procedures, techniques, assumptions used, without the consent of ONXPRESS CJV ENGINEERING may invalidate the conclusions, outputs or expressions of opinion, ONXPRESS CJV ENGINEERING does not accept any liability in connection with such altered information; and
+Unless expressly stated otherwise in this report, ONXPRESS CJV ENGINEERING has not verified the accuracy, completeness or validity of any information provided to ONXPRESS CJV ENGINEERING by or on behalf of the ONXPRESS CIVILS CONTRACTOR GP and ONXPRESS CJV ENGINEERING does not accept any liability in connection with such information.
+
+
+
+Table of Contents
+DISCLAIMER
+1.	Introduction	1
+1.1	Purpose	1
+1.2	GO Rail Expansion – On Corridor	2
+1.3	ONxpress CC (Civil) Infrastructure Trackwork	2
+1.4	ONxpress Cable Containment Works	3
+2.	Units	4
+3.	Abbreviations	4
+4.	References	6
+5.	Safety Assurance	7
+6.	Level of Development	7
+7.	Survey	7
+8.	Inputs and Outputs	9
+9.	Construction Work Packages Scope Description	10
+9.1	Corridors Scope Description	10
+9.1.1	Lakeshore West Corridor – Oakville Subdivision	10
+9.1.2	Kitchener Corridor – Weston-Guelph Subdivisions	14
+9.1.3	Barrie Corridor – Newmarket Subdivision	19
+9.1.4	Stouffville Corridor – Uxbridge Subdivision	23
+9.1.5	Richmond Hill Corridor – Bala Subdivision	27
+9.1.6	Lakeshore East Corridor – Kingston Subdivision	29
+9.1.7	Union Station Rail Corridor (USRC East & West)	32
+9.2	Logistics Sites Scope Definition	34
+9.3	Line Stations Scope Definition	34
+9.4	Traction Power Facilities (TPFs)	35
+10.	Design Approach Description	35
+10.1	Introduction	35
+10.2	Cabling Infrastructure	36
+10.2.1	Contractual Requirements	36
+10.2.2	Maintenance Requirements	36
+10.2.3	Site Characteristics	36
+10.3	Sizing	36
+10.4	Comparison	37
+10.5	Change Management	38
+11.	Compliance Means to Rail Corridor Raceway Requirements	38
+11.1	General	39
+11.1.1	Cable Separation	39
+11.2	Grounding and Bounding	42
+11.2.1	General	42
+11.3	Installation on Railway Right-of-Way	42
+11.3.1	Loading	42
+11.3.2	Longitudinal Installations	42
+11.4	Casing Pipe Material, Culverts	46
+11.5	Conduits	47
+11.5.1	General	47
+11.5.2	Conduit Material Requirements	49
+11.6	Conductor Pull Access Points	49
+11.6.1	General	49
+11.6.2	Manholes, Handholes, Pullboxes	50
+11.6.3	Slack Pit Requirements/Vaults	53
+11.6.4	General	53
+11.7	Duct Banks	54
+11.7.1	General	54
+11.7.2	Minimum Number of Mainline Conduits Including Spares	55
+11.7.3	Traction Power and High Voltage Raceway	57
+11.8	Cable Tray	57
+11.9	Cable Trough	58
+11.10	Raceways at Passenger Stations	61
+11.11	Pedestrian Tunnels	61
+11.12	Marker Posts and Tie Plate Markers, Warning Decals	61
+11.12.1	Marker Posts	61
+11.12.2	Tie Plates	61
+11.12.3	Warning Decals	61
+11.13	As-Built Drawings	62
+11.14	Summary of Proposed Optimizations	63
+12.	Additional Design Criteria	69
+12.1	Geo-Engineering	69
+12.2	Fire-Resistance Design	69
+12.3	Design Life Span	69
+12.4	Clearances from Power Lines	69
+12.5	Interface with Existing Line Stations	70
+12.6	Passive Protection within USRC	71
+
+
+List of Tables
+Table 1: Bundle 1 Development Phase Early Works Construction Stage Descriptions	3
+Table 2: List of Abbreviations	4
+Table 3: List of References	6
+Table 4: Topographical and Top of Rail Survey Basis for Rail Corridors	8
+Table 5: Cable Containment – Design Inputs and Outputs	9
+Table 6: Railway Bridges – Lakeshore West Corridor	11
+Table 7: Road Crossings – Lakeshore West Corridor	12
+Table 8: Stations – Lakeshore West Corridor	12
+Table 9: Construction Stages – Lakeshore West Corridor	13
+Table 10: Railway Bridges – Kitchener Corridor	14
+Table 11: Road Crossings – Kitchener Corridor	16
+Table 12: Stations – Kitchener Corridor	17
+Table 13: Construction Stages – Kitchener Corridor	18
+Table 14: Railway Bridges – Barrie Corridor	19
+Table 15: Road Crossings – Barrie Corridor	20
+Table 16: Stations – Barrie Corridor	21
+Table 17: Construction Stages – Barrie Corridor	22
+Table 18: Railway Bridges – Stouffville Corridor	23
+Table 19: Road Crossings – Stouffville Corridor	24
+Table 20: Stations – Stouffville Corridor	24
+Table 21: Construction Stages – Stouffville Corridor	26
+Table 22: Railway Bridges – Richmond Hill Corridor	27
+Table 23: Road Crossings – Richmond Hill Corridor	27
+Table 24: Stations – Richmond Hill Corridor	27
+Table 25: Construction Stages – Richmond Hill Corridor	28
+Table 26: Railway Bridges – Lakeshore East Corridor	29
+Table 27: Road Crossings – Lakeshore East Corridor	30
+Table 28: Stations – Lakeshore East Corridor	30
+Table 29: Construction Stages – Lakeshore East Corridor	31
+Table 30: Construction Stages – Union Station Rail Corridor	32
+Table 31: Bundle 1 and Bundle 1.1 Logistics Sites	34
+Table 32: Project TPFs	35
+Table 33: Comparison Table of Different Infrastructure Type	37
+Table 34: Cable Susceptibility Classes	40
+Table 35: Separation distance in air (mm)	40
+Table 36: Separation distance in an open metallic tray (mm) – without metallic separators	41
+Table 37: Separation distance in an open metallic tray (mm) – with metallic separators	41
+Table 38: Separation distance in a closed metallic tray (mm) – with metallic separators	41
+Table 39: Separation Distance When Crossing Utilities	46
+Table 40: Number of conduits in casings	46
+Table 41: Canadian Electrical Code Table 7 – Radius of conduit or tubing bends	48
+Table 42: Canadian Electrical Code Table 8 – Maximum allowable per cent conduit and tubing fill	48
+Table 43: Mandatory Access Points Locations	50
+Table 44: Spare Conduits Design Guidance	56
+Table 45: Trough Type Metrolinx Requirements Compliance Analysis	59
+Table 46: Trough Type Additional Requirements Compliance Analysis	61
+Table 47: Design Optimization Table	63
+Table 48: Clearance from Cable Containment to Live Uninsulated Electrical Components	70
+
+
+List of Figures
+Figure 1: ONxpress CC (Civil) Infrastructure Track Works Development Context Plan	2
+Figure 2: Delineation of Basis of Design Reports per Construction Package Type	3
+Figure 3: USRC Staging	33
+Figure 4: Typical cross-section with cable containment in track bed structure	43
+Figure 5 – Multi -Ducts	54
+Figure 6: Typical Reinforced Concrete Encased Ductbank Cross-section	55
+
+
+List of Appendices
+Appendix A	Requirements Compliance Matrix
+
+
+
+1.Introduction
+1.1Purpose
+Metrolinx (Contracting Authority) has engaged the ONxpress Transportation Partners Inc. Joint Venture (ONxpress) to design and build the GO Rail Expansion-On-Corridor Program (OnCorr).
+The purpose of this report is to describe the basis of design for the development of the cable containment design, external to buildings, associated with the ONxpress CC (Civil) Infrastructure track works to deliver passenger service improvements through the implementation of successive configuration states. Each Configuration State (CS) represents a significant upgrade to the GO Transit Railway System infrastructure and service.
+This report documents the specific design criteria and fundamental design guidelines to be adhered to throughout the execution of the project, and establishes the:
+Minimum design standards
+Safety of personnel and equipment
+Legal regulatory and statutory requirements
+Environmental and sustainable development objectives
+Minimum life-cycle costs.
+This document is intended for use by the cable containment design team and other design disciplines, as well as any external design consultants engaged to perform design work for the project, whether in direct support or within the scope of external design limits.
+This report should be read in conjunction with the latest version of the Project Agreement (PA) and other Construction Package Type specific Basis of Design reports (refer to Section 2). This report is part of the Design Development phase with the objective to:
+Document the rationale, criteria, principles, assumptions, and constraints used for the detailed design of the project.
+Identify discipline design Standards, Codes and Practices to apply to the design approach and maintain consistency and efficiency throughout the Program.
+Propose integrated design procedures for elements of scope requiring multiple design disciplines.
+The information presented herein relies on the Canadian Electrical Code. Part I [1], especially Section 12 – Wiring Methods and on the Ontario Electrical Safety Code (OESC).[28]. For underground systems in the railway right-of-way (ROW), it relies on CSA C22.3 No. 7 Underground Systems [3], whereas for cabling systems installed inside substation premises, it relies on IEEE Std. 525 [4].
+NFPA130 [5] is also considered, more particularly Chapter 12 – Wire and Cable Requirements.
+1.2GO Rail Expansion – On Corridor
+GO Transit is a regional transit system serving the Golden Horseshoe region of Ontario with hub at Union Station in Toronto. It operates on infrastructure that is either owned by Metrolinx (MX territory), or by third parties such as CN or CPR (non-MX territory).
+GO Rail Expansion is a program which will provide more travel options for residents and commuters. Upon delivery, the GO Rail Expansion program will provide faster, more frequent, two-way, all-day service on core segments of the GO rail network.
+The On-Corridor Works project is a part of the Province's GO Rail Expansion. Under the GO Expansion, the fleet is expected to switch to electric locomotive. There are no further indications of specific vehicle requirements.
+1.3ONxpress CC (Civil) Infrastructure Trackwork
+The Civil Infrastructure Trackwork includes the construction of new and modification of existing sections of track, including alignment, cable containment, grading, drainage, addition, or modification to retaining walls, relocation of utilities, noise barriers, fences, removal or modification of level crossings and modifications to existing stations, foundations for overhead catenary system (OCS), specific to the work required to achieve the Service Level for each Configuration State.
+
+Figure 1: ONxpress CC (Civil) Infrastructure Track Works Development Context Plan
+This Basis of Design report is initially focused on the Bundle 1 Development Phase Early Works identified by ONxpress as the locations of the early design works priority for CJV and CJV Engineering, as illustrated in Figure 1 and summarized in Table 1. This includes the requirements for cable containment at 16 different locations, across the GO Transit Corridors.
+Table 1: Bundle 1 Development Phase Early Works Construction Stage Descriptions
+Go Transit Corridor (Sub-Division)
+Bundle 1 Development Phase Early Works
+Construction Stage Descriptions
+Lakeshore West (Oakville)
+Cable Containment - Construction Stages 3, 4, 9A
+Kitchener (Weston – Guelph)
+Corridor Cable Containment - Construction Stages 7A, 9
+Barrie (Newmarket)
+Cable Containment - Construction Stages 6, 12A, 15, 19A
+Richmond Hill (Bala)
+Cable Containment - Construction Stages 1, 2, 3
+Lakeshore East (Kingston)
+Cable Containment – Construction Stages 2A, 3A, 9, 11A
+Scope descriptions of each of the above Construction Stages are documented in a separate Construction Stage Scope Description report, Ref. ONC-ECW-5090-SWS-EGM-RPT-00002.
+1.4ONxpress Cable Containment Works
+The ONxpress Cable Containment Works encompass the cabling infrastructure designed to host Metrolinx-owned cables in the railway Right-of-Way, including in bridge crossings, underpasses, through stations, as well as outside substations, technical and layover facilities, both above and below ground. The routing of cables inside buildings is not part of the cable containment works scope. The infrastructure for third-party cabling is also not part of the cable containment works scope.
+Figure 2 illustrates a typical cross-section. The cable troughs shown (in red for power cable and optical fiber and in green for communications cables) represent the scope covered by this current document. All other elements are the responsibility of other disciplines and are covered by their own documents. Refer to Section 2 for references to these documents.
+
+Figure 2: Delineation of Basis of Design Reports per Construction Package Type
+The cross section shown in the figure above is provided for visual purposes only and the values provided in the figure are not to be used for design purposes and does not reflect the proposed design of the cable containment works.
+The design requirements for the civil earthworks, storm water catchment areas and ditches, drainage, adjacent laydown areas and access roads at the limits of and beyond the corridor right-of way are document in the Civil Infrastructure Line Works Basis of Design report (Ref.: ONC-ECW-0000-SWS-PWS-EGM-DCR-00001).
+2.Units
+All units shall be expressed in the form of International System of Units (SI - Metric). 
+3.Abbreviations
+The following abbreviations are commonly used in the Project Agreement, Metrolinx ONxpress, Regulators and other stakeholders’ documentation. Some of the terms used are acronyms developed by ONxpress to organize the work of the RER3 program.
+Table 2: List of Abbreviations
+Abbreviation
+Name
+BAR
+Barrie – Newmarket GO railway line
+BIM
+Building Information Model
+C5
+Schedule C-5 of the Project Agreement
+C6
+Schedule C-6 of the Project Agreement
+CDS
+Construction Document Development
+CJV
+Construction Joint Venture
+COT
+City of Toronto
+DDD
+Design Development Definition
+DDS
+Design Development Submission
+EA
+Environmental Assessment
+EJV
+Engineering Joint Venture
+GTA
+Greater Toronto Area
+IFC
+Issued for Construction
+IFP
+Issued for Permit
+IFT
+Issued for Tender
+IO
+Infrastructure Ontario
+KIT
+Kitchener – Weston-Guelph GO railway line
+LCA
+Life Cycle Assessment
+LEED
+Leadership in Energy and Environmental Design
+LOD
+Level of Detail
+LOI
+Level of Information
+LOS
+Level of Service
+LSE
+Lakeshore East GO railway line
+LSW
+Lakeshore West GO railway line
+MAPP
+Metrolinx Assent Protection Plan
+MTO
+Ministry of Transportation Ontario
+MX
+Metrolinx
+OCS
+Overhead Catenary System
+OPSD
+Ontario Provincial Standard Drawing
+PA
+Project Agreement
+PLAA
+Permits, Licenses, Approvals and Agreements
+PS
+Paralleling Station
+PSOS
+Project Specific Output Specifications
+RCD
+Reference Concept Design
+RER
+GO Regional Express Rail
+RIC
+Richmond Hill – Bala GO railway line
+SOW
+Scope of Work
+SPA
+Site Plan Control Approval
+SWS
+Switching Station
+TEDI
+Thermal Energy Demand Intensity
+TGS
+Toronto Green Standards
+TRCA
+Toronto Region Conservation Authority
+TPAP
+Transit Project Assessment Process
+TPFs
+Traction Power Facilities
+TPSS
+Traction Power Sub Station
+TTC
+Toronto Transit Commission
+USEP
+Union Station Expansion Project
+USRC
+Union Station Rail Corridor
+4.References
+Table 3: List of References
+Document Identification
+Document Title
+[1] CSA C22.1-18
+Canadian Electrical Code, Part I – Safety Standard for Electrical Installations, 24th edition
+[2] CSA C22.1HB-18
+Canadian Electrical Code Handbook – An explanation of the rules of the Canadian Electrical Code, Part I
+[3] CSA C22.3 No. 7
+Canadian Electrical Code, Part III, No. 7 – Underground Systems
+[4] IEEE Std 525-2016
+IEEE Guide for the Design and Installation of Cable Systems in Substations
+[5] NFPA130
+Standard for Fixed Guideway Transit and Passenger Rail Systems
+[6] MX-ELEC-RCWY-2018-REV0
+Capital Projects Group Rail Corridor Raceway Requirements
+[7] OESC 2021
+Ontario Electrical Safety Code 28th Edition 2021
+[8] OPSD 2104.010
+Ontario Provincial Standard Drawing – Ducts, Surface Mounted on Structures
+[9] OPSD 3090.101, Rev. 1
+Ontario Provincial Standard Drawing – Foundation Frost Penetration Depths for Southern Ontario
+[10] AASHTO HB 17
+American Association of State Highway and Transportation Officials Highway Bridge 17th Edition
+[11] RER3-EM-SYS-SPN-ALL-00003
+System Design and Construction Rules, Revision A1
+[12] ONC-ECW-5090-SWS-GBN-DES-DCR-00001
+Basis of Design for Grounding and Bonding
+[13] OPSD 2101.01
+Ontario Provincial Standard Drawing – Duct installation in Trenches
+[14] ONC-ECW-5090-SWS-PWS-EGM-DCR-00003
+Basis of Design – Renovation Stations
+[15] RER3-EM-SYS-DRG-BA-00001, Rev. P02
+Richmond Hill Corridor – Cabling Diagram
+[16] RER3-EM-SYS-DRG-GO-00001, Rev. P02
+Whitby RMF – Cabling Diagram
+[17] RER3-EM-SYS-DRG-KN-00001, Rev. P03.01
+Lakeshore East Corridor – Cabling Diagram
+[18] RER3-EM-SYS-DRG-NM-00001, Rev. P02
+Barrie Corridor – Cabling Diagram
+[19] RER3-EM-SYS-DRG-OA-00001, Rev. P02
+Lakeshore West Corridor – Cabling Diagram
+[20] RER3-EM-SYS-DRG-OA-00002, Rev. P01
+Willowbrook RMF – Cabling Diagram
+[21] RER3-EM-SYS-DRG-USRC-00001, Rev. P02
+USRC Corridor – Cabling Diagram
+[22] RER3-EM-SYS-DRG-UX-00001, Rev. P02.01
+Stouffville Corridor – Cabling Diagram
+[23] RER3-EM-SYS-DRG-WN-00001, Rev. P03.01
+Kitchener Corridor – Cabling Diagram
+[24] OPSD 3900.100
+Ontario Provincial Standard Drawing – Utilities Duct Location
+[25] ONC-ECW-5090-SWS-PWS-EGM-DCR-00004
+Basis of Design - Corridors – Trackwork and Alignment
+[26] ONC-ECW-0000-SWS-PWS-EGM-DCR-00001
+Basis of Design - Corridors – Civil Infrastructure Line Works
+[27] ONC-ECW-5090-SWS-PWS-EGM-DCR-00010
+Basis of Design - Utilities
+[28] OESC
+Ontario Electrical Safety Code
+[29] RER3-SVS-PW-5090-SWS-SYS-ICD-00031
+ICD E&M Cable Routing General Specification / CJV Cable Containment
+[30] RER3-ECW-PW-0000-SWS-EGM-RPT-00015
+Basis of Design - Geo-engineering
+5.Safety Assurance
+Safe solutions are part of the core values, thus will be embedded in all design aspects related to the Infrastructure Civil Works. The design process will ensure compliance to applicable codes, regulations, standards, as well as project-specific safety requirements. 
+6.Level of Development
+The Level of Development (LOD) is a reference tool intended to improve the quality of communication among users of the Building Information Models (BIMs) about the characteristics of elements in the model. RER3-ECW-PW-0000-SWS-IDD-MTX-00001 is the LOD matrix which has been developed for the project and details the development anticipated at each stage of the design phase (i.e., DDD, DDS, CDS, IFC etc.,).
+7.Survey
+As per the PA Schedule C-6, there are several types of surveys required for the project works. The following surveys will be incorporated into the design of civil earthworks, as a design input from CJV, and will interface with their respective survey requirements memorandums.
+Control Survey
+Legal Survey
+Topographical Survey
+Pre- and Post-Construction Utility Survey
+Structures and Pavement Condition Survey
+CCTV Survey.
+Survey type and requirements shall be in accordance with RER3-ECW-PW-0000-SWS-SUR-TMO-00001 – Technical Memo EJV Survey Requirements. For areas requiring further detail or specific requirements, a site-specific Topographical Survey Memo will be prepared and provided to CJV. 
+At the time of publishing of this document, the following topographical surveys are being used as the basis of design. As more topographical survey data is received, the latest data set shall be incorporated at the appropriate time.
+Table 4: Topographical and Top of Rail Survey Basis for Rail Corridors
+Item
+Corridor
+Stage
+DDD Survey Basis
+Survey Class
+1
+LSE
+Stage 1 - Gerard to West Danforth 1
+Tulloch LIO
+C
+2
+LSE
+Stage 2 - Danforth St to Kennedy Rd
+Tulloch LIO / Groma
+C
+3
+LSE
+Stage 3 - Scarborough Junction
+Tulloch / Groma
+C
+4
+LSE
+Stage 9 - Durham Junction
+Tulloch LIO
+C
+5
+LSE
+Stage 11 - West Whitby to Oshawa 
+Groma
+C
+6
+STO
+Stage 7A - Stouffville Station
+Tulloch LIO
+C
+7
+BAR
+Stage 6 - Maple to Kirby Station
+Tulloch 2015
+-
+8
+BAR
+Stage 12A - East Gwillimbury Station
+Tulloch 2015
+-
+9
+BAR
+Stage 15 - Bradford Station
+Bid phase survey
+-
+10
+BAR
+Stage 19A - Innisfill Station
+Bid phase survey
+-
+11
+RIC
+Stage 1 - Don Valley Park
+Tulloch 2015 (DTM missing)
+-
+12
+RIC
+Stage 2 - Wexford - Maryvale
+Tulloch 2015 (DTM missing)
+-
+13
+RIC
+Stage 3 - Oriole Station to Old Cummer Station
+Tulloch 2015 (DTM missing)
+-
+14
+LSW
+Stage 3 - Mimico East Extension 
+Tulloch LIO
+C
+15
+LSW
+Stage 4 - Canpa
+Tulloch LIO / Groma TOR
+C
+16
+LSW
+Stage 9A - Burlington
+Tulloch LIO
+C
+17
+KIT
+Stage 7A - Etobicoke & Islington
+Tulloch LIO
+C
+18
+KIT
+Stage 9 - Malton
+Tulloch LIO
+C
+8.Inputs and Outputs
+The cable containment activities will involve input and coordination from several disciplines of the project scope. Table 5 displays the design inputs and outputs of the civil team throughout the design process.
+Table 5: Cable Containment – Design Inputs and Outputs
+Item No.
+Item Description
+Input/Output
+1
+Review of Existing As-built and Reference Documents and Drawings
+Input
+2
+Topographical and Legal Survey
+Input
+3
+Coordination with Other Disciplines:
+Input
+3a
+Geotechnical Investigation Report
+Input
+3b
+Environmental Management Plan and Soil Contamination Report
+Input
+3c
+Track Layout, Alignment, and Geometry
+Input
+3d
+Location of Utilities and Cable Containment
+Input
+3e
+Location and Alignment of Retaining Walls
+Input
+3f
+Design of Stormwater Infrastructure
+Input
+3h
+Location of Structure Foundations
+Input
+4
+Cable Containment Standard Specifications
+Output
+5
+Perform Cable Containment Sizing Calculations
+Output
+6
+Produce Cable Containment Drawings:
+Output
+6a
+Cable Containment Plan View
+Output
+6b
+Sections
+Output
+-6c
+Typical Details
+Output
+6d
+Manholes, Cable Trough, Ductbank Schedules
+Output
+6e
+Butterfly Drawings
+Output
+7
+Generate MD3 and MD2 Civil Models:
+Output
+7a
+Cable Containment MD3 model for corridor
+Output
+7b
+Cable Containment MD3 Model for structures stubs
+Output
+7a
+Cable Containment MD3 model for building connections
+Output
+7c
+Cable Containment MD2 model for drafting for each model type
+Output
+8
+Material Take Off Estimate
+Output
+9
+Permits, Licenses and Approval from Metrolinx 
+Output
+9.Construction Work Packages Scope Description
+The cable containment design scope encompasses the following Construction Work Packages:
+9.1Corridors Scope Description
+The Electrical and Mechanical Joint Venture (E&M) is responsible for the design of the system’s signalling and cabling, as well as for any requirements pertaining to cable installation. These requirements are exported to CJV Engineering’s cable containment discipline and form part of the inputs required to proceed with the dimensioning and design of the cable containment infrastructure. The interface with E&M is described in ICD E&M Cable Routing General Specification / CJV Cable Containment [29].
+E&M’s approach is to deploy the E&M design in stages once the cable containment infrastructure has been put in place in these areas. To do so, the main cable containment infrastructure extending to the adjacent signal houses on both sides of each construction stage is required. The tables in each of the following subsections identify the start and end chainages of all the construction stages and the chainages of adjacent bungalows. Cable containment design will be developed by stage, taking the PREVIOUS BUNGALOW and NEXT BUNGALOW chainages as start and end chainages to ensure data is available to allow the construction stages to be built in any sequence.
+9.1.1Lakeshore West Corridor – Oakville Subdivision
+The Lakeshore West Corridor covers the Oakville subdivision, from the western limit of USRC all the way to Burlington. It has a length of about 50 km and is 3 to 4 mainline tracks wide.
+34 bridges can be found in the corridor. Bridges will be grouped by bridge type, with each of these requiring a specific cable containment solution given the limited structure widths. Refer to Section 11.3.2.4 for the design approach on bridge crossings. Table 6 lists the bridges and their location on the corridor.
+Table 6: Railway Bridges – Lakeshore West Corridor
+Bridge Location
+Chainage
+Parkside Dr.
+6+283
+Colborne Lodge Ave
+6+718
+Ellis Ave
+7+294
+Windermere Ave
+7+565
+Kingsway Offramp
+7+847
+Queensway Offramp
+7+883
+Humber Bay Bridge
+8+083
+TTC Humber Loop
+8+552
+Park Lawn Rd
+9+374
+Mimico Creek Bridge
+9+562
+Royal York Rd. 
+10+843
+Kipling Ave
+12+970
+30th Street
+14+119
+Etobicoke Creek 
+15+818
+Dixie Rd
+16+407
+Applewood Creek
+16+547
+Cawthra Rd.
+18+449
+Cooksville Creek
+19+310
+Hurontario St.
+20+474
+Credit River Bridge
+21+364
+Mississauga Rd
+21+559
+Southdown Road
+26+744
+Sheridan Creek
+26+835
+Winston Churchill Blvd.
+28+847
+Ford Drive
+29+831
+Joshua Creek
+30+388
+Trafalgar Rd
+34+187
+Cross Ave
+34+919
+Kerr St.*
+35+317
+Dorval Drive
+36+054
+McCarney Creek
+37+099
+Mile Fourteen Creek
+38+920
+Third Line
+39+272
+Bronte Rd.
+41+310
+Bronte Creek
+41+646
+Creek
+42+975
+Burloak Dr.*
+43+392
+Appleby Line
+45+445
+Walkers Line
+47+517
+Guelph Line
+49+564
+Brant St.
+51+379
+ * Road crossing to be upgraded to a grade separation
+There are 9 at-grade road crossings and 10 stations where the cable containment design will be space constrained and where bespoke solutions will be required.
+Table 7: Road Crossings – Lakeshore West Corridor
+Road Crossings
+Chainage
+Haig Blvd.
+17+025
+Ogden Ave.
+17+440
+Alexandra Ave.
+17+730
+Revus Ave.
+19+316
+Stavebank Rd.
+21+078
+Lorne Park Rd.
+24+221
+Clarkson Rd.
+25+879
+Chartwell Rd.
+33+063
+Fourth Line
+37+210
+Table 8: Stations – Lakeshore West Corridor
+Stations
+Chainage
+Exhibition
+3+140
+Park Lawn
+9+170
+Mimico
+10+489
+Long Branch
+15+296
+Port Credit
+20+540
+Clarkson
+26+762
+Oakville
+34+190
+Bronte
+39+573
+Appleby
+44+756
+Burlington
+50+566
+Table 9 lists the construction stages, their chainages as well as the chainages of the bungalows representing the interconnection points for cable containment of each stage.
+
+
+Stages part of the Early Works delivery are identified as being part of Bundle 1 or Bundle 1.1.
+Table 9: Construction Stages – Lakeshore West Corridor
+CORRIDOR
+SUB-DIVISION
+STAGE
+AREA
+BUNDLE
+PREV BUNGALOW
+CONSTRUCTION STAGE START
+CONSTRUCTION STAGE END
+NEXT BUNGALOW
+LSW
+OAKVILLE
+STAGE 1
+EXHIBITION STATION
+
+2+708
+3+100
+4+900
+5+138
+
+
+STAGE 2
+HUMBER EAST
+
+4+660
+4+900
+7+900
+8+919
+
+
+STAGE 3
+MIMICO EAST EXTENSION
+1.1
+7+719
+7+900
+13+050
+13+441
+
+
+STAGE 4
+CANPA
+1.1
+12+207
+13+050
+15+250
+15+735
+
+
+STAGE 5
+PORT CREDIT EAST
+
+14+870
+15+250
+26+000
+26+017
+
+
+STAGE 6
+CLARKSON WEST
+
+25+889
+26+000
+29+400
+29+834
+
+
+STAGE 7
+OAKVILLE
+
+28+326
+29+400
+35+350
+35+542
+
+
+STAGE 8
+APPLEBY & BRONTE
+
+34+788
+35+350
+45+600
+46+141
+
+
+STAGE 9
+BURLINGTON
+1
+44+643
+45+600
+51+400
+51+486
+
+
+9.1.2Kitchener Corridor – Weston-Guelph Subdivisions
+The Kitchener Corridor covers the Weston and Guelph subdivisions, starting from the western limit of USRC and extending northwest to Kitchener GO Station. It has a length of about 97 km and has 3 to 4 parallel tracks all the way to Georgetown Station after which it consists in a single track with side tracks.
+The Kitchener corridor contains 66 bridges. Table 10 lists the bridges and their location on the corridor.
+Table 10: Railway Bridges – Kitchener Corridor
+Bridge Location
+Chainage
+King St Bridge
+3+126
+Queens St
+3+953
+Dufferin St
+4+401
+Brock Ave
+4+460
+Landsdowne Ave
+5+008
+Bloor St
+6+372
+Dupont St
+7+398
+St Clair Ave W
+8+567
+Gunns Rd.*
+8+930
+Black Creek Drive
+10+294
+Eglington Ave
+10+947
+Ray Ave
+11+532
+Dennison Rd
+12+805
+Lawrence Ave
+13+562
+Weston Rd
+15+288
+Weston CNR Railway Bridge (Humbler River)
+15+480
+Kipling Ave
+17+786
+Martin Grove Rd
+18+870
+Hwy No. 27
+19+870
+Carlingview Dr
+20+998
+Goreway Dr
+21+871
+Mimico Creek East Branch
+22+024
+Derry Rd. E.
+24+029
+Airport Rd.
+24+204
+Torbram Rd.
+26+025
+Dixie Rd
+29+325
+Rutherford Rd S
+31+555
+Kennedy Rd. S
+32+445
+Centre St S
+33+187
+Etobicoke Creek
+33+345
+Queen St E
+33+605
+Union St
+33+797
+Main St
+33+998
+Fletcher Creek
+35+225
+Mclaughlin Rd N.
+35+568
+Creditview Rd
+39+550
+Credit River
+45+500
+McNabb St
+47+438
+Black Creek
+50+812
+Sixth Line Rd.
+51+065
+Town Line Rd.
+61+388
+Farm Underpass
+63+724
+Richardson Drain
+65+525
+Eramosa River
+65+950
+Private Road
+73+224
+Watson Pkwy N
+74+755
+Victoria Rd N
+76+558
+Stevenson St.
+77+096
+Arthur N & Elisabeth St
+78+000
+Wellington St E
+78+120
+Wyndham St S.
+78+530
+Wilson St
+78+715
+Norfolk St.
+78+768
+Hanlon Pkwy
+81+037
+Paisley Rd
+81+162
+Imperial Rd N
+82+500
+Elmira Rd N
+82+982
+Shantz Station Rd
+90+305
+Fountain St N
+93+375
+Grand River
+94+500
+Pathway 
+94+560
+Victoria St N.
+94+950
+Conestoga Pkwy
+98+812
+Margaret Ave
+100+445
+Weber Street w
+100+875
+Regional Rd 15
+101+380
+* New grade separation – road under rail
+The Kitchener corridor has several specificities. It has two tunnels. The West Tunnel spans chainages 14+052 to 14+437 and the 401/409 tunnel is located at chainage 17+087.
+At chainage 34+523, the CANDU Railway is crossing the tracks at grade.
+The Pearson Leg towards the airport is elevated and will require a dedicated cable containment design compatible with the structure.
+There are 48 at-grade road crossings and 14 stations where the cable containment design will be space-constrained and where bespoke solutions will be required.
+Table 11: Road Crossings – Kitchener Corridor
+Road Crossings
+Chainage
+North Alarton St. (Scarboro St.)
+24+555
+Mill St. N.
+34+388
+Mississauga Rd.
+40+257
+Heritage Rd.
+41+807
+Winston Churchill Blvd.
+43+447
+Farm Crossing
+44+083
+Farm Crossing
+44+613
+Private Crossing
+45+025
+Foreman Crossing
+45+275
+Foreman Crossing
+46+875
+Trafalgar Rd.
+49+607
+Fourth Line Rd.
+53+951
+Third Line Rd.
+55+082
+Farm Crossing
+55+648
+Private Rd.
+56+078
+Eastern Ave.
+57+078
+Mill St. E.
+57+410
+Main St. N.
+58+237
+Dublin Line
+59+840
+No. 32 Side Road
+61+472
+7th Line Rd.
+63+085
+Wellington Rd. 50
+65+240
+Main St. N.
+66+432
+4th Line Rd.
+67+861
+Farmer Crossing
+68+040
+Farmer Crossing
+68+895
+3rd Line Rd.
+69+205
+Wellington Rd. 29
+70+727
+Watson Rd. N.
+74+360
+Glasgow St.
+79+160
+Yorkshire St.
+79+353
+Edinburgh Rd. N.
+79+676
+Alma St. N.
+80+088
+Farm Crossing
+84+345
+Wellington Rd. 32
+85+258
+Private Rd.
+86+060
+Private Rd.
+86+490
+W Ave Speedvale
+86+960
+Woolwich Guelph Townline Rd.
+87+462
+Farm Crossing
+88+485
+Wurster Pl.
+91+687
+Township Rd. 72A
+91+697
+Greenhouse Rd.
+92+065
+Woolwich St. S
+93+925
+Bingemans Centre Dr.
+96+210
+Lancaster St. W.
+99+850
+St Leger St.
+100+140
+Park St.
+101+973
+Table 12: Stations – Kitchener Corridor
+Stations
+Chainage
+King Liberty
+3+459
+Bloor St.
+6+379
+St. Clair W.
+8+690
+Mt. Dennis
+10+750
+Weston
+13+164
+Etobicoke North GO
+17+785
+Malton GO
+23+785
+Bramalea GO
+27+298
+Brampton
+34+013
+Mt. Pleasant
+38+928
+Georgetown
+46+931
+Acton
+57+095
+Guelph
+78+237
+King Victoria
+101+033
+Table 13: lists the construction stages, their chainages as well as the chainages of the bungalows representing the interconnection points for cable containment of each stage. Stages part of the Early Works delivery are identified as being part of Bundle 1 or Bundle 1.1.
+
+Table 13: Construction Stages – Kitchener Corridor
+CORRIDOR
+SUB-DIVISION
+STAGE
+AREA
+BUNDLE
+PREV BUNGALOW
+CONSTRUCTION STAGE START
+CONSTRUCTION STAGE END
+NEXT BUNGALOW
+KITCHENER
+WESTON
+STAGE 1
+KING LIBERTY 
+1.1
+3+065
+3+065
+5+600
+5+792
+
+
+STAGE 2
+GALT TRACKS 
+
+3+828
+4+000
+8+400
+8+591
+
+
+STAGE 3
+BLOOR STATION SOUTH
+1.1
+5+230
+5+600
+6+700
+7+179
+
+
+STAGE 4
+BLOOR STATION NORTH
+
+6+337
+6+700
+8+400
+8+591
+
+
+STAGE 5
+ST.CLAIR TO MT.DENNIS
+
+7+438
+8+400
+11+500
+11+598
+
+
+STAGE 6
+CP CONNECTING TRACK
+
+10+431
+11+500
+15+600
+15+840
+
+
+STAGE 7
+ETOBICOKE & ISLINGTON
+1.1
+14+778
+15+600
+19+950
+20+852
+
+
+STAGE 8
+WICE JUNCTION 
+
+19+694
+19+950
+23+400
+23+970
+
+
+
+Pearson Leg
+
+8+000
+8+000
+10+841
+10+841
+
+
+STAGE 9
+MALTON
+1.1
+22+890
+23+400
+27+000
+27+000
+
+HALTON
+STAGE 10
+BRAMALEA STATION
+
+27+000
+27+000
+29+750
+29+750
+
+
+STAGE 11
+GEORGETOWN STATION
+
+46+550
+46+550
+53+032
+53+977
+
+GUELPH
+STAGE 12
+EAST OF ACTON 
+
+52+570
+53+032
+55+847
+55+846
+
+
+STAGE 13
+ACTON LOOP
+
+55+846
+55+847
+63+000
+63+063
+
+
+STAGE 14
+ROCKWOOD
+
+61+458
+63+000
+67+800
+67+883
+
+
+STAGE 15
+EAST OF GUELPH STATION
+
+67+610
+67+800
+78+122
+78+132
+
+
+STAGE 16
+GUELPH STATION
+
+77+230
+78+122
+79+900
+80+109
+
+
+STAGE 17
+IMPERIAL TO ALMA ST
+
+79+700
+79+900
+86+300
+86+492
+
+
+STAGE 18
+SHANTZ STATION
+
+85+185
+86+300
+90+500
+90+918
+
+
+STAGE 19
+BRESLAU STATION
+
+90+425
+90+500
+94+578
+95+011
+
+
+STAGE 20
+SHIRLEY LAYOVER
+
+93+325
+94+578
+100+500
+100+540
+
+
+STAGE 21
+KITCHENER 
+
+100+335
+100+500
+102+090
+102+090
+
+
+9.1.3Barrie Corridor – Newmarket Subdivision
+The Barrie Corridor encompasses the Newmarket subdivision, starting from the western limit of USRC and extending North. It has a length of about 97 km and has 1 or 2 parallel tracks.
+The Barrie corridor contains 27 bridges. Table 14 lists the bridges and their location on the corridor.
+Table 14: Railway Bridges – Barrie Corridor
+Bridge Location
+Chainage
+King St Bridge
+3+126
+Queens St 
+3+953
+Dufferin St 
+4+401
+Brock Ave 
+4+460
+Landsdowne Ave 
+5+008
+Bloor St 
+6+276
+Dupont St. 
+7+255
+Davenport Rd
+7+826
+St Clair Ave West
+8+415
+Rogers Rd 
+9+421
+Lawrence Ave W
+12+558
+Wilson Ave 
+14+618
+Sheppard Ave 
+17+493
+Finch Ave 
+18+730
+Steeles Ave 
+20+768
+CN Railway
+21+191
+Hwy No. 407
+22+210
+Hwy No 7
+22+882
+Don River
+24+752
+Rutherford Rd 
+27+080
+Major Mackenzie Dr.
+29+112
+Yonge St 
+45+802
+Clubinis Creek
+51+540
+Holland River
+54+198
+Holland River West Branch
+65+984
+Bridge
+79+918
+Cox Mill Rd
+98+406
+At chainage 7+376, the Pacific Railway is crossing the Newmarket Subdivision track at grade.
+There are 58 at-grade road crossings and 14 stations where the cable containment design will be space-constrained and where bespoke solutions will be required.
+Table 15: Road Crossings – Barrie Corridor
+Road Crossings
+Chainage
+Wallace Ave
+6+647
+Castlefield Ave
+11+098
+Carl Hall Rd
+16+689
+York University Busway
+19+117
+Rivermede Rd
+23+807
+Langstaff Rd
+24+959
+McNaughton Rd
+29+756
+Teston Rd
+31+154
+Farm Crossing
+32+251
+Farm Crossing
+32+527
+Kirby Rd
+33+251
+Farm Crossing
+33+906
+Farm Crossing
+34+298
+Farm Crossing
+33+740
+King Vaughan Rd
+35+394
+Station Rd
+36+575
+Dufferin St
+39+631
+Farm Crossing
+40+600
+Side Rd 15
+42+025
+Engelhard Dr.
+46+951
+Wellington St. E.
+48+279
+Centre St
+48+353
+St. John’s Sideroad
+50+354
+Murlock Dr.
+52+720
+Water St
+54+020
+Timothy St
+54+167
+Davis Dr
+54+497
+Green Lane Rd
+57+319
+Chapman St
+60+719
+Old Yonge St
+60+821
+Bradford St
+61+868
+Oriole Dr
+63+320
+Bathurst St
+63+846
+Given Rd
+66+656
+Private Rd
+67+501
+Industrial Rd
+68+061
+9th Line
+69+847
+10th Line
+71+382
+Farm Crossing
+72+180
+11th Line
+73+039
+12th Line
+74+520
+13th Line
+75+962
+Farm Crossing
+78+365
+Gilford Rd
+78+960
+Shore Acres Dr
+79+263
+2nd Line
+80+671
+3rd Line
+82+206
+Killarney Beach Rd
+83+528
+Belle Aire Beach Rd
+85+020
+7th Line
+87+785
+Innisfil Beach Rd
+89+416
+9th Line
+91+084
+10th Line
+92+531
+Farm Crossing
+93+542
+Lockhart Rd
+94+081
+Mapleview Dr. E.
+95+426
+Little Ave
+98+738
+Minet’s Point Rd
+99+834
+Table 16: Stations – Barrie Corridor
+Stations
+Chainage
+King Liberty
+3+459
+Caledonia
+10+490
+Downsview GO
+17+262
+York University GO
+20+084
+Rutherford GO
+26+698
+Maple GO
+29+327
+King City GO
+36+224
+Aurora GO
+47+891
+Newmarket GO
+55+039
+East Gwillimbury GO
+56+956
+Bradford GO
+66+762
+Innisfill GO
+86+562
+Barrie South GO
+95+586
+Allandale Waterfront GO
+101+229
+Table 17 lists the construction stages, their chainages as well as the chainages of the bungalows representing the interconnection points for cable containment of each stage. Stages part of the Early Works delivery are identified as being part of Bundle 1 or Bundle 1.1.
+
+
+Table 17: Construction Stages – Barrie Corridor
+CORRIDOR
+SUB-DIVISION
+STAGE
+AREA
+BUNDLE
+PREV BUNGALOW
+CONSTRUCTION STAGE START
+CONSTRUCTION STAGE END
+NEXT BUNGALOW
+BARRIE
+NEWMARKET
+STAGE 1
+BLOOR LANSDOWNE
+
+3+050
+3+050
+8+100
+8+343
+
+
+STAGE 2
+DAVENPORT TO DOWNSVIEW 
+
+7+850
+8+100
+16+900
+17+614
+
+
+STAGE 3
+DOWNSVIEW STATION
+
+16+743
+16+900
+18+200
+19+139
+
+
+STAGE 4
+YORK UNIVERSITY STATION
+
+17+625
+18+200
+24+000
+24+930
+
+
+STAGE 5
+RUTHERFORD TO MAPLE STATION
+
+23+827
+24+000
+29+700
+31+178
+
+
+STAGE 6
+MAPLE TO KIRBY STATION
+1
+29+963
+29+700
+33+200
+33+207
+
+
+STAGE 7
+KIRBY STATION TO KING LUMBER
+
+33+207
+33+200
+39+600
+39+609
+
+
+STAGE 8
+KING LUMBER TO BATHURST ST
+
+39+609
+39+600
+42+350
+42+650
+
+
+STAGE 9
+AURORA STATION
+
+41+998
+42+350
+48+553
+49+640
+
+
+STAGE 10
+TANNERY CREEK 
+
+48+390
+48+553
+51+500
+51+710
+
+
+STAGE 11
+NEWMARKET STATION
+
+50+730
+51+500
+55+537
+55+540
+
+
+STAGE 12
+EAST GWILLIMBURY STATION
+1
+55+540
+55+537
+57+580
+57+580
+
+
+STAGE 13
+NORTH OF GREEN LANE RD.
+
+57+580
+57+580
+61+300
+61+474
+
+
+STAGE 14
+EAST OF HOLLAND RIVER
+
+61+000
+61+300
+66+022
+66+058
+
+
+STAGE 15
+BRADFORD STATION
+1
+65+889
+66+022
+68+536
+69+490
+
+
+STAGE 16
+BRADFORD LAYOVER
+
+68+069
+68+536
+71+000
+71+346
+
+
+STAGE 17
+WEST OF SCANLON CREEK
+
+69+910
+71+000
+78+200
+78+295
+
+
+STAGE 18
+EAST OF INNISFILL STATION
+
+77+780
+78+200
+86+117
+86+125
+
+
+STAGE 19
+INNISFILL STATION
+1.1
+86+105
+86+117
+92+683
+92+695
+
+
+STAGE 20
+VICTORIA ST. TO LOCKHART RD.
+
+92+609
+92+683
+94+325
+94+855
+
+
+STAGE 21
+EAST OF ALLANDALE STATION
+
+94+075
+94+325
+100+500
+100+760
+
+
+STAGE 22
+ALLANDALE STATION 
+
+100+021
+100+500
+101+561
+101+561
+
+
+9.1.4Stouffville Corridor – Uxbridge Subdivision
+The Stoufville Corridor covers the Uxbridge subdivision, branching from the Lakeshore East Corridor at Kennedy Road. It has a length of about 30 km and is 1 to 2 tracks wide depending on location.
+Thirteen bridges can be found in the corridor. Table 18 lists the bridges and their location on the Stouffville corridor.
+Table 18: Railway Bridges – Stouffville Corridor
+Bridge Location
+Chainage
+Danforth Rd*
+14+657
+Pedestrian Crossing Corvette Ave*
+15+080
+Progress Ave*
+20+233
+West Highland Bridge 1
+20+346
+West Highland Bridge 2
+20+496
+West Highland Bridge 2
+21+435
+Sheppard Ave E
+21+816
+Havendale Rd*
+22+748
+Huntingwood Dr*
+23+200
+Finch Ave E*
+23+949
+McNicoll Ave*
+25+238
+Steeles Ave
+26+579
+Denison St*
+27+887
+Enterprise Blvd
+30+011
+Riviere Rouge Bridge
+30+700
+Bruce Creek Bridge
+31+778 
+Snider Creek
+35+502
+Little Rouge Creek
+39+644
+Bridge
+41+654
+* New grade separation – road under rail
+There are 29 at-grade road crossings and 10 stations where the cable containment design will be space-constrained and where bespoke solutions will be required.
+Table 19: Road Crossings – Stouffville Corridor
+Road Crossings
+Chainage
+Passmore Ave
+25+966
+Kennedy Rd S
+27+265
+Foreman’s Crossing
+29+350
+Hwy No. 7
+30+886
+Eureka St
+31+155
+Main St. Unionville
+31+417
+Kennedy Rd. N (Reg. Rd 3)
+32+000
+McCowan Rd
+33+690
+Snider Dr
+35+647
+Markham Main St
+35+969
+16th Ave
+37+005
+Bur Oak Rd
+37+961
+Castlemore Ave
+38+389
+Major Mackenzie Dr. E.
+39+019
+Elgin Mills Rd. E.
+41+579
+Ninth Line
+43+303
+19th Ave
+43+866
+Reeves Way Blvd
+44+361
+Hoover Park Dr
+45+244
+Main St. (Stouffville)
+45+998
+Millard St.
+46+726
+Bethesda Rd
+48+944
+10th Line
+48+944
+Table 20: Stations – Stouffville Corridor
+Stations
+Chainage
+Kennedy GO Station
+15+959
+Agincourt GO Station
+21+915
+Finch Station
+23+902
+Miliken GO Station
+26+222
+Unionville GO Station
+29+678
+Centennial GO station
+33+280
+Markham GO Station
+35+696
+Mount Joy GO Station
+37+621
+Stouffville GO Station
+40+064
+Lincolnville GO Station
+48+432
+Table 21 lists the construction stages, their chainages as well as the chainages of the bungalows representing the interconnection points for cable containment of each stage. The cable containment scope on the Stouffville corridor is not part of Early Works and will be delivered as part of Bundle 3.
+
+
+Table 21: Construction Stages – Stouffville Corridor
+CORRIDOR
+SUB-DIVISION
+STAGE
+AREA
+BUNDLE
+PREV BUNGALOW
+CONSTRUCTION STAGE START
+CONSTRUCTION STAGE END
+NEXT BUNGALOW
+STOUFFVILLE
+UXBRIDGE
+STAGE 1
+KENNEDY TO PROGRESS AVE.
+3
+14+665
+14+550
+21+200
+21+415
+
+
+STAGE 2
+HAVENDALE RD. TO HUNTINGWOOD DR.
+3
+20+254
+21+200
+23+700
+23+900
+
+
+STAGE 3
+McNICOLL AV. TO DENISON ST.
+3
+23+211
+23+700
+28+100
+29+000
+
+
+STAGE 4
+UNIONVILLE TO CENTENIAL
+3
+27+951
+28+100
+33+000
+33+146
+
+
+STAGE 5
+MARKHAM 
+3
+32+010
+33+000
+37+600
+38+024
+
+
+STAGE 6
+MOUNT JOY
+3
+37+095
+37+600
+43+100
+43+456
+
+
+STAGE 7
+STOUFVILLE TO LINCOLNVILLE
+3
+42+430
+43+100
+49+119
+48+987
+
+
+9.1.5Richmond Hill Corridor – Bala Subdivision
+Richmond Hill Corridor covers the Bala subdivision, starting at the eastern limit of USRC. It has a length of about 14 km and is 1 to 2 tracks wide.
+Sixteen bridges can be found in the Richmond Hill corridor. Table 22 lists the bridges and their location on the corridor.
+Table 22: Railway Bridges – Richmond Hill Corridor
+Bridge Location
+Chainage
+Don River 1
+7+562
+Don River 2
+7+916
+Don River 3
+10+298
+Don River 4
+11+907
+Don River 5
+13+677
+Don River 6
+13+837
+Don River 7
+14+159
+Don Valley Pkwy
+14+803
+Leslie St.
+19+083
+Esther Shiner Blvd.
+20+016
+Sheppard Ave. E.
+20+177
+Don River 8
+20+756
+Finch Ave.
+22+333
+Cummer Ave.
+23+411
+Don River 9
+23+813
+Steeles Ave. E.
+24+409
+There are 2 at-grade road crossings and 2 stations where the cable containment design will be space-constrained and where bespoke solutions will be required.
+Table 23: Road Crossings – Richmond Hill Corridor
+Road Crossings
+Chainage
+Pottery Rd.
+7+128
+Beechwood Dr.
+7+884
+Table 24: Stations – Richmond Hill Corridor
+Stations
+Chainage
+Oriole GO Station
+20+096
+Old Cummer GO Station
+22+350
+Table 25 lists the construction stages, their chainages as well as the chainages of the bungalows representing the interconnection points for cable containment of each stage. Stages part of the Early Works delivery are identified as being part of Bundle 1 or Bundle 1.1.
+
+
+Table 25: Construction Stages – Richmond Hill Corridor
+CORRIDOR
+SUB-DIVISION
+STAGE
+AREA
+BUNDLE
+PREV BUNGALOW
+CONSTRUCTION STAGE START
+CONSTRUCTION STAGE END
+NEXT BUNGALOW
+RICHMOND HILL
+BALA
+STAGE 1
+Don Valley Park
+1
+2+920
+2+920
+10+000
+10+008
+
+
+STAGE 2
+Wexford - Maryvale
+1
+10+008
+10+000
+17+900
+18+014
+
+
+STAGE 3
+Oriole Station to Old Cummer Station
+1
+17+010
+17+900
+25+600
+25+600
+
+
+9.1.6Lakeshore East Corridor – Kingston Subdivision
+The Lakeshore East Corridor covers the Kingston and GO subdivisions, from the eastern limit of USRC. It has a length of about 48 km. The number of tracks along the corridor vary from 2 to 4 depending on the location.
+Thirty-four bridges can be found in the corridor. Table 26 lists the bridges and their location on the corridor.
+Table 26: Railway Bridges – Lakeshore East Corridor
+Bridge Location
+Chainage
+Don River and Don Valley Parkway
+2+920
+Broadview Ave.
+2+927
+Eastern Ave.
+3+136
+Queen St. E.
+3+478
+Dundas St. E.
+3+929
+Logan Ave.
+4+063
+Carlaw Ave.
+4+367
+Gerrard St. E.
+4+423
+Jones Ave
+5+073
+Greenwood Ave
+5+735
+Pedestrian Underpass
+6+058
+Coxwell Ave
+6+489
+Woodbine Ave
+7+418
+Victoria Park Ave
+9+499
+Warden Ave
+10+747
+Danforth Ave
+10+972
+St. Clair Ave
+13+897
+Midland Ave
+14+263
+Brimley Rd
+15+459
+McCowan Rd.
+16+391
+Eglinton Ave
+17+103
+Scarborough Golf Club Rd.*
+19+104
+Galloway Rd.*
+20+750
+Poplar Rd.*
+21+161
+Morningside Ave.*
+21+603
+Highland Creek Bridge
+24+730
+Port Union Pedestrian Pathway
+25+991
+Riviere Rouge
+28+497
+Maintenance Road
+32+642
+Duffins Creek
+36+950
+Westney Rd S
+37+865
+Salem Rd
+40+279
+Lynde Creek
+44+385
+Victoria St. E.
+47+086
+South Blair St.
+47+560
+Thickson Rd S.
+49+299
+* New grade separation – road under rail
+There are 7 at-grade road crossings and 10 stations where the cable containment design will be space-constrained and where bespoke solutions will be required.
+Table 27: Road Crossings – Lakeshore East Corridor
+Road Crossings
+Chainage
+Manse Rd.
+22+444
+Beechgrove Dr.
+24+126
+Rodd Ave.
+28+793
+Foreman Crossing
+32+150
+Access Road
+42+732
+Table 28: Stations – Lakeshore East Corridor
+Stations
+Chainage
+East Harbour Station
+2+806
+Danforth GO Station
+8+337
+Scarborough GO Station
+13+566
+Eglington GO Station
+16+763
+Guildwood GO Station
+20+067
+Rouge Hill GO Station
+26+344
+Pickering GO Station
+33+602
+Ajax GO Station
+37+513
+Whitby GO Station
+46+216
+Oshawa GO Station
+50+345
+Table 29 lists the construction stages, their chainages as well as the chainages of the bungalows representing the interconnection points for cable containment of each stage. Stages part of the Early Works delivery are identified as being part of Bundle 1 or Bundle 1.1.
+
+
+Table 29: Construction Stages – Lakeshore East Corridor
+CORRIDOR
+SUB-DIVISION
+STAGE
+AREA
+BUNDLE
+PREV BUNGALOW
+CONSTRUCTION STAGE START
+CONSTRUCTION STAGE END
+NEXT BUNGALOW
+LSE
+KINGSTON
+STAGE 0
+DVP TO GERARD
+
+2+650
+2+650
+5+380
+5+875
+
+
+STAGE 1
+GERARD TO WEST DANFORTH
+
+5+069
+5+380
+7+400
+7+624
+
+
+STAGE 2
+DANFORTH
+1
+5+879
+7+400
+12+500
+12+630
+
+
+STAGE 3
+SCARBOROUGH JUNCTION
+1
+11+200
+12+500
+14+700
+15+069
+
+
+STAGE 4
+EGLINTON
+
+14+110
+14+700
+16+750
+17+530
+
+
+STAGE 5
+EGLINTON TO GUILDWOOD
+
+16+734
+16+750
+20+000
+20+813
+
+
+STAGE 6
+GUILDWOOD TO MORNINGSIDE AVE
+
+19+696
+20+000
+21+600
+22+448
+
+
+STAGE 7
+MORNINGSIDE TO HIGHLAND CREEK
+
+21+222
+21+600
+24+700
+24+720
+
+
+STAGE 8
+HIGHLAND CREEK TO ROUGE RIVER
+
+24+139
+24+700
+28+600
+28+771
+
+
+STAGE 9
+DURHAM JUNCTION
+1
+28+000
+28+600
+36+000
+36+750
+
+GO
+
+
+
+
+
+
+
+
+
+STAGE 10
+PICKERING TO WEST WHITBY
+
+35+865
+36+000
+44+000
+44+920
+
+
+STAGE 11
+OSHAWA
+1
+43+815
+44+000
+50+660
+50+740
+
+
+9.1.7Union Station Rail Corridor (USRC East & West)
+The Union Station Rail Corridor spans the areas described in Table 30. With 14 tracks entering Union Station, it is an area of immense complexity with numerous track switches and limited available space for cable containment. Refer to the USRC cable routing diagram for the connection requirements [21].
+Table 30: Construction Stages – Union Station Rail Corridor
+CORRIDOR
+SUB-DIVISION
+STAGE
+AREA
+CONSTRUCTION STAGE START
+CONSTRUCTION STAGE END
+USRC
+USRC-E
+USRC-E
+Union Station Rail Corridor East
+0+000
+2+650E
+
+USRC-W
+USRC-W
+Union Station Rail Corridor West
+0+000
+3+100W
+To ensure enough routes remain operational at any one time to provide for unaffected service, reconstruction in this area will be performed in stages (here stage has the meaning of phase). The cable containment scope and areas of intervention are described in each of the corresponding sub-sections.
+In addition to the scope described below, some under track crossings (UTX) will need to be built in areas where tracks are neither modified nor reconfigured. For these areas, the construction can take place in any of the Stages, contingent on track availability.
+Moreover, areas of passive protection at USRC will be considered during the design phase (refer to Section 12.6).
+9.1.7.1Stage 0
+During Stage 0, the focus for cable containment will be to integrate E&M needs with the Union Station Enhancement Project (USEP), done by others, and affecting Platforms 12, 13 and 15, as shown on Figure 3. Of note, cable containment infrastructure will be required to interconnect the South side of Track 15 to Tracks 11, 12, and 13.
+Involvement may also be required in case the modified wayside signalling system requires additional cable containment infrastructure to support South tracks modifications.
+Partial construction of several under track crossings (UTX) will also take place during this phase for the portion located underneath the affected tracks. The South side cable containment infrastructure will also be installed in that phase.
+
+
+
+Figure 3: USRC Staging
+
+
+Stage 1
+In Stage 1, involvement may be required to support the modified wayside signalling system and North tracks modifications.
+Partial construction of several under track crossings (UTX) will also take place during this phase for the portions located underneath the modified tracks.
+The North side cable containment infrastructure will also be installed in that phase.
+Stage 2
+For Stage 2, the reconfiguration of tracks 4, 5, and 6 will enable the continuation of construction of several UTX as well as the installation of a longitudinal cable containment infrastructure, both on the East and West portions of USRC.
+Stage 3
+In Stage 3, the construction of new Tracks 7, 9E, and 9W will enable the partial construction of several UTX under these tracks. As for the other stages, shunt cable containment paths will be built to accommodate the reconfiguration of the signalling configuration if required.
+Stage 4
+During Stage 4, the unfinished portions of UTX will be completed around Track 10W and 11W.
+Stage 5
+Cable containment infrastructure affected by the re-building of Platforms 6/7 and 12/13, if any, will be modified as required.
+9.2Logistics Sites Scope Definition
+Cable containment scope within the area of logistic sites consists in designing the cable containment infrastructure outside of buildings. The logistic sites part of Bundle 1 and 1.1 are listed in Table 31.
+Table 31: Bundle 1 and Bundle 1.1 Logistics Sites
+Logistics Sites
+Bundle
+Walkers Line Layover
+1
+Sceglington Logistics Site
+1
+Henry Logistics Site
+1.1
+Stoney Creek Layover
+1
+9.3Line Stations Scope Definition
+Refer to the Basis of Design -Renovation Stations document [14].
+9.4Traction Power Facilities (TPFs)
+For traction power facilities, in addition to the cable containment infrastructure scope inside the property limits (outside of buildings), the cable containment discipline design also covers the concrete-encased ductbanks required to connect the TPFs to the feeder points within the railway right-of-way.
+Table 32 lists the traction power facilities required for this project along with their locations.
+Table 32: Project TPFs
+TPF
+Line
+Chainage
+Allandale TPSS
+Newmarket (NM)
+102+000
+Burlington TPSS
+Oakville (OA)
+48+600
+City View (TPSS)
+Weston (WN)
+19+700
+ERMF (TPSS)
+Kingston (KN)
+48+700
+Mimico TPSS
+Oakville (OA)
+12+500
+Scarborough TPSS
+Uxbridge (UX)
+17+400
+Mimico TFF
+Oakville (OA)
+13+300
+Scarborough TFF
+Kingston (KN)
+15+000
+Durham SWS
+Kingston (KN)
+34+700
+Newmarket SWS
+Newmarket (NM)
+52+900
+Oakville SWS
+Oakville (OA)
+31+000
+Ordnance SWS
+Oakville (OA)
+2+200
+Don Yard PS
+Kingston (KN)
+2+550
+3500 Eglinton PS
+Weston (WN)
+11+500
+Gilford PS
+Newmarket (NM)
+78+800
+Lincolnville PS
+Uxbridge (UX)
+49+400
+Maple PS
+Newmarket (NM)
+31+900
+Unionville PS
+Uxbridge (UX)
+29+500
+Cable Containment’s scope of work ends 1 meter outside the proposed buildings. All scope beyond that limit will be under the responsibility of the Electrical Design Team and in their corresponding basis of design.
+Design Approach Description
+9.5Introduction
+The redundancy requirements for the project mean that cable containment is required on both sides of the trainway, on the outside of tracks. The general design approach for the cable containment design is to use cable troughs (cable trenches) as the primary choice to host cables. In the eventuality that cable troughs cannot be used due to site or technical restrictions, ductbanks or other solutions may be used. Reinforced concrete ductbanks will also be used for traction power cables and may be used for crossing of underground utilities, railway tracks, roads, etc. Use of multi-ducts would be the preferred approach for track crossings provided that depth of installation is compatible with acceptable ground settlement and sleepers’ displacement.
+Bridge crossings shall be done with exposed PVC-coated or epoxy-coated steel conduits, FRE conduits, or covered cable trays as specified by OPSD 2104.010 [8].
+Concrete-encased ductbank is the preferred method to run through the tunnels alongside the tracks to comply with NFPA130 requirements.
+9.6Cabling Infrastructure
+To determine which type of cabling infrastructure works best for a specific application, there are numerous factors to consider. Some factors to consider first are: contractual requirements, maintenance requirements, and site characteristics.
+9.6.1Contractual Requirements
+The requirements specific to cable containment are contained in the Capital Projects Group Rail Corridor Raceway Requirements [6] produced by Metrolinx and called for in the project agreement for the GO Rail Expansion – On Corridor Project.
+9.6.2Maintenance Requirements
+Maintenance requirements are defined and developed by the operations and maintenance joint venture (OMJV) and will be complied with during design.
+9.6.3Site Characteristics
+Cable containment type will be selected to adjust to site characteristics.
+Before construction starts, the constructor shall review site conditions and design, evaluate the constructability of the proposed design, and inform the engineering design team of any issue uncovered.
+9.7Sizing
+For preliminary design purposes, sizing of the required cable containment volume has been done conservatively, based on experience and on a high-level review of the cable routing diagrams produced by E&M during the bid phase ([15] to [23]). As the design evolves and cable lists become available, these will be reviewed to assess the potential for cable containment design optimization.
+The size considered for each of the cable troughs is 20 inches wide by 12 inches deep. The internal volume of such cable troughs is ~160 000 mm2, for a total usable volume of ~320 000 mm2 on each side of the tracks.
+This is equivalent to about twenty (20) 103 mm diameter conduits per trough.
+For the equivalent volume using multi-ducts would require two MULTIductTM 9 Way, each being 15 in. x 15 in. outside dimensions.
+9.8Comparison
+Once one or several options have been identified as meeting the above requirements, they then can be compared for cost and availability before selecting the solution. The analysis and the selection rationale should be produced jointly with the constructor and documented for future reference. It should be noted that the cable containment type will not be the same everywhere.
+Table 33: Comparison Table of Different Infrastructure Type
+Infrastructure Type
+When/Where to use
+Things to consider
+Reinforced concrete ductbank
+- Where surface obstacles need to be avoided
+- Where subject to vehicular loading
+- Where subject to ground settlement
+- Ensure proper spacers are used to provide intended duct spacing and flexible deformation
+- Ensure duct formation matches the access points sidewall openings to avoid having to do ductbank rotations
+- Ensure proper concrete coverage around conduits
+Direct-buried ducts
+- Where no vehicular or ground settlement are expected
+- Provide a means of ensuring duct spacing before backfilling
+Flexible conduits
+- For the last meter connection to an equipment
+- To account for structure movement when transitioning on or off a structure
+- Do not exceed the cable maximum bending radius
+Multi-duct
+- Anywhere a concrete ductbank or direct-buried ducts are used
+- Ensure depth of burial is adequate for expected loading
+- Verify that it can withstand loading required at installation location
+When used as UTX, under-sleeper pads are required
+Post-installation compaction and ballast tamping is required to prevent settlement and hanging sleepers when installation for UTX
+Exposed conduits
+- On structures where depth is insufficient for ducts burial and where cable troughs cannot be installed due to insufficient space
+- On walls where space is insufficient for other solutions
+- Anchoring of supports and brackets
+- Expansion joints or flexible conduits are required when transitioning on/off structures
+- PVC should not be used in exposed conditions
+- For surface run conduits, conduit must be PVC-coated or epoxy-coated galvanized steel 
+Cable troughs / trenches
+- For long longitudinal runs with little or no surface obstacles (along train tracks outside the track loading area)
+- For applications where loading is a concern, use polymer concrete or concrete troughs
+- Ensure selected product meets loading requirements (both lateral and vertical)
+- Ensure installation requirements from the supplier are considered during design
+Cable trays with lids
+- On structures where depth is insufficient for cable burial and where cable troughs cannot be installed due to insufficient space
+- Where it can easily be supported (under evacuation walkways for example)
+- Account for thermal expansion by installing expansion splice plates
+- Ensure adequate cable trays structural supports
+- Be wary of galvanic corrosion when dissimilar metals are in contact with one another
+Direct-buried cables
+FOR GROUNDING AND BONDING ONLY
+
+Overhead lines (except OCS)
+- The only location this might be used is at interfaces with the electric utility company (Hydro One, Toronto Hydro). However, these interfaces might preferably use underground systems for interconnection
+- Inductive coupling for long parallel cable runs
+9.9Change Management
+The cable containment design approach relies on the pursuit’s initial baseline 3.1 cable routing diagrams produced by E&M [15] to [23]. The interconnections defined in these diagrams will be ported to a Microsoft Access database for baselining and change management. The database will be kept up to date as the project progresses and design evolves. It will constitute cable containment data management system.
+Compliance Means to Rail Corridor Raceway Requirements
+For detailed information on the requirements, please refer to the document MX-ELEC-RCWY-2018-REV0 [6] from Metrolinx. This section presents the design criteria which will be applied during cable containment design to ensure all requirements are met. To facilitate verification of compliance, this section uses the same structure as the requirements document. However, the headings of some sections or sub-sections which contained only information statements or requirements covering construction activities were intentionally omitted.
+In some cases, we consider that optimization of the requirements is possible. Such optimizations are identified by specific markers:
+**************************** PROPOSED OPTIMIZATION START ******************************
+****************************** PROPOSED OPTIMIZATION END *******************************
+A description of the proposed optimization along with the associated rationale are presented in each case.
+9.10General
+9.10.1Cable Separation
+The project requirements specify a minimum separation of 610 mm between power and communications systems and that the cables be run in separate raceways.
+**************************** PROPOSED OPTIMIZATION START ******************************
+For some of the tight cross sections, a 610 mm separation might not be feasible. However, under the clause 5.1.8.2 of the CSA C22.3 No.7 [3], a minimum separation of 300 mm between the power and communication system is permitted in a joint-use trench. A 300 mm separation between the power and communication troughs would be equivalent to this.
+If the minimum separation of 300 mm cannot be achieved, the two troughs can be run closer for a parallel distance not exceeding 3 meters.
+Description
+Electromagnetic susceptibility is dependent on voltage and current. Small power circuits have a lower impact than high power circuits on control cables. The required separation can be refined to account for the type of signal carried by each cable.
+Rationale
+By categorizing cables into electromagnetic compatibility classes, the required separation between each cable class to ensure adequate mitigation of electromagnetic interference can be determined. For most cable classes, this relaxes the required spacing aiding design in space constrained areas. Conversely, for instances where high voltage cables are present, it is determined that additional spacing is required.
+The required spacing can be further reduced if metallic cable trays with or without separators are used, providing electromagnetic shielding.
+Table 34 lists the cable susceptibility classes as defined in [11].
+Table 34: Cable Susceptibility Classes
+Category
+Class
+Signal Type
+Examples
+Sensitive
+1
+Analogue low-level circuits of ~1mV sensitivity scale
+Low level analogue signals (millivolt output)
+Sensor measurement signal
+Audio and video analogue signal cables
+
+2
+Analogue / digital low-level circuits of ~1V sensitivity scale
+Standard analogue signals (4-20 mA, 1-10 V)
+HF and UHF transmitter and receiver signal cables (except leaky cables)
+Digital communications cables (RS232, Ethernet)
+AC/DC control signals <= 110 V (no inductive loads such as contact relays)
+Indifferent
+3
+Discrete control circuits
+AC/DC control signals for relays, contactors, (e.g., relay command, pilot wire) of voltage level > 110 V
+
+
+Small power circuits
+AC/DC power supply < 1 kV and < 20 Amps
+Battery related cables (from charger to battery and from battery to UPS)
+Noisy
+4a
+Medium power circuits
+AC/DC power supply < 1 kV and > 20 Amps
+Lighting of discharge type
+PWM
+
+4b
+Large power circuits
+DC traction feeder cables (e.g., 750 Vdc, NEG)
+
+5
+HV circuits
+HV power distribution cables
+AC traction feeder cables (e.g., 25 KV @50/60 HZ)
+Lightning down conductor
+The separation distances between cable classes are listed in the following tables. These separations can be influenced by the presence of metallic cable containment providing interference attenuation.
+Table 35: Separation distance in air (mm)
+Class
+1
+2
+3
+4a
+4b
+2
+300
+
+
+
+
+3
+300
+300
+
+
+
+4a
+350
+350
+350
+
+
+4b
+500
+500
+500
+500
+
+5
+1000
+1000
+1000
+1000
+500
+Table 36: Separation distance in an open metallic tray (mm) – without metallic separators
+Class
+1
+2
+3
+4a
+4b
+2
+50
+
+
+
+
+3
+100
+100
+
+
+
+4a
+NA
+100
+100
+
+
+4b
+NA
+NA
+200
+200
+
+5
+NA
+NA
+NA
+NA
+NA
+*NA – Not allowed.
+Table 37: Separation distance in an open metallic tray (mm) – with metallic separators
+Class
+1
+2
+3
+4a
+4b
+2
+0
+
+
+
+
+3
+0
+0
+
+
+
+4a
+50
+50
+50
+
+
+4b
+100
+100
+100
+100
+
+5
+200
+200
+200
+200
+200
+Table 38: Separation distance in a closed metallic tray (mm) – with metallic separators
+Class
+1
+2
+3
+4a
+4b
+2
+0
+
+
+
+
+3
+0
+0
+
+
+
+4a
+0
+0
+0
+
+
+4b
+100
+100
+100
+100
+
+5
+200
+200
+200
+200
+200
+****************************** PROPOSED OPTIMIZATION END *******************************
+9.11Grounding and Bounding
+The grounding and bounding shall be done in coordination with E&M teams and the grounding and bonding discipline.
+Refer to the Basis of Design for Grounding and Bonding [12] and to System Design and Construction Rules [11] for details and background information.
+9.11.1General
+Cathodic protection and grounding will be provided by the grounding and bonding discipline in line with E&M’s requirements.
+Pullboxes will be connected to grounding rods and provide grounding points inside.
+Concrete-encased ductbanks will be grounded at the pullboxes or buildings they connect to.
+Cable trays will be grounded to their supporting structures, themselves grounded.
+Any other grounding and bonding requirements from the grounding and bonding team will be implemented in the cable containment design.
+9.12Installation on Railway Right-of-Way
+9.12.1Loading
+Metrolinx requires that any installation within 7.5 m of the centerline of the outermost track shall withstand a minimum Cooper E-80 loading.
+9.12.2Longitudinal Installations
+General
+The design approach for longitudinal installation of cable containment infrastructure is to use two cable troughs on each side (for a total of four (4) cable troughs) of the right of way to provide the redundancy required by the system. One of the troughs on each side is dedicated to power cables and the other is for control and fiber optic cables, separated by a divider. A physical separation between the power and the communications troughs is required to mitigate EMI/EMC effects.
+Note that at some specific locations, additional troughs may be used if the volume of cables warrants.
+The troughs are installed outside the area reserved for OCS poles. The installation will be coordinated with existing and relocated utilities to ensure the troughs are not installed above.
+In addition, the troughs placement will be coordinated with drainage to ensure drainage functions properly and with the tracks team to ensure track stability is unaffected.
+Particular situations for which there is insufficient space for the cable troughs (retaining walls, narrow ROW, stations, bridges, etc.) will be handled on a case-by-case basis during detailed design.
+**************************** PROPOSED OPTIMIZATION START ******************************
+9.12.2.1.1Description
+The Metrolinx requirements prescribe that longitudinal installations be clear of the track bed. We suggest making this a target design criterion rather than a hard requirement.
+Proposed alternate text: "Longitudinal raceway installations within the track bed shall be avoided as much as practical. When unavoidable, installation design requires a review by tracks designers to ensure impact on track stability and longevity is minimized. Refer to Figure 1: Fill Installation Directional Bore (Appendix A) for preferred installation location.
+
+Figure 4: Typical cross-section with cable containment in track bed structure
+9.12.2.1.2Rationale
+It is impossible to meet this requirement everywhere given the locations with a narrow ROW, existing underground infrastructure and the fact that trackside equipment requiring connections will lie within the illustrated area.
+This optimization will allow reconciling requirements and site conditions to enable designing a practical and constructible design.
+****************************** PROPOSED OPTIMIZATION END *******************************
+**************************** PROPOSED OPTIMIZATION START ******************************
+9.12.2.1.3Description
+A 3.5 m wide zone, located 1.5 m away from the centerline of the track, is reserved around OCS poles in the MX requirements. This means that the closest from an OCS foundation that cable containment can be installed is 1.4 m (5 m – 3 m from the centerline of track to center of OCS pole – 0.6 m (half widest expected diameter for OCS foundation)). Proposal is to relax that requirement for space-constrained located to a minimum of 500 mm.
+9.12.2.1.4Rationale
+500 mm clearance would be sufficient to enable OCS pole foundation construction. Saving 900 mm on both sides or the ROW would help designing in space-constrained locations.
+****************************** PROPOSED OPTIMIZATION END *******************************
+Track Crossing
+The MX Standard [6] has the following requirements with respect to under-track crossings (UTX).
+The crossings below the track shall meet the following clearance requirements:
+Top of ductbank or pipe casing at least 1.52 m below the base of rail.
+Crossing under railways shall be done following geometric criteria’s:
+0.6 m beyond the toe of the slope.
+2.0 m from the outside rail.
+not extending beyond the rail right-of-way.
+All under track bores shall be at 90 degrees when using a directional bore. Minimum angle of 60 degrees shall be used.
+**************************** PROPOSED OPTIMIZATION START ******************************
+9.12.2.1.5Description
+Allow the use of multi-ducts to replace casing pipes or individual ducts.
+9.12.2.1.6Rationale
+Multi-ducts meet E-80 Cooper loading and have been used extensively in Europe. They have been installed in Northern climates such as in Finland and Norway. Installation would require an open trench but short installation times minimize operations disruption.
+****************************** PROPOSED OPTIMIZATION END *******************************
+Road Crossing
+Minimum depth of road crossing is 1.52 m below top of pavement and shall be coordinated with the authorities having jurisdiction.
+Where open trench cannot be performed, crossing under roads shall be done in a casing pipe and shall be approved by authorities having jurisdiction. It shall also be done below the frost penetration of 1,200 mm for the GTA area [9].
+For open trench, duct bank shall have a minimum of 1.52 m cover depth.
+For required separation from other utilities, refer to Section 11.3.2.6.
+Bridge Crossing
+In the case of new bridges where design is not yet complete, using conduits embedded in the structure will be considered.
+In the case of existing bridges, the solution depends on the bridge type. Ducts can be mounted on the surface of structures, using brackets, or hanged under the structure, as shown in OPSD 2104.010 [8].
+OPSD 3900.100 [24] shows the preferred location of cable containment for each structure type.
+As per the proposed optimization detailed in Section 11.8, the ducts could be replaced by cable trays provided the optimization is acceptable to the authority having jurisdiction.
+Expansion boxes and joints will be used as required to account for structure movement (e.g., at structure expansion joints and where transitioning on and off structures). The infrastructure shall allow for a means to provide cable slack during cable installation so that cables can follow structural movement without damage. For this purpose, refer to mandatory access points locations (Table 43).
+Oil/Gas Pipeline Crossing
+Pipeline crossing shall be coordinated with the National Energy Board and/or the owner in question before entering its ROW. In addition, a minimum separation of 1.0 m is required, or as per utility owner requirements. Coordination with external stakeholders is the responsibility of CJV.
+Utility Crossing
+Metrolinx requires a 1 m minimum separation between duct and utility, from the outside of the duct. Refer to Utilities discipline Basis of Design [27] when cable containment design crosses third party networks (i.e., Bell, Zayo, CN, etc.).
+**************************** PROPOSED OPTIMIZATION START ******************************
+The 1.0 m separation might not be achievable in congested areas.
+9.12.2.1.7Description
+The approach would be to use 1.0 m for horizontal separation as a design target to be met everywhere it is practical. For areas where maintaining 1.0 m horizontal separation is not possible, the maximum achievable separation would be used, never less than 300 mm.
+For vertical separation, a minimum of 150 mm would be used.
+In all cases, coordination with the utilities companies will take place and their specific requirements will be considered.
+9.12.2.1.8Rationale
+The proposed values are in line with separation values listed in Table 3 of CSA 22.3 No. 7 [3] and reproduced here for convenience.
+Table 39: Separation Distance When Crossing Utilities
+
+Supply Ducts
+Communication Ducts
+Type of installation
+Horizontal Separation
+Vertical Separation
+Horizontal Separation
+Vertical Separation
+Other underground systems (e.g., gas lines, pipelines, water lines, and sewer lines)
+300 mm
+150 mm
+(or agreement on solution if not achievable)
+300 mm
+150 mm
+(or agreement on solution if not achievable)
+Propane tanks larger than 7600 L
+1.5 m
+-
+1.5 m
+-
+Crossing of pipelines
+N/A
+300 mm
+N/A
+300 mm
+Crossing of other underground systems other than pipelines
+N/A
+150 mm
+N/A
+150 mm
+****************************** PROPOSED OPTIMIZATION END *******************************
+9.13Casing Pipe Material, Culverts
+When casing pipes are required, the requirements of Section 3.3 of MX-ELEC-RCWY-2018-REV0 [6] will be followed.
+The number of 100 mm conduits allowed in the casing varies according to the casing diameter.
+Table 40: Number of conduits in casings
+Nominal Casing Diameter
+Maximum Number of 100 mm (4”) ducts
+mm
+Inch
+
+300
+12
+1 Duct
+400
+16
+2 Ducts
+450
+18
+3 Ducts
+500
+20
+4 Ducts
+600
+24
+5 Ducts
+750
+30
+9 Ducts
+900
+36
+12 Ducts
+1050
+42
+16 Ducts
+1200
+48
+24 Ducts
+9.14Conduits
+9.14.1General
+The allowable length of a conduit run is driven by the ability to successfully pull cables through it for installation. The two main limiting factors are the cable pulling tension and the maximum sidewall bearing pressure, two cable-dependent values.
+Pulling tension is a function of the value of the angles of the elbows used in a run as well as of the cable weight.
+Pullboxes will be installed at a maximum of 250 m along a linear route without any bends. This number will get confirmed once the cables are selected and their specifications are known.
+Angles
+Although the adequacy of each run needs to be validated by a pulling calculation, a general rule to develop the preliminary design is to ensure that the sum of angles of any conduit run does not exceed 270 degrees between two consecutive access points.
+Deviating from this is acceptable provided a cable pulling calculation considering the cable characteristics demonstrates that neither the maximum pulling tension nor the maximum sidewall bearing pressure is exceeded. However, a total of 360 degrees shall never be exceeded between two consecutive access points (CEC HB, Rule 12-910). A margin of 10% should be applied when performing the calculation.
+Always aim at using the smallest angles which meet the purpose and leverage the inherent conduit flexibility for direction changes which can be done over long lengths. Refer to manufacturer’s specifications for allowable deflection per pipe material and size.
+Depending on conduit types and diameters, some conduits can be bent in the field to accommodate arbitrary angles. It is good practice however to use standard angles as much as possible. Care should be taken to double-check commercially available elbow angles prior to designing as their availability sometimes vary depending on the conduit type. If bending is a necessity, refer to the fabricant specification and maximum bend angles prescribed.
+Radii
+The second factor at play, maximum sidewall bearing pressure, is a function of the elbow radius and of the pulling tension at the entry of the bend.
+Table 7 of the Canadian Electrical Code (CSA C22.1-18), reproduced here, lists the minimum radius to be respected depending on size of conduit.
+In general, however, it is good practice to use larger radii to ease cable pulling by minimizing sidewall bearing pressure. Standard radii provided by conduit manufacturers always meet and generally exceed the code requirements. Larger radii are also likely to be specified in contractual requirements. When designing, aim for a larger radius when site conditions allow as it will ease cable pulling. If space constraints are present, work your way down from there using the next largest available radius size, never going under the minimum values of the table above. When sidewall pressures are exceeded with the largest radius the site can accommodate, consider adding an intermediate access point.
+Note that the elbows have a straight portion (“tangent”) of varying length before and after the bend. It is important to refer to the appropriate data sheet to consider the proper length when designing and modeling.
+Table 41: Canadian Electrical Code Table 7 – Radius of conduit or tubing bends
+Size of Conduit or Tubing (nominal mm)
+Minimum radius to centre of Conduit or tubing, mm
+16
+102
+21
+114
+27
+146
+35
+184
+41
+210
+53
+241
+63
+267
+78
+330
+91
+381
+103
+406
+129
+610
+155
+762
+Sizing
+From the Metrolinx requirements, a maximum 30% fill ratio, no matter the number of cables, is specified for this project.
+**************************** PROPOSED OPTIMIZATION START ******************************
+9.14.1.1.1Description
+With regards to conduit size, the maximum conduit fill is specified in the Canadian Electrical Code, in Table 8, where the allowable conduit fill depends on the number of cables to be installed in a particular conduit. Following the requirements of Table 42 would allow optimizing the cable containment size.
+Table 42: Canadian Electrical Code Table 8 – Maximum allowable per cent conduit and tubing fill
+
+Maximum conduit and tubing fill, %
+
+Number of conductors or multi-conductor cables
+
+1
+2
+3
+4
+Over 4
+conductors or multi-conductor cables (not lead-sheathed)
+53
+31
+40
+40
+40
+Lead-sheathed conductor or multi-conductor cables
+55
+30
+40
+38
+35
+9.14.1.1.2Rationale
+When the number of cables and their type running inside a conduit is known, the conduit size can be optimized by following the CEC rather than the Metrolinx requirements while still ensuring that cables can be easily installed.
+****************************** PROPOSED OPTIMIZATION END *******************************
+Drainage
+Exposed conduit runs installed in wet locations shall use water-tight joints preventing seepage.
+Additionally, the conduits must be sloped away from buildings to avoid water ingress. Water will collect at access points which shall have drainage provisions (see Section B). Design for 0.25% (1:400) slopes or steeper.
+Under no circumstances, should there be a low point in a ductbank that would cause water accumulation.
+9.14.2Conduit Material Requirements
+The projects requirements call for the following types of conduits to be used:
+a) PVC Schedule 40, or PVC Schedule 80; or
+b) HDPE 80, or HDPE 80 multi-duct; or
+c) PVC or epoxy coated rigid galvanized steel; or
+d) FRE rigid non-metallic; or
+e) liquid-tight flexible metal.
+For surface-run conduits, PVC-coated or epoxy-coated rigid galvanized steel shall be used.
+**************************** PROPOSED OPTIMIZATION START ******************************
+When building concrete-encased ductbanks, DB2 conduits, a standard industry product, compliant with CSA C22.2 No.211.1 would enable cost-savings versus using PVC rigid conduits and offer adequate performance.
+****************************** PROPOSED OPTIMIZATION END *******************************
+9.15Conductor Pull Access Points
+9.15.1General
+Access Points Locations
+Access points from which cables can be pulled are required periodically for long conduit runs. A cable pulling calculation is necessary to establish the distance between each access point. Limit pulling tension to a point that will not damage cable insulation or deform the cable. A description of maximum permissible pulling forces is given in the Ontario Electrical Safety Code. Access points are also mandatory at the following specific locations:
+Table 43: Mandatory Access Points Locations
+Location
+Access Point Requirement
+Rationale
+Wayside Equipment
+Along the main cable route (usually installed longitudinally with respect to the train tracks) to connect to wayside equipment, level crossings or to a bungalow.
+The access point allows for branching and doubles up as an access point for the longitudinal run.
+Buildings
+An independent access point is required for each ductbank entering a building as well as before and after station platforms.
+Provides the interface between the building and the external cabling infrastructure. Easier for cable pulling and avoids coordination challenges potentially exceeding the allowed angles (i.e., angles inside and outside the buildings are decoupled)
+Structures
+Just before and just after trainway structures (bridges, viaducts, etc.).
+These access points allow realizing a clean transition onto and off structures as the cabling infrastructure on the structures are likely to be different (exposed or concealed conduits, cable trays, etc.) and structure dependent.
+They are also used as slack pits to account for the effect movement of structures will have on installed cables (expansion and contraction).
+9.15.2Manholes, Handholes, Pullboxes
+General
+For the purpose of this section, the following definitions apply.
+Pullbox: Generic term for an access point from which cables can be pulled. Can be either a manhole or a handhole depending on the cable size requirement, the purpose (drainage or cable pulling or both), and site conditions.
+Manhole: Modular glass-reinforced plastic or concrete reinforced pullbox of sufficient dimensions for an individual to enter and store coiled cable slack.
+Handhole: Smaller pullbox providing an access point to ease cable pulling. Can be either reinforced concrete, polymer concrete or modular glass-reinforced plastic.
+Different pullboxes will be used for the different system components (e.g., positive traction power cables, negative traction power cables, low voltage cables and communications).
+Factors bearing on the choice of manholes and handholes are number of cables, direction, and location of duct runs; cable racking arrangement; method of drainage; adequacy of workspace (especially if equipment is to be installed in the manhole); and the size of the opening required to install and remove equipment.
+Manholes, handholes and pullboxes should be located at least 3.0 m from the edge of the track ties when ROW permits. When space is not sufficient, the minimum distance to consider is 1.0 m provided that track stability is unaffected.
+Manholes
+9.15.2.1.1Description
+Manholes shall be constructed from modular glass-reinforced plastic (GRP) or from precast concrete and satisfy the requirements expressed in Section 11.6.2.2.2. Note that concrete type and strength, as well as chimney height requirements do not apply to modular GRP. All other requirements apply.
+In areas where cast-in-place manholes might be needed, the following general requirements shall be respected. Choose the type of manhole based on loading and size requirements and robustness.
+9.15.2.1.2General Requirements
+A.Manholes subjected to train loading must be designed in accordance with Cooper E-80 loading.
+B.For precast manholes, outside the rail right-of-way (ROW), in roadways or in traffic paths by heavy or medium vehicles shall be designed with a H-20 loading in accordance with AASHTO HB 17. Units not located in deliberate traffic paths by heavy or medium vehicles shall be designed with a H-10 loading. H-10 loading is equivalent to 50% of H-20 loading.
+C.As per CSA 23.4-05, concrete shall be a minimum 28-day compressive strength of 35 MPa, stripping strength of minimum of 20 MPa, 5-8% air entrained and with an exposure of class C1. Concrete shall conform to latest CSA-A23.1. All testing shall conform to latest CSA-A23.2. Reinforcement shall conform to latest CSA standard G30.18, Fy = 400 MPa.
+D.Precast dividing sections shall be sealed to prevent water from leaking in. In areas where water table is subject to reach the structure, the exterior surface of a roof and neck shall be waterproofed with a self-adhered bitumen membrane.
+E.For cast-in-place manholes, roof and walls shall be designed in accordance with the Canadian Highway Bridge Design Code, CAN/CSA-S6-06, CL-625-ONT live loading or according to AASHTO HB 17, H-20 live loading with the following load ratings:
+Units located in roadways and other deliberate traffic paths by heavy or medium vehicles: H-20 structural load rating according to AASHTO HB 17.
+Units not located in deliberate traffic paths by heavy or medium vehicles: H-10 load rating according to AASHTO HB 17.
+AASHTO HB 17. H-10 loading is 50 % of the H-20 loading.
+F.Chamber’s chimney height shall be between 450 mm and 760 mm where necessary. Lids shall be a minimum 450 mm clear of walls. Chamber lids shall be located away from any obstructions or safety hazards.
+G.Enough clearance between ducts openings and adjacent surfaces inside the pullboxes shall be provided to enable easy manipulation of the cables. Clearance from installed cable racks to be provided.
+H.In paved areas and traffic-ways, set manhole frames flush with finished grade. Set other manhole frames 25 mm above finished grade.
+I.All manholes shall be grounded as per Ontario Electrical Safety Code (OESC).
+J.Cover plates shall be provided and secured with bolts and grounded.
+K.Cover plates to be labeled with service type (i.e., Power or Communications).
+L.Seal all conduits or troughs entering a pullbox on both the interior and exterior sides.
+9.15.2.1.3Pullbox Dimensions
+The pullbox dimensions will be as below unless site conditions or duct sizes do not permit, in which case alternate form factors will be sought.
+A.Manholes standard external length and width shall be as followed (internal dimensions):
+OPSD 2111.040 : 1850 mm x 1400 mm x (1650 mm x 1200 mm)
+OPSD 2111.050 : 2650 mm x 2050 mm (2400 mm x 1800 mm).
+B.Traction Power Manholes shall be 2500 mm L x 2500 mm W x 3000 mm D (inside dimensions), minimum 200 mm thickness, c/w galvanized pulling irons, knockouts, minimum 2 cable racks per wall, precast concrete type.
+Drainage
+9.15.2.1.4General
+For manholes, there will be no sump pit as per OSPD 2111.040 and OSPD 2111.050. All Manholes shall be drained to the sewer and drainage system and shall depend on sewer outfall elevation:
+1.Manholes that can be gravity drained:
+a.Drain opening shall be located on the manhole wall, at the invert of the floor.
+b.Pipe shall be PVC, HDPE or ABS,100 mm diam with a 2% slope minimum.
+c.May require a cleaning grate, a back-water valve and a P-trap if site conditions warrant.
+d.Outfall shall be connected to stormwater pipe, culvert, infiltration well, ditch or other acceptable drainage element.
+e.Shall have a soak away pit if the groundwater level is low and the ditch too far.
+2.In the eventuality of a connection to a storm manhole is impossible, drainage to embankment or drainage pocket shall be used as per OPSD 2116.01 and 2116.02.
+9.15.2.1.5Frost consideration
+Drainage pipes shall be under the frost depth. If impractical, pipes shall be protected with polystyrene foam insulation. Design equation from Dow shall be used:
+
+
+
+
+
+Handholes
+Handholes can be made of reinforced concrete, polymer concrete (ex. Oldcastle Duralite) or modular glass-reinforced plastic (Cubis STAKKAbox).
+Sizing of handholes to be determined in accordance with the Canadian Electrical Code.
+9.15.3Slack Pit Requirements/Vaults
+9.15.4General
+If a single pullbox of sufficient volume cannot be installed due to space constraints, slack pits will be considered. When slack pits are required, a standard precast manhole will be used to perform that function.
+**************************** PROPOSED OPTIMIZATION START ******************************
+Description
+Suggest accepting that manholes or pullboxes act as slack pits and pull pits when they are of sufficient size to adequately accommodate cable slack storage.
+Rationale
+Large manholes or pullboxes can accommodate cable slack storage reducing the need for slack pits. Slack pits could be used when manholes or pullboxes are not of sufficient size to accommodate cable slack storage resulting in space and cost savings.
+****************************** PROPOSED OPTIMIZATION END *******************************
+9.16Duct Banks
+9.16.1General
+Direct-Buried Conduits Ductbanks
+Direct-buried conduits ductbanks will be designed according to OPSD 2101.01 [13].
+As per MX-ELEC-RCWY-2018-REV0 [6], direct-buried conduits ductbanks shall not be used for traction power cables.
+If the total number of conduits, or if conduit size is not specified in the table of OPSD 2101.01 [13], concrete encased ductbanks as described in Section 11.7.1.3 shall be used.
+Multi-Ducts
+Multi-ducts are HDPE modules designed to host cables which have been used in the UK by Network Rail for under-track crossings. Figure 5 shows a picture of multi-ducts of various sizes. An assessment is currently underway to determine if multi-ducts installations in the context of OnCorr would meet the requirements, notably the required E-80 Cooper loading. The review of track behavior by the tracks discipline is also required to confirm acceptable depth of installation of the multi-duct and its potential effects on track stability (settlement, sleeper displacement, etc.). If all requirements are met, multi-ducts may be used in the design.
+
+Figure 5 – Multi -Ducts
+Concrete Encased Ductbanks
+Ductbanks will be reinforced concrete encased. Rebar will be 20M and center-to-center conduit spacing will be 190mm as per the Canadian Electrical Code, as per OPSD 2100.06.
+
+Figure 6: Typical Reinforced Concrete Encased Ductbank Cross-section
+Conduit spacers will be used in the duct bank and maintain a minimum spacing of 190 mm between conduits.
+A warning tape of minimum width of 304 mm will be provided above all ductbanks, placed 500 mm below surface.
+All conduits in duct banks shall have pull cords installed along the entire length, initiating from a pullbox and terminating at the duct banks end.
+Conduits shall be terminated using a bell end at pullboxes and where entering a building.
+9.16.2Minimum Number of Mainline Conduits Including Spares
+Minimum Number of Mainline Conduits
+The minimum number of conduits running on both sides of the tracks will be determined from E&M’s needs as expressed in the cable routing diagrams ([14] to [23]) and as they evolve. 30% spares will be considered along with additional provisions for riskier areas.
+**************************** PROPOSED OPTIMIZATION START ******************************
+Description
+The Metrolinx Raceways Standard [6] prescribes a colour-code for conduits. Suggest not applying this requirement.
+Rationale
+Conduits identification at the manholes will serve the same purpose. This optimisation would result in cost savings and facilitate procurement of conduits.
+****************************** PROPOSED OPTIMIZATION END *******************************
+Conduits Spares
+It is unlikely that the final cable list will be available when design of the cable containment infrastructure begins. Extra care needs to be taken in providing enough reserve conduits to ensure that the inevitable addition of cables will still allow meeting the maximum fill threshold for all conduits. Use the guide below to provide a minimum of 30% spares as per the project’s requirements [6].
+Table 44: Spare Conduits Design Guidance
+Number of conduits required
+Number of spare conduits
+Total number of conduits
+% Spares
+1
+1
+2
+50%
+2
+2
+4
+50%
+3
+3
+6
+50%
+4
+2
+6
+33%
+5
+3
+8
+38%
+6
+3
+9
+33%
+7
+3
+10
+30%
+8
+4
+12
+33%
+9
+7
+16
+43%
+10
+6
+16
+38%
+11
+5
+16
+31%
+12
+6
+18
+33%
+13
+7
+20
+35%
+14
+6
+20
+30%
+15
+9
+24
+37%
+16
+8
+24
+33%
+17
+11
+28
+39%
+18
+10
+28
+36%
+19
+9
+28
+32%
+20
+10
+30
+33%
+9.16.3Traction Power and High Voltage Raceway
+Traction power raceways will be concrete reinforced ductbanks as described in the previous section with conduit size dimensioned to meet fill ratio of 30% with 2 cables per conduit.
+Conduits will be Schedule 80 PVC conduits or FRE conduits for straight portions and use PVC-coated or epoxy-coated rigid galvanized steel conduit elbows.
+**************************** PROPOSED OPTIMIZATION START ******************************
+Description
+Reduce required radius to 5 feet. This is the maximum standard commercially available PVC-coated steel conduits radius (5 feet, 1.524 m).
+Allow the use of PVC elbows with PVC conduits provided that it can be demonstrated that maximum sidewall pressure during cable pulling is not exceeded.
+Rationale
+1.8 m radius conduits are not available for PVC-coated steel.
+A custom radius conduit would need to be produced.
+Such a radius is not required given the cables specifications which can accommodate a smaller bend radius.
+Sidewall pressure during cable pulling can be calculated to ensure burn through is avoided even when using PVC elbows.
+****************************** PROPOSED OPTIMIZATION END *******************************
+9.17Cable Tray
+In the Metrolinx raceway requirements, the use of cable tray is restricted to radio towers, where ventilated trays and covers may be used.
+Cable trays and supports will be designed to provide adequate strength to support the weight of the cables and future cables, minimum load Class E, complete with stainless steel hardware, extra heavy duty. Covers will be used.
+******************************** PROPOSED OPTIMIZATION START ******************************
+Description
+Allowing the use of cable trays on bridges and viaducts and in the corridor as an alternate allowed design approach would provide an additional technical solution for areas of limited space.
+Rationale
+There will be instances when using exposed conduits does not allow meeting required usable volume or site space requirements. Cable trays for exterior use have been used successfully on numerous transit projects, provide for easier cable installation and are a definite option for tight areas.
+****************************** PROPOSED OPTIMIZATION END *******************************
+9.18Cable Trough
+A comparative analysis of the main types of cable troughs is presented herein.
+Considering this analysis, the polymer concrete troughs offer the best compromise. The HDPE troughs do not meet several requirements, notably the loading capacity and the resistance to lateral forces.
+Table 45: Trough Type Metrolinx Requirements Compliance Analysis
+
+
+Trough Type
+Section from MX Standard [6]
+HDPE
+(e.g., Trojan Trotruf)
+Polymer Concrete
+(e.g., Oldcastle Plastibeton)
+Cast-in-place
+3.8.1 a)
+Cable trough shall be rated for:
+a) heavy duty vehicle traffic, complete with “knock-out” holes or “T” configurations;
+Not rated for heavy duty traffic
+
+No “knock-outs”
+T-pieces available
+H-20 Loading (32 000 lbs) with Plastibeton HD or Steel Cover
+
+No “knock-outs”
+T can be produced by installing a cut section
+Heavy loading can be achieved (design dependent)
+
+No “knock-outs”
+T forms can be poured
+3.8.1 b)
+Cable trough shall be rated for:
+b) exterior below grade use;
+Compliant
+Compliant
+Compliant
+3.8.1 c)
+Cable trough shall be rated for:
+c) resistant to sunlight exposure; and
+Compliant
+Compliant
+Compliant
+3.8.1 d)
+Cable trough shall be rated for:
+d) suitable for use in wet locations.
+Compliant
+Compliant
+Compliant
+3.8.2
+Individual cable trough sections shall interlock together to make a continuous cable trough without gaps.
+Compliant
+Compliant
+N/A
+3.8.3
+The cable trough shall have integral dividers to maintain separation between power and communication cables.
+Model dependent
+Can be installed
+Can be installed
+3.8.4
+Cables shall only enter or exit the cable trough through cable trough hand holes or pull boxes that are an integral part of the cable trough system.
+Not a trough requirement. Applies no matter the type selected.
+3.8.5
+The cable trough shall be placed in a level trench and installed per manufacturer recommendation by qualified personnel.
+Not a trough requirement. Applies no matter the type selected.
+3.8.6
+Cable trough transition from trough trench shall have protected entry/exit point so as not to cause damage by vibration or movement.
+Not a trough requirement. Applies no matter the type selected.
+3.8.7
+Drainage at track structure shall be no closer than 304mm from edge of tie. Elevation of drainage shall be below top of tie.
+Drainage holes provided
+Openings at the bottom provide drainage
+To be designed in
+3.8.8
+Covers for cast-in-place cable troughs shall be prefabricated High Density Polymer Concrete or cast iron type and be secured with stainless steel vandal proof hardware.
+N/A
+N/A
+Can be met
+3.8.9
+Covers shall sit inside the trough, be flush with the finished grade, and be designed to withstand excessive, or heavy traffic loading.
+Non-compliant
+Compliant
+Can be met
+3.8.10
+The weight of each cover shall not exceed the allowable handling weight as per OHSA requirements.
+Covers can be man-handled
+Covers have lifting holes. Can be moved using lifting hooks (two people required).
+To be determined. Machinery likely required for handling.
+3.8.11
+Cable troughs shall not be located directly above longitudinal runs of utilities.
+Not a trough requirement. Applies no matter the type selected.
+3.8.12
+The use of cable trough and lids where accessible by motor vehicles shall be rated to withstand H-20 loading.
+Non-compliant
+Compliant
+Can be met
+3.8.13
+Special circumstances will be determined as required. For example, cast-in-place type cable troughs shall be located on bridges as an integral part of a pedestrian walkway.
+Not a requirement.
+Table 46: Trough Type Additional Requirements Compliance Analysis
+
+Trough Type
+Additional Requirements
+HDPE
+(e.g., Trojan Trotruf)
+Polymer Concrete
+(e.g., Oldcastle Plastibeton)
+Cast-in-place
+Ability to sustain lateral forces without deforming (as produced by rails thermal expansion and tamping operations) 
+Design dependent
+Compliant
+Compliant
+Non-skid Surface
+Compliant
+Compliant
+Cover type dependent
+Durability
+Compliant
+Compliant
+Compliant
+Constructability / Installation
+Easiest
+Machinery is required for handling of the troughs section.
+More involved (formworks and concreting are required).
+9.19Raceways at Passenger Stations
+Manholes and handholes must be located at every end of the platform and along the platform at the entrance of a tunnel, bridge, shelter, and outside pedestrian traffic areas to grant junction points for the communication and power conductors.
+The cable containment inside the station or outside the platform is the responsibility of the Electrical Design Team. The manholes will constitute the preferred design interface point between the two disciplines. There might be instances with the interface where it must be adjusted depending on site conditions or existing buildings layout. Those adjustments will require the Line station Basis of Design.
+9.20Pedestrian Tunnels
+Pedestrian tunnels are outside the scope of the cable containment discipline. Refer to the electrical discipline.
+9.21Marker Posts and Tie Plate Markers, Warning Decals
+9.21.1Marker Posts
+The crossings will be suitably identified with markers located on each side of the railway tracks and roadway.
+9.21.2Tie Plates
+Tie plates will be used where raceway/cables pass underneath the track or is within the raceway/cable crosses multiple tracks. In addition, they will be placed on the main track tie and the siding tie so the markers are on either side of the cable where available and if not replaced by concrete ties.
+9.21.3Warning Decals
+The warning decals is sized to be 75 mm x 240 mm, with white background and black letters stating, “warning of buried cable” and the appropriate contact information before digging and excavation.
+9.22As-Built Drawings
+As-built drawings will be provided by the Constructor. As such, their production is not part of the cable containment discipline scope.
+
+
+9.23Summary of Proposed Optimizations
+Table 47 summarizes the proposed optimization and its rationale.
+Table 47: Design Optimization Table
+Metrolinx Paragraph Number
+Metrolinx Requirements
+Related Section
+Proposed Optimization
+Rationale
+Benefit
+2.1.4
+Power and communications (control and data) systems shall be run in separate raceways and set a minimum of 610 mm apart.
+11.1.1
+Use separation according to cable susceptibility classes as defined in RER3-EM-SYS-SPN-ALL-00003 [11].
+Susceptibility is dependent on voltage and current. Small power circuits have a lower impact than high power circuits on control cables.
+Separation could be reduced to 300 mm resulting in a space saving of 620 mm for the required width of overall cable containment.
+3.2.1 (1)
+The minimum allowable distance from the raceway to the centerline of track shall be per Figure 1: Fill Installation Directional Bore (Appendix A).
+11.3.2.1
+Suggest making this a target design criteria rather than a hard requirement. Proposed alternate text: "Longitudinal raceway installations within the track bed shall be avoided as much as practical. When unavoidable, installation design requires a review by tracks designers to ensure impact on track stability and longevity is minimized. Refer to Figure 1: Fill Installation Directional Bore (Appendix A) for preferred installation location.
+Impossible to meet this requirement everywhere given the ROW, existing underground infrastructure, and the fact that trackside equipment requiring connections will lie within the illustrated area. 
+In addition, transverse cable routes will be required periodically to ensure system redundancy.
+Allows reconciling requirements and site conditions to enable designing a practical and constructible design.
+3.2.1 (7)
+Figure 6: Typical OCS Pole (Appendix A) shows a reserved 3.5 m wide zone, located 1.5 m away from the centerline of the track, around OCS poles
+11.3.2.1
+A 3.5 m wide zone, located 1.5 m away from the centerline of the track, is reserved around OCS poles in the MX requirements. This means that the closest from an OCS foundation that cable containment can be installed is 1.4 m (5 m – 3 m from the centerline of track to center of OCS pole – 0.6 m (half widest expected diameter for OCS foundation)). Proposal is to relax that requirement for space-constrained located to a minimum of 500 mm.
+500 mm clearance would be sufficient to enable OCS pole foundation construction. Saving 900 mm on both sides of the ROW would help designing in space-constrained locations
+1.8 m narrower ROW required.
+3.2.2 (2)
+Crossing under rail tracks shall be done in casing pipe or duct bank:
+a) not less than 1.52 m from base of rail to top of casing at its closest point:
+b) of a size sufficient to allow for the removal of the cable without disturbing the casing pipe or road bed
+c) Extending 600 mm beyond the toe of the slope of the roadbed
+d) 1.0 m beyond the ditch;
+11.3.2.2
+Allow the use of multi-ducts to replace casing pipes or individual ducts.
+Multi-ducts can sustain adequate loading and have been used extensively in Europe.
+Shorter installation times and less operations disruption.
+3.2.6 (2)
+Minimum separation between duct and utility shall be 1.0m from the outside of the duct.
+11.3.2.6
+1 m for horizontal separation as a design target. If not possible, max practical separation, never less than 300 mm
+150 mm for vertical separation between ductbanks and other underground systems
+Clarify that this applies for horizontal separation of parallel infrastructures. We need to define the minimum clearance between utilities and raceways when they are crossing (vertical separation). Suggest using 150 mm as per CSA C22,3 No. 7, paragraph 6.2.1.2.
+Allows reconciling requirements and site conditions to enable designing a practical and constructible design.
+3.4.1 (3)
+Conduits fill shall not exceed 30%. 
+11.5.1.3
+Following the requirements of Table 8 of the Canadian Electrical Code would allow optimizing the cable containment size.
+When the number of cables and their type running inside a conduit is known, the conduit size can be optimized by following the CEC rather than the Metrolinx requirements while still ensuring that cables can be easily installed.
+Reduction of the number of conduits required.
+3.4.2 (1)
+Conduits shall be:
+a) PVC Schedule 40, or PVC Schedule 80; or
+b) HDPE 80, or HDPE 80 multi-duct; or
+c) PVC or epoxy coated rigid galvanized steel; or
+d) FRE rigid non-metallic; or
+e) liquid-tight flexible metal.
+11.5.2
+Proposal to add DB2 conduits (compliant to CSA C22.2 No.211.1) for concrete-encased ductbanks.
+Standard industry product.
+CSA approved (C22.2 No. 211.1)
+The type of conduit in the ductbank has a negligible impact on meeting the E-80 Cooper loading. The supported loading is related to the ductbank construction, namely concrete and rebar types.
+Cost-savings vs rigid PVC conduits.
+3.4.2 (3)
+On bridges and other structures, exposed raceways shall be PVC or epoxy coated rigid galvanized steel conduit (RGSC), complete with expansion deflection assemblies, see Ministry of Transportation drawings MTOD-2930.070, MTOD-2930.060. If raceways are concealed in concrete as an integral part of a bridge or overpass, Schedule 40 PVC conduit may be used.
+11.5.2
+As per previous proposal, allow DB2 conduits for concrete encased applications as an integral part of a bridge or overpass.
+Standard industry product. 
+
+CSA approved (C22.2 No. 211.1)
+Cost-savings vs rigid PVC conduits.
+3.5.3 (1)
+Vault/slack storage pits shall be provided for cable slack storage in electrical chamber (usually the last 3.0m from handhole/manhole into bungalows/cases to equipment, tunnels, bridges, road and track crossing, culverts, ends of station platforms, per detail design) where the cables are usually coiled near cable ends.
+11.6.4
+Suggest accepting that manholes or pullboxes act as slack pits and pull pits when they are of sufficient size to adequately accommodate cable slack storage.
+Large manholes or pullboxes can accommodate cable slack storage reducing the need for slack pits. Slack pits to be used when pullbox is not of sufficient size to accommodate cable slack storage.
+Space and cost savings.
+3.6.2 (1)
+Power Raceways:
+a) Provide a minimum of 4 x 100mm (4 in), red color conduit and red color with different strips for easy identification (2 Signaling, 2 Electrification).
+11.7.2
+Do not apply this requirement.
+Conduits identification at the manholes will serve the same purpose.
+Cost savings.
+
+Better conduits availability.
+3.6.2 (2)
+Communication Raceways:
+
+a) Provide a minimum of 6 x 53 mm, orange color, for Fiber Optic Systems.
+b) Provide a minimum of 2 x 53 mm, purple color, for Corporate Network, Operation/Station, Leasing, and Communications System.
+c) Provide a minimum of 1 x 53 mm, brown color, for Radio System.
+11.7.2
+Do not apply this requirement.
+Conduits identification at the manholes will serve the same purpose.
+Cost savings.
+
+Better conduits availability.
+3.6.2 (4)
+A minimum of 610 mm separation shall be provided between power and communications.
+See proposed optimization for paragraph 2.1.4.
+ 
+ 
+ 
+3.6.3 (1)
+Duct banks initiating from facilities to the first manhole outside of the alignment and to all subsequent manholes and feeder poles within the alignment, shall be Schedule 80 PVC conduit, FRE conduit, with PVC or epoxy coated rigid galvanized steel conduit elbows, with a radius greater than 1.8m, encased in steel-reinforced concrete.
+11.7.3
+Reduce required radius to 5 feet. This is the maximum standard commercially available PVC-coated steel conduits radius (5 ft, 1.524 m).
+Allow the use of PVC elbows provided that it can be demonstrated that maximum sidewall pressure during cable pulling is not exceeded.
+1.8m radius conduits are not available for PVC-coated steel.
+A custom radius conduit would need to be produced.
+Such a radius is not required given the cables specifications which can accommodate a smaller bend radius.
+Sidewall pressure during cable pulling can be calculated to ensure burn through is avoided even when using PVC elbows.
+Cost savings
+3.7.1
+Design circumstances may require physical protection of the cables, in which case ventilated cable trays and covers may be used. Cable trays use is restricted to radio towers between bunker and tower within system buildings, across pedestrian bridges and rooms (i.e., bungalows, bunkers, electrical and control rooms). Cable trays and supports shall be designed to provide adequate strength to support the weight of the cables and future cables, minimum load Class E, complete with stainless steel hardware, extra heavy duty.
+11.8
+Allowing the use of cable trays on bridges and viaducts and in the corridor as an alternate allowed design approach would provide an additional technical solution for areas of limited space. 
+There might be instances when using exposed conduits does not allow meeting required usable volume or site space requirements.
+
+Cable trays for exterior use have been used successfully on numerous transit projects, provide for easier cable installation and are a definite option for tight areas.
+Easier cable installation.
+
+Option for tight areas.
+
+10.Additional Design Criteria
+10.1Geo-Engineering
+The geo-engineering design criteria are provided within the program-wide Geo-engineering Basis of Design [30] currently under development and provided under separate cover.
+This document will include the design principles and assumptions to be implemented in the approach to geotechnical, hydrogeological, and geo-environmental (excess soils and groundwater) design, as well as pavement and materials design for the program, herein referred to as geo-engineering.
+10.2Fire-Resistance Design
+A fire barrier (e.g., fire-resistant putty) shall be used to seal the space around the cables in conduits entering a building and prevent fire propagation.
+Cable containment in enclosed trainways shall meet NFPA 130 [5] Section 12 requirements.
+To achieve that, the cable containment infrastructure for emergency power and emergency communications will make use of redundant and independent ductbanks embedded in at least 100mm of concrete to provide a 1-hour fire-resistance.
+For space-constrained locations where achieving this is impossible, incombustible cable containment with fire-resistant cables shall be used.
+An alternate solution to allow using standard cabling would be to use endothermic mats to protect the incombustible cable containment. Hilti and 3M are suppliers of endothermic mats. However, this solution is a last resort and should only be used for short lengths. It expensive, requires more work to put in place and installation quality is critical to adequate fire-resistance.
+10.3Design Life Span
+The minimum design life for the signalling system is 30 years, communications system 20 years, SCADA system 30 years and traction power equipment 40 years. (Project Agreement, Schedule C-6, Section A.3.5).
+A minimum design life span of 30 years for general cable containment and of 40 years for cable containment hosting traction power cables is thus considered.
+10.4Clearances from Power Lines
+All system components shall be maintained at a minimum clearance as shown in Table 48.
+Table 48: Clearance from Cable Containment to Live Uninsulated Electrical Components
+Nominal System Voltage (kV)
+Maximum System Voltage (kV)
+Design BIL (kV)
+Minimum Clearance (mm)
+≤ 13.8
+14.5
+110
+178
+≤ 23.0
+24.3
+150
+254
+≤ 34.5
+36.5
+200
+330
+≤ 46.0
+48.3
+250
+432
+≤ 69.0
+72.5
+350
+635
+≤ 115.0
+21.0
+550
+1067
+≤ 138.0
+145.0
+650
+1270
+≤ 161.0
+169.0
+750
+1473
+≤ 230.0
+242.0
+900
+1050
+1930
+2134
+≤ 345.0
+362.0
+1050
+1300
+2134
+3150
+≤ 500.0
+550.0
+1500
+1800
+3150
+3658
+≤ 765.0
+800.0
+2050
+4242
+10.5Interface with Existing Line Stations
+Assemblies are not part of the cable containment design and shall be looked after by the electrical design team. An interface might still exist when a cable transitions from a ductbank to an electrical room inside a station for example. In this case, the end assembly would be the destination electrical panel in the electrical room, as defined by the station electrical discipline.
+Refer to the Basis of Design for existing stations [12].
+10.6Passive Protection within USRC
+Cable containment will not be installed in the ballast, sub ballast and sub grade levels in the following areas:
+Between MP 0.40 and 0.55:
+A. south of the existing Oakville-Kingston south connector track;
+B. between existing tracks C1 and A3; and
+C. north of existing track B.
+North of existing track BNY1 between MP 0.7 and MP 0.75 where the existing Bathurst North Layover Facilities Substation and Bathurst North Layover Facilities Crew Center are currently located inclusive of all ancillary spaces and staff parking.
+Where Spadina station will be constructed as defined in section C13 of the project agreement.
+The exact type of cable containment will be selected according to specific site conditions and depends on the reusability of the legacy cable containment already in place. When cable containment cannot avoid the afore-mentioned areas, to meet the requirement to relocate new cables within a 7-day window, exposed conduits, or cable trays, installed on existing structures or walls or installed on racks not requiring foundations are envisioned.
+
+
+Appendix A
+Requirements Compliance Matrix
+
+
+Requirements Compliance Table
+Source module
+Num Heading
+Primary Text
+Artifact Type
+Applicable section(s) &
+ Basis of Design Document Number
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.8.4 (c)
+(vii)  Underground electrical ducting and wiring shall be provided in compliance with Municipal Standards.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 4
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.10 (a)
+(a)  Project Co shall submit an initial set of Record Drawings, As-Built Drawings and operation and maintenance manuals (“Record Drawings, As-Built Drawings and Operations and Maintenance Manuals”) to Contracting Authority for review in accordance with Schedule C-2 – Initial Works Review Procedure.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 11.13
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.10 (b)
+(b)  Initial Record Drawings and operation and maintenance manuals for all disciplines where Infrastructure is necessary for Train Service Plans shall be submitted by Project Co to Contracting Authority no later than six (6) months prior to the submission of the Consent to Operate Submission as set out in Schedule A-5 – Safety and System Assurance.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 8
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.10 (e)
+(e)  Project Co shall finalize the Record Drawings and operation and maintenance manuals where Infrastructure is necessary for Train Service Plans (incorporating the comments from Contracting Authority) and submit final Record Drawings and operation and maintenance manuals to Contracting Authority no later than three (3) months prior to the Consent to Operate Submission as set out in Schedule A-5 – Safety and System Assurance.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 8
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.10 (f)
+(f) Project Co shall finalize the Record Drawings and operation and maintenance manuals where Infrastructure is not necessary for Train Service Plans (incorporating the comments from Contracting Authority) and submit final Record Drawings and operation and maintenance manuals to Contracting Authority no later than three (3) months prior to Substantial Completion.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 5
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.11.1 (b)
+(b)  Design of all elements of the various system designs shall be developed to operate reliably in the environment in which they are installed. Project Co shall design all systems elements to integrate with the environmental conditions present including ambient temperature range, humidity, precipitation and other environmental factors that will impact operation. 
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 5
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.11.3 (a)
+(a)  Project Co shall develop and implement nomenclature (“Nomenclature”) as a means of identifying, labeling and tracking equipment and assets to comply with this Schedule C-6 and Part B-3 –Fixed Asset Maintenance. The Nomenclature shall adhere to the defined terms under the Project Agreement to the extent applicable and shall be developed to allow for easy identification of System and Facility elements to support operational decisions, maintenance activities, and alarm management.
+Requirement
+RER3ECW-PW-0000-SWS-IFM-PLN-00001, Section 1.8.2
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.11.3 (b)
+(b)  Project Co shall ensure the Nomenclature includes a method for system-wide labeling that includes Service Group, functional description of the element, and a unique sequential identification number, with the functional description containing information related to the type of element and being an alpha numeric designation to represent the specific field element based on the Project Co system architecture.
+Requirement
+RER3ECW-PW-0000-SWS-IFM-PLN-00001, Section 1.8.2
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.11.3 (c)
+(c)  The Nomenclature including the functional description codes, shall be documented in the Project Co EAIS and the Project Co MMIS.
+Requirement
+RER3ECW-PW-0000-SWS-IFM-PLN-00001, Section 1.8.2
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.1 (c)
+(ii) D. viii. Metrolinx Guidelines for Rail Corridor Raceway Requirements
+MX-ELEC-RCWY-2018-REV0.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 4
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.1 (c)
+(vi) A. viii. Metrolinx Guidelines for Rail Corridor Raceway Requirements
+MX-ELEC-RCWY-2018-REV0.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 4
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.6.1 (d)
+(d) Should Project Co’s design require the installation of new cabling within the locations defined in Section B.6.1(b)(i) then this infrastructure shall be able to be relocated from the areas within a period of 7 days from written instruction from Contracting Authority.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 10.2
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.6.1 (h)
+(h) Should Project Co’s design require the installation of new cabling within the locations defined in Section B.6.1(e)(i) and Section B.6.1(f) then this infrastructure shall be able to be relocated from the areas within a period of 7 days from written instruction from Contracting Authority.
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 10.2
+Schedule C-6 - Initial Works Output Specifications - PART D - Systems
+D.5.2 (a)
+(ii) design standards and criteria that will be followed to minimize EMI/EMC impacts;
+Requirement
+ONC-ECW-PW-5090-SWS-EGM-DCR-0002, Section 11.1.1

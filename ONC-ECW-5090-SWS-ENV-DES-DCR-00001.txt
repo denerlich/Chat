@@ -1,0 +1,2110 @@
+﻿
+Basis of Design - Environmental
+
+
+
+
+
+
+04/18/2023
+D01.03
+DDD Interdisciplinary Review
+J. Chan
+K. Wilson /
+R. Young
+Jawad Malik
+Raff Orsi
+03/17/2023
+D01.02
+Internal Review
+J. Chan
+K. Wilson /
+R. Young
+Jawad Malik
+Raff Orsi
+Not Required
+DATE
+MM/DD/YYYY
+REV.
+STATUS
+PREPARED BY
+CHECKED BY
+APPROVED BY
+APPROVED BY
+
+Discipline Lead
+Functional Manager
+
+
+
+DISCLAIMER
+© 2022. This document has been produced and distributed for members of ONXPRESS CIVILS CONTRACTOR GP’s purposes in respect of the GO Rail Expansion – On Corridor (RER Package 3) project only. No part of this document may be reproduced, published, converted, or stored in any data retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording or otherwise) without the prior written permission of the Designers, ONXPRESS CJV ENGINEERING. This document must not be used by the ONXPRESS CIVILS CONTRACTOR GP (or any of its constituent members) for any other purpose, or provided to, relied upon or used by any other person without ONXPRESS CJV ENGINEERING’s prior written consent.
+All Confidential Information shall remain the sole property of the applicable Sponsor or the ONXPRESS CIVILS CONTRACTOR GP or ONXPRESS CJV ENGINEERING and each party shall treat it as confidential. Confidential Information shall not be used by for any purpose other than for performing their respective duties on the GO Rail Expansion – On Corridor (RER Package 3) Project.
+This report contains the expression of the opinion of, ONXPRESS CJV ENGINEERING using its professional judgment and reasonable care based on information available and conditions existing at the time of preparation. The use of, or reliance upon this report is subject to the relevant Design Services Agreement between ONXPRESS CJV ENGINEERING and the ONXPRESS CIVILS CONTRACTOR GP (the “DSA”) and the following:
+This report is to be read in the context of and subject to the terms of the DSA, including any methodologies, procedures, techniques, assumptions and other relevant terms or conditions specified in the DSA.
+This report is meant to be read as a whole, and sections of the report must not be read or relied upon out of context. This report is meant to be used in its unaltered form, as delivered by ONXPRESS CJV ENGINEERING, and any modifications to the report, or the methodologies, procedures, techniques, assumptions used, without the consent of ONXPRESS CJV ENGINEERING may invalidate the conclusions, outputs or expressions of opinion, ONXPRESS CJV ENGINEERING does not accept any liability in connection with such altered information; and
+Unless expressly stated otherwise in this report, ONXPRESS CJV ENGINEERING has not verified the accuracy, completeness or validity of any information provided to ONXPRESS CJV ENGINEERING by or on behalf of the ONXPRESS CIVILS CONTRACTOR GP and ONXPRESS CJV ENGINEERING does not accept any liability in connection with such information.
+
+
+Table of Contents
+1.	Introduction	1
+1.1	Purpose	1
+1.2	GO Rail Expansion – On Corridor	2
+1.3	ONxpress CC (Civil) Infrastructure Civil Works	3
+2.	Units	3
+3.	Abbreviations	3
+4.	Applicable Standards and Reference Documents	5
+4.1	Metrolinx Specifications / Guidelines	5
+4.2	Environmental Compliance	5
+4.3	Reference Documents	5
+4.3.1	Environmental Reference Documents	5
+4.3.2	Additional Environmental Reports	9
+4.3.3	Legislation and Guidance Documents	10
+4.3.4	Project Specific Documents	16
+5.	Safety Assurance	18
+6.	Planning and Development Procedures	18
+7.	Ambient Air Quality	18
+7.1	Baseline Air Quality Monitoring	19
+8.	Archaeology	19
+9.	Cultural Heritage	20
+10.	Erosion and Sediment Control	20
+11.	Species at Risk	20
+12.	Tree Removal and Protection	21
+13.	Fish and Fish Habitat	24
+14.	Noise and Vibration	25
+14.1	Assessments Leading to the Design of Noise and Vibration Controls	25
+14.2	Permanent Noise and Vibration Control Design	26
+14.2.1	Noise Barriers	26
+14.2.2	Ballast Mats	26
+15.	Soil and Excavated Material Management	26
+16.	Groundwater Management	27
+17.	Waste Diversion and Management	28
+18.	Climate Change and Vulnerability Assessment	28
+19.	Sustainability	29
+
+List of Tables
+Table 1: List of Abbreviations	3
+Table 2: Applicable Environmental Reference Documents	6
+Table 3: Applicable Federal and Provincial Legislation and Guidance Documents	11
+Table 4: Specific Reference Documents by Environmental Subdiscipline	12
+Table 5: Applicable Environmental Management Plans	17
+Table 6: Air Quality Criteria and Limits for PM2.5, PM10 and Silica	19
+Table 7: Applicable Tree By-Laws	22
+
+
+List of Figures
+Figure 1: Two-Stage EMP Approach	16
+
+
+List of Appendices
+Appendix A	Requirement Allocation Table
+
+1.Introduction
+1.1Purpose
+Metrolinx (Contracting Authority) has engaged the ONxpress Transportation Partners Inc. Joint Venture (ONxpress) to design and build the GO Rail Expansion - On-Corridor Program (OnCorr).
+The purpose of this report is to describe the Environmental Basis of Design (BoD) for all scopes of work associated with the Project. The environmental scope is highly multidisciplinary and includes the following subdisciplines:
+Ambient Air Quality
+Archaeology
+Cultural Heritage
+Erosion and Sediment Control
+Species at Risk
+Tree Removal and Protection
+Fish and Fish Habitat
+Noise and Vibration
+Soil and Excavated Materials Management
+Groundwater Management
+Waste Diversion and Management
+Climate Change and Vulnerability Assessment
+Sustainability.
+Due to the multi-disciplinary nature of the environmental discipline, collaboration with other disciplines has taken place to ensure consistency in approach across the Project. This document includes references from related BoDs, such as Geo-Engineering Basis of Design. The geo-engineering design criteria are provided within the program-wide Geo-engineering BoD (ONC-ECW-5090-SWS-PWS-EGM-DCR-00001), provided under separate cover. The Geo-engineering BoD includes the design principles and assumptions to be implemented in the approach to geotechnical, hydrogeological, and geo-environmental (excess soils and groundwater) design, as well as pavement and materials design for the program, herein referred to as geo-engineering.
+The On-Corridor Works scopes of work applicable to this Environmental Design Criteria include:
+Advanced Works (Cable Containment and Priority Traction Power Facilities)
+Corridors
+Union Station
+Line Station Renovations
+New Line Stations
+TPFs (not included in Advanced Works)
+Grade Separations
+Bridge Modifications.
+The report summarizes the scope of work applicable to the Environmental BoD criteria that will be considered as part of the ONxpress Civil Infrastructure and Buildings Design Work.
+This report should be read in conjunction with the execution version of the Project Agreement (PA) and other BoDs, as required. This report is part of the Design Development Definition (DDD) phase with the objective to:
+Identify discipline design standards, codes, and practices to apply to the design approach to maintain consistency and efficiency throughout the Program.
+Define the scope requirements and scope content of the infrastructure works and sub-works within a Construction Stage – design methodology and boundaries.
+Create the basis for future decisions relating to environmental design scope management i.e., what is and what is not included in the scope – Change Management.
+1.2GO Rail Expansion – On Corridor
+GO Transit is a regional transit system serving the Golden Horseshoe region of Ontario with a hub at Union Station in Toronto. It operates on infrastructure that is either owned by Metrolinx (MX territory), or by third parties such as Canadian National (CN) Railway or Canadian Pacific Railway (CPR), or non-MX territory.
+GO Rail Expansion is a program which will provide more travel options for residents and commuters. Upon delivery, the GO Rail Expansion program will provide faster, more frequent, two-way, all-day service on core segments of the GO rail network.
+The On-Corridor Works are part of the Province's GO Rail Expansion. For the GO Expansion, the fleet is expected to switch to electric locomotives. There are no further indications of specific vehicle requirements.
+1.3ONxpress CC (Civil) Infrastructure Civil Works 
+This Basis of Design report is initially focused on the Bundle 1 Development Phase Early Works identified by ONxpress as the locations of the early design works priority for CJV and CJV. It may, from time to time, require to be revised as the development phase works priorities shift to the Bundle 2 Development Phase Early Works locations.
+Scope descriptions of each Construction Stage are documented in a separate Construction Stage Scope Description report, Ref. ONC-ECW-5090-SWS-EGM-RPT-00002.
+2.Units
+All units shall be expressed in the form of International System of Units (SI - Metric) unless required to use an alternative unit system (i.e., United States Customary Units - Imperial) by stakeholders or governing body.
+3.Abbreviations
+The following abbreviations presented in Table 1 are commonly used in the PA, Metrolinx ONxpress, Regulators and other stakeholders’ documentation. Some of the terms used are acronyms developed by ONxpress to organize the work of the On-Corridor Works program.
+Table 1: List of Abbreviations
+Abbreviation
+Name
+BMP
+Best Management Practice 
+BoD
+Basis of Design
+CCME
+Canadian Council of Ministers of the Environment
+CCRA
+Climate Change Resiliency Assessment
+CCVA
+Climate Change Vulnerability Assessment
+CEQGs
+Canadian Environmental Quality Guidelines
+CFIA
+Canada Food Inspection Agency
+CHER
+Cultural Heritage Evaluation Report
+CHSR
+Cultural Heritage Screening Report
+CJV
+Construction Joint Venture
+CN
+The Canadian National Railway Company
+COC
+Contaminants of Concern
+COPC
+Contaminants of Potential Concern
+CPR
+Canadian Pacific Railway
+CSA
+Canadian Standards Association
+DDD
+Design Development Definition
+DDS
+Design Development Submission
+DFO
+Fisheries and Oceans Canada
+EA
+Environmental Assessment
+ECCC
+Environment and Climate Change Canada
+EJV
+Engineering Joint Venture (Hatch + WSP)
+EMP
+Environmental Management Plan
+EPA 
+Environmental Protection Act
+EPP
+Environmental Protection Procedures
+EPR
+Environmental Project Report
+ESA
+Endangered Species Act
+ESC
+Erosion and Sediment Control
+FEQGs
+Federal Environmental Quality Guidelines
+GWMDP
+Groundwater Management and Dewatering Plan
+HIA
+Heritage Impact Assessment Report
+LEED
+Leadership in Energy and Environmental Design
+MBCA
+Migratory Birds Convention Act
+MCM
+Ministry of Citizenship and Multiculturalism
+MECP
+Ministry of the Environment, Conservation, and Parks
+MOECC
+Ministry of the Environment and Climate Change
+MTO
+Ministry of Transportation Ontario
+MX
+Metrolinx
+OPSS
+Ontario Provincial Standards and Specifications
+PA
+Project Agreement
+PCB
+Polychlorinated Biphenyls
+PIEVC
+Public Infrastructure Engineering Vulnerability Committee
+PLAA
+Permits, Licenses, Approvals and Agreements
+PPS
+Provincial Policy Statement
+QP
+Qualified Person
+RER
+GO Regional Express Rail
+SAR
+Species at Risk
+SARA
+Species at Risk Act
+SCP
+Strategic Conservation Plan
+SEMMP
+Soil and Excavated Materials Management Plan
+SIP
+Soil Importation Plan
+SPOT
+Swimming Performance Online Tools
+SWS
+Switching Station
+TRCA
+Toronto Region Conservation Authority
+TPAP
+Transit Project Assessment Process
+TPFs
+Traction Power Facilities
+USRC
+Union Station Rail Corridor
+VWSARMP
+Vegetation, Wildlife, and Species at Risk Management Plan
+WDPP
+Well Decommissioning and Protection Plan
+4.Applicable Standards and Reference Documents
+4.1Metrolinx Specifications / Guidelines
+The following Metrolinx documents shall also be utilized to meet design requirements:
+Metrolinx Design Guideline DGL-01, Noise and Vibration Mitigation, Version 1.1 (Nov. 2021)
+Metrolinx Design Specification DS-28, Noise Barriers
+Metrolinx Environmental Guide for Air Quality and Greenhouse Gas Emissions Assessment (2019)
+ Metrolinx General Guidelines for the Design of Railway Bridges and Structures RC-0506-04STR
+Metrolinx GO Electrification Enabling Works ET Standards, MX-ELEC-TRAC EW-DW-2106 REV 0, drawing no: 14724-EW-ET-0225-Layout1
+Metrolinx Vegetation Guideline (2020)
+Metrolinx Climate Adaptation Strategy, 2018.
+4.2Environmental Compliance
+Environmental design shall be developed to incorporate the commitments and mitigation measures outlined in the Project’s applicable Transit Project Assessment Process (TPAP) Environmental Assessment(s) (EA), specifically the Environmental Project Report(s) (EPR), future EPR Addendum(s), Environmental Management Plans (EMP), and Environmental Protection Procedures (EPP).
+4.3Reference Documents
+4.3.1Environmental Reference Documents
+The Environmental Reference Documents provided by Metrolinx via the Data Room includes forty-nine (49) TPAPs and their related supporting documents, as presented in Table 2. These TPAPs have been completed in the past to support varying contracts and may be subject to an Addendum to support the Project. In the event any of the TPAPs undergo an Addendum, these revisions will be captured and documented within the BoD.
+Additionally, each of the TPAPs includes a list of Environmental Commitments which are requirements to be met by the Project and will be tracked in a compliance matrix by CJV throughout the lifespan of the Project. In the event any changes are made the Environmental Commitments as a result of a TPAP Addendum, these revisions will be captured in the compliance matrix.
+Table 2: Applicable Environmental Reference Documents 
+Document Type 
+Environmental Reference Documents 
+TPAPs
+Metrolinx/GO Transit Barrie Corridor Double Track Expansion Project Summary Report (August 2014), Prepared by: Aecom.
+GO Transit Rail Expansion Bradford to Barrie Class EA ESR (February 2005), Prepared by: McCormick Rankin Corporation.
+Barrie Rail Corridor Expansion Project Transit Project Assessment Process Environmental Project Report (August 2017), Prepared by: Burnside.
+Barrie Rail Corridor Expansion TPAP Environmental Project Report Addendum New GO Stations (August 2018), Prepared by: 4Transit, Parsons, Hatch, WSP.
+Project Environmental Project report (February 2008), Prepared by: AECOM and Errata.
+Class environmental Assessment Study, twelve Mile Creek/Burloak Drive, Environmental Study Report (June 1994), Prepared by: McCormick Rankin.
+Caledonia GO Station TPAP EPR (February 2016), Prepared by: Burnside.
+Davenport Diamond Grade Separation TPAP EPR (March 2016), Prepared by: Aecom.
+GO Rail Network Electrification TPAP EPR (October 2017), Prepared by: Morrison Hershfield, Gannett Fleming.
+GO Rail Network Electrification TPAP Errata to the EPR (November 2017), Prepared by: Morrison Hershfield, Gannett Fleming.
+GO Rail Network Electrification TPAP – Barrie-Collingwood 2 x 25kV Feeder Route Easement Area Insignificant TPAP Addendum Memo (November 2018), Prepared by: Gannett Fleming.
+GO Rail Network Electrification TPAP – Don Yard Paralleling Station Relocation Insignificant TPAP Addendum Memo (July 2019), Prepared by: Gannett Fleming.
+GO Rail Network Electrification TPAP – Drury Lane Pedestrian Bridge Minor TPAP Addendum Memo (August 2018), Prepared by: Gannett Fleming.
+GO Rail Network Electrification Final Environmental Project Report Addendum (February 2021), Prepared by: Gannett Fleming, Morrison Hershfield.
+GO Rail Network Electrification Final Environmental Project Report Addendum Errata to Environmental Project Report Addendum (April 2021), Prepared by: Gannett Fleming, Morrison Hershfield.
+GO Rail Network Electrification TPAP – Lincolnville Rail Layover Insignificant TPAP Addendum Mem (March 2020).
+GO Rail Network Electrification TPAP – New GO / SmartTrack Stations Insignificant TPAP Addendum Memo (October 2018), Prepared by: Gannett Fleming.
+GO Rail Network Electrification Transit Project Assessment Process (TPAP) – Stouffville Corridor Hydro One Conflict Areas Insignificant EPR Addendum Memo (September 2019), Prepared by: Gannett Fleming.
+Tap/TPF Reference Concept Design Insignificant TPAP Addendum Report - GO Rail Network Electrification TPAP (February 2021), Prepared by: Gannett Fleming.
+GO Rail Network Electrification TPAP – Wilson Yard Layover TPAP Addendum Memo (November 2018), Prepared by: Gannett Fleming.
+GO Transit Georgetown to Kitchener Rail Expansion ESR (July 2009), Prepared by: Burnside.
+Georgetown North Corridor Rail Expansion ESR (April 2006), Prepared by: Earth Tech, Gartner Lee.
+Georgetown South Service Expansion and Union-Pearson Rail Link EPR (July 2009), Prepared by: Metrolinx.
+Environmental Study Report Hagerman Rail/Rail Grade Separation Stouffville Corridor (January 2004), Prepared by: Morrison Hershfield.
+Lincolnville Layover and GO Station Improvements EPR (February 2018), Prepared by: Stantec.
+Lincolnville Layover and GO Station Improvements EPR Addendum (February 2019), Prepared by: Stantec.
+Lakeshore East Rail Corridor Expansion (Don River to Scarborough GO Station) Project EPR (September 2017), Prepared by: Aecom.
+Lakeshore East Rail Corridor Expansion (Don River to Scarborough GO Station) Project – Errata to the Environmental Project Report (October 2017), Prepared by: Aecom.
+Birchmount Road Bridge Replacement - EA Determination of Degree of Significance - Rev 2 (January 2021), Prepared by: Wood.
+Lakeshore East Corridor Rail Expansion Environmental Study Report (March 2005), Prepared by: Hatch Mott MacDonald.
+Lakeshore East Rail Corridor Expansion (Guildwood to Pickering) Project EPR (December 2016), Prepared by: Aecom.
+GO Transit Lakeshore West Corridor Rail Expansion Between Port Credit Station and Kerr Street City of Mississauga and Town of Oakville ESR Class Environmental Assessment (Group 'B') (May 2006), Prepared by: URS.
+New SmartTrack Stations Environmental Project Report, including: Volume I – Introduction, Volume II - Finch-Kennedy SmartTrack Station, Volume III -Lawrence-Kennedy SmartTrack Station, Volume IV - Gerrard-Carlaw SmartTrack Station, Volume V - East Harbour SmartTrack Station, Volume VI -King-Liberty SmartTrack Station, Volume VII - St. Clair-Old Weston Smart Track Station, Volume VIII - Climate Change, Volume IX - Consultation and Engagement and Volume X - Commitments to Future Studies, Permits and Approvals (July 2018), Prepared by: 4Transit, Parsons, Hatch, WSP.
+New Track and Facilities TPAP EPR (March 2021), Prepared by: Gannett Fleming.
+New Track and Facilities TPAP EPR (March 2021), Prepared by: Gannett Fleming.
+Niagara Rail Service Expansion Environmental Study Report GO Transit (April 2011), Prepared by: Burnside.
+Oshawa To Bowmanville Rail Service Expansion And Rail Maintenance Facility Transit Project Assessment Process Environmental Assessment Study (January 2011), Prepared by: Aecom.
+Environmental Study Report Addendum Bloomington GO Station (November 2016), Prepared by: IBI Group.
+Richmond Hill Layover Facility EA and Preliminary Design ESR (August 2009), Prepared by: Aecom.
+Scarborough Junction Grade Separation Project: Revised Final EPR (January 2021), Prepared by: Stantec.
+Stouffville Corridor Rail Service Expansion Environmental Study Report (July 2014), Prepared by: Burnside.
+Stouffville Grade Separation Project: Revised Final EPR (February 2021), Prepared by: Stantec.
+Stouffville Grade Separation Project: Errata to the Final EPR (February 2021), Prepared by: Stantec.
+Union Pearson Express Electrification Transit Project Assessment EPR (April 2014), Prepared by: Parsons, Morrison Hershfield.
+UP Express Electrification Transit Project Assessment Process (TPAP) – Kitchener Hydro One Conflict Area Insignificant EPR Addendum Memo (August 2020), Prepared by: Gannett Fleming.
+Union Pearson (UP) Express Electrification Transit Project Assessment Process (TPAP) – Insignificant EPR Addendum Memo (March 2021), Prepared by: Gannett Fleming.
+Union Pearson Express Traction Power Substation Class Environmental Assessment ESR (March 2015), Prepared by: Hydro One.
+Union Station Rail Corridor (USRC) East Enhancements TPAP EPR (August 2018), Prepared by: AECOM.
+Highway 27 Woodbine Station, Environmental Project Report (February 2020), Prepared by: AECOM.
+4.3.2Additional Environmental Reports
+To ensure the environmental due diligence is completed in support of the project, Additional Environmental Reports may be prepared to fill data gaps. The following reports will be prepared, as required:
+Natural Heritage Report (ELC, Wetlands, Wildlife, SAR)
+Aquatic Habitat Assessment Report
+Stage 1 Archaeological Assessment Report
+Stage 2 Archaeological Assessment Report
+Stage 3 Archaeological Assessment Report
+Stage 4 Archaeological Assessment Report
+Cultural Heritage Screening Report (CHSR)
+Cultural Heritage Evaluation Report (CHER)
+Cultural Heritage Impact Assessment Report (HIA)
+Arborist Report
+Phase I Environmental Site Assessment
+Phase II Environmental Site Assessment
+Air Quality Baseline Conditions Report
+Air Quality Comparison of Design Basis and Input Parameters Report
+Air Quality Impact Assessment Report
+Air Quality Mitigation Design Report (if required)
+Designated Substances and Hazardous Materials Assessment Report.
+4.3.3Legislation and Guidance Documents
+In addition to the Metrolinx specifications and guidelines outlined in Section 4.1, the following federal and provincial legislations and guidance documents presented in Table 2 including legislation and guidance documents related to specific environmental subdiscipline shown in Table 3 shall be referred to and form an integral part of the design basis.
+Table 3: Applicable Federal and Provincial Legislation and Guidance Documents 
+Jurisdiction
+Legislation
+Federal
+Species at Risk Act (SARA), S.C. 2002, c.29.
+Migratory Birds Convention Act (MBCA), 1994.
+Fisheries Act, R.S.C., 1985, c. F-14.
+Federal Environmental Quality Guidelines, (as amended) under section 54 of the Canadian Environmental Protection Act, 1999, (CEPA 1999).
+Canadian Environmental Quality Guidelines (CEQGs), as amended.
+Federal Environmental Quality Guidelines (FEQGs), as amended
+Provincial 
+Conservation Authorities Act, R.S.O. 1990, c./ C.27.
+Endangered Species Act (ESA), R.S.O. 2007, c.6.
+Environmental Protection Act (EPA), R.S.O. 1990, as amended.
+Guide to Environmental Assessment Requirements for Transit Projects (Ministry of the Environment, Conservation and Parks (MECP), January 2014).
+Invasive Species Act, S.O. 2015, c.22 Bill 37.
+Niagara Escarpment Planning and Development Act, R.S.O. 1990, c. N.2.
+Oak Ridges Moraine Conservation Act, 2001, S.O. 2001, c. 31.
+Occupational Health and Safety Act, R.S.O. 1990, as amended.
+Ontario Water Resources Act, R.S.O. 1990, c. O.40.
+Provincial Policy Statement (PPS) (Ontario Ministry of Municipal Affairs and Housing (OMMAH), 2020).
+Resource Recovery and Circular Economy Act, 2016, S.O. 2016, c. 12, Sched. 1.
+Table 4: Specific Reference Documents by Environmental Subdiscipline 
+Environmental Subdiscipline
+Reference Documents
+Environmental Planning
+Legislation:
+Ontario Regulation 42/06, as amended: Central Lake Ontario Conservation Authority - Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses.
+Ontario Regulation 150/06, as amended: Grand River Conservation Authority - Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses.
+Ontario Regulation 160/06, as amended: Credit Valley Conservation Authority - Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses.
+Ontario Regulation 161/06, as amended: Hamilton Region Conservation Authority - Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses.
+Ontario Regulation 162/06, as amended: Halton Region Conservation Authority - Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses.
+Ontario Regulation 166/06, as amended: Toronto and Region Conservation Authority - Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses.
+Ontario Regulation 179/06, as amended: Lake Simcoe Region Conservation Authority - Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses.
+Air Quality
+Legislation:
+Ontario Regulation 419/05 for Air Pollution – Local Air Quality.
+
+Guidance Documents:
+Canadian Ambient Air Quality Standards (CCME, 2017).
+Environmental and Climate Change Canada Best Practices Guide for the Reduction of Air Emissions from Construction and Demolition Activities.
+Ontario Ambient Air Quality Criteria (MECP, April 2019).
+Archaeology
+Legislation:
+Ontario Heritage Act, R.S.O. 1990, c.018.
+Funeral, Burial and Cremation Services Act, 2002, S.O. 2002, c.33.
+
+Guidance Documents:
+MCM Standards and Guidelines for Consultant Archaeologists (2011).
+MCM Engaging Aboriginal Communities in Archaeology: a Draft Technical Bulletin for Consultant Archaeologists (2011).
+Cultural Heritage 
+Legislation:
+Ontario Heritage Act, R.S.O. 1990, c.018.
+Provincial Policy Statement (PPS – 2020)
+
+Guidance Documents:
+Ministry of Citizenship and Multiculturalism (MCM):
+Ontario Heritage Act (2023)
+Standards and Guidelines for the Conservation of Provincial Heritage Properties (2010)
+Heritage Identification and Evaluation Process (2014)
+Information Bulletin 2: Preparing Strategic Conservation Plans for Provincial Heritage Properties (2017)
+Information Bulletin 3: Heritage Impact Assessments for Provincial Heritage Properties (2017)
+Ontario Heritage Toolkit (2006)
+Erosion and Sediment Control
+Guidance Documents:
+Erosion and Sediment Control Guideline for Urban Construction (TRCA, 2019).
+National Standard of Canada: Erosion and Sediment Control Inspection and Monitoring (CAN/WSA-W202-18) (CSA, 2018).
+National Standard of Canada: Erosion and Sediment Control Installation and Maintenance (WSA-W208-20) (CSA, 2019).
+Species at Risk 
+Legislation:
+Endangered Species Act, S.O. 2007, c.
+Species at Risk Act, S.C. 2002, c.29
+Fisheries Act, R.S.C., 1985, c. F-14
+
+Guidance Documents:
+ESA Permit (Permit #CN-D-001-21)
+Metrolinx Vegetation Guideline (2022)
+Environmental Gap and Constraint Analysis and Planning Investigations Report
+Tree Removal and Protection
+Legislation:
+Ontario Regulation 140/02: Oak Ridges Moraine Conservation Plan (ORMCP).
+Ontario Regulation 213/07: Ontario Fire Code.
+Note: Extensive list of specific upper and lower tier municipal by-laws can be found in Table 7.
+
+Guidance Documents:
+Canada Food Inspection Agency (CFIA) 2014 Directive (D-03-08): Phytosanitary Requirements to Prevent the Introduction into and Spread within Canada of the Emerald Ash Borer, Agrilus planipennis (Fairmaire).
+Fish and Fish Habitat
+Legislation:
+Canadian Navigable Waters Act, R.S.C., 1985, c. N-22.
+Fish & Wildlife Conservation Act, 1997, S.O. 1997, c.41.
+Noise and Vibration
+Legislation:
+City of Toronto By-Law No. 514-2008.
+City of Toronto Municipal Code Chapter 363 – Demolition.
+
+Guidance Documents:
+MOECC Publication NPC-300, Environmental Noise Guideline – Stationary and Transportation Sources – Approval and Planning (August 2013).
+Ministry of Municipal Affairs and Housing (2012) Ontario Building Code.
+CSA/CAN Z107.9-00 Standard for Certification of Noise Barriers
+OPSS 760 – Construction Specification for Noise Barriers
+Soil and Excavated Material Management
+Legislation:
+Ontario Regulation 153/04: Record of Site Condition, (as amended).
+Ontario Regulation 406/19: On-Site and Excess Soil Management, as amended.
+Ontario Regulation 347: General – Waste Management, (as amended).
+Ontario Regulation 351/12: Registrations Under Part II.2 of the Act – Waste Management Systems, (as amended).
+
+Guidance Documents:
+Excess Soil Reuse Guidance DRAFT, NOVEMBER 2022, Canadian Council of Ministers of the Environment (CCME).
+Protocol for Analytical Methods Used in the Assessment of Properties under Part XV.1 of the Environmental Protection Act and Excess Soil Quality, Laboratory Services Branch Ministry of the Environment, Conservation and Parks March 9, 2004 (PIBS 4696), amended as of July 1, 2011, and as of February 19, 2021, Version 3.1.
+Rules for Soil Management and Excess Soil Quality Standards, (as amended).
+Soil, Ground Water and Sediment Standards for Use Under Part XV.1 of the Environmental Protection Act, (as amended).
+Groundwater Management
+Legislation:
+Ontario Regulation 903: Wells, (as amended).
+Ontario Safe Drinking Water Act, 2002.
+Ontario Clean Water Act, 2006, as amended.
+Ontario Water Resources Act, 1990, as amended.
+O. Reg. 63/16: Registrations under Part II.2 of the Environmental Protection Act – Water Taking.
+O. Reg. 387/04: Water Taking and Transfer, as amended.
+Waste Management
+Legislation:
+Canada Transportation Accident Investigation and Safety Board Act, S.C. 1989, c.3.
+Canada Transportation Act, S.C. 1996, c.10.
+Cross-border Movement of Hazardous Waste and Hazardous Recyclable Material Regulations.
+Ontario Regulation 102/94: Waste Audits and Waste Reduction Work Plans.
+Ontario Regulation 103/94: Industrial, Commercial and Institutional Source Separation Programs.
+Ontario Regulation 213/91: Construction Project Projects, (as amended).
+Ontario Regulation 278/05: Designated Substance – Asbestos on Construction Projects and in Buildings and Repair Operations, (as amended).
+Ontario Regulation 347: General – Waste Management, (as amended).
+Ontario Regulation 351/12: Registrations Under Part II.2 of the Act – Waste Management Systems, (as amended).
+Ontario Regulation 362: Waste Management – PCBs, (as amended).
+Ontario Regulation 490/09: Designated Substances, (as amended).
+Ontario Regulation 833: Control of Exposure to Biological or Chemical Agents.
+Ontario Regulation 860: Workplace Hazardous Materials Information System (WHMIS), (as amended).
+Transportation of Dangerous Goods Act, 1992, (as amended).
+Waste-Free Ontario Act, S.O. 2016, c. 12 – Bill 151.
+
+Guidance Documents:
+Ontario Waste Classes, Ontario Ministry of the Environment, Environmental Approval Access and Service Integration Branch, Last Revision Date: February 2013.
+Registration Guidance Manual for Generators of Liquid Industrial and Hazardous Waste, April 1995, amended January 2016.
+4.3.4Project Specific Documents
+Throughout the progression of the Design Development and Detailed Design phases, Project documents will be generated to tailor environmental considerations to the latest design.
+4.3.4.1Environmental Management Plans
+Environmental Management Plans (EMPs) will provide guidance to prescribe, measure and achieve compliance with the environmental protection and mitigation requirements of the Project. Due to the size of the Project, the EMPs have been developed in a two-stage approach, as depicted in Figure 1, including:
+
+Figure 1: Two-Stage EMP Approach
+The Project-Wide EMPs are intended to address higher-level Project Agreement (PA) content applicable to all sites. This content includes policy, procedures, responsibilities, approaches to monitoring (i.e., equipment, testing), inspection, reporting, etc. Whereas Site-Specific EMPs are specifically tailored to each scope of work and the activities taking place. The Site-Specific EMPs are informed by materials informed by the environmental characteristics of each site including:
+1)Environmental studies,
+2)Permits and approvals (including TPAP EA Commitments),
+3)Package plans (i.e., ESC drawings, well protection), and
+4)Construction activities including approaches (i.e., means and methods), staging, schedule, etc.
+Table 5 presents the Project-Wide and Site-Specific EMPs applicable to the Project.
+Table 5: Applicable Environmental Management Plans
+Approach
+Environmental Management Plans
+Project-Wide EMPs
+Soil and Excavated Material Management Plan
+Soil Importation Plan
+Erosion and Sediment Control Plan
+Groundwater Management and Dewatering Plan
+Contamination Management Plan (also listed as S-1038)
+Spill Prevention and Response Plan
+Designated Substances and Hazardous Materials Management Plan
+Construction Air Quality Management Plan
+Construction Noise and Vibration Management Plan
+List of Representative Construction Noise & Vibration Sensitive Receptors
+Additional Noise and Vibration Sensitive Receptor Performance Requirements - Construction, including any Associated Measurement Data
+Archaeological Risk Management Plan (Initial Version)
+Cultural Heritage Risk Management Plan (Initial Version)
+Integrated Vegetation Management Plan
+Contamination Management Plan (also listed as S-1010)
+Well Decommissioning and Protection Plan
+Vegetation, Wildlife and Species at Risk Management Plan
+Strategic Conservation Plan
+Soil and Excavated Materials Management Plan
+Waste Diversion Management Plan
+Waterbodies and Aquatic Ecology Management Plan
+Arborist Report Methodology and Execution Management Plan
+Site-Specific EMPs
+[Strategy still under discussion with CJV Technical – to be populated in next version]
+5.Safety Assurance
+Safe solutions are part of our core value, thus will be embedded in all design aspects related to the Infrastructure Civil Works. The design process will ensure compliance to applicable codes, regulations, standards, as well as project specific safety requirements.
+6.Planning and Development Procedures
+The Conservation Authorities regulate watercourses, wetlands, and hazard lands (valley lands, shorelines, floodplains) through application of the Ontario Regulation 97/04: Regulation of Development, Interference with Wetlands and Alterations to Shorelines and Watercourses, under the Conservation Authorities Act. The following Ontario Regulations cover the respective jurisdictions across the entire Project:
+Ontario Regulation 42/06, as amended: Central Lake Ontario Conservation Authority
+Ontario Regulation 150/06, as amended: Grand River Conservation Authority
+Ontario Regulation 160/06, as amended: Credit Valley Conservation Authority
+Ontario Regulation 161/06, as amended: Hamilton Region Conservation Authority
+Ontario Regulation 162/06, as amended: Halton Region Conservation Authority
+Ontario Regulation 166/06, as amended: Toronto and Region Conservation Authority
+Ontario Regulation 179/06, as amended: Lake Simcoe Region Conservation Authority.
+The main purpose of the regulations is to ensure public health and safety and protection of life and property in relation to natural hazards. These regulations establish guidelines for development, interference with wetlands and alterations to shorelines and watercourses. All Project areas shall be mapped and reviewed against the Authority’s regulated areas to determine the required planning and development procedure, and if required, a list of documents to be submitted with the application to the appropriate Conservation Authority.
+7.Ambient Air Quality
+Ambient air quality site selection and monitoring locations will be dependent upon assessing community exposure, with consideration for suspected sensitive receptors, and documented locations where the highest concentrations of COC are anticipated, based on local meteorological and dispersion modelling information.
+The methodology and design criteria used as the basis for the assessment of construction air quality impacts are outlined in the Project Wide Construction Air Quality Management Plan (ONC-CJV-5090-SWS-ENV-CNT-PLN-00013). The Project Wide Construction Air Quality Management Plan outlines requirements for baselining, monitoring, and the design of temporary controls to achieve compliance with the Project Agreement Schedule A-9, Environmental Obligations.
+7.1Baseline Air Quality Monitoring
+The baseline ambient air quality levels will be established by performing quantitative data collection over a minimum period of one month and prior to any construction activities, to measure existing air quality conditions within the air quality impact zones (working site boundaries) surrounding the construction activities. The baseline ambient air quality levels can be used to assess the degree of exceedances of applicable construction air quality criteria and limits, as outlined in Table 10.2-1 under the PA Schedule A-9, and presented in Table 6, that may occur independent of construction, to determine the degree of potential exceedances that are attributable to construction activities.
+Table 6: Air Quality Criteria and Limits for PM2.5, PM10 and Silica
+Contaminant
+Air Quality Limits
+Averaging Period
+PM2.5
+27 μg/m3
+24 hour
+
+81 μg/m3
+15-minute
+PM10
+50 μg/m3
+24 hour
+
+150 μg/m3
+15-minute
+Silica
+5 μg/m3
+24 hour
+
+25 μg/m3
+ 15-minute 
+8.Archaeology
+Archaeological assessments will be required where construction activities will have ground disturbing impacts in areas that retain potential for the presence of archaeological resources. Should design elements fall within areas not subject to previous assessment, or within areas with outstanding archaeological recommendations (i.e., requiring further Stage 2-4 archaeological assessment), these assessments will be completed to obtain approval letters from the MCM prior to construction.
+Areas with outstanding archaeological requirements (e.g., Stage 1-4 archaeological assessment), as determined through the gap analysis, will be subject to assessment following the requirements of the MCM Standards and Guidelines for Consultant Archaeologists (2011). An Archaeological Risk Management Plan will also be prepared to include protocols for the unanticipated discovery of archaeological resources or human remains during construction.
+9.Cultural Heritage
+A Cultural Heritage Report that documents Existing Conditions and Preliminary Impact Assessment will be required for all areas within and adjacent to the proposed study area, if no earlier Cultural Heritage Report has been completed for the project. If areas are added to a Study Area covered by an existing Cultural Heritage Report, or if the impacts have changed, an addendum will be required to identify additional resources and mitigate impacts.
+Recommendations from existing Cultural Heritage Reports, where they exist, should be carried forward. This may include the completion of Cultural Heritage Evaluation Reports (CHERs) for properties of potential heritage value, the completion of Heritage Impact Assessments (HIAs) for properties of heritage value that will be impacted by the project, and Strategic Conservation Plans (SCPs) for Provincial Heritage Properties and Provincial Heritage Properties of Provincial Significance.
+10.Erosion and Sediment Control
+An Erosion and Sediment Control (ESC) Plan shall be prepared during the Design Development Submittal (DDS) phase using Best Management Practices (BMPs) and requirements found in the Erosion and Sediment Control Guideline for Urban Construction (TRCA, 2019). The TRCA Erosion and Sediment Control Design and Submission Requirements (2020) along with the Erosion and Sediment Control Plan (RER3-CJV-PW-0000-SWS-ENV-PLN-00004) gives an outline of the required documentation, calculations and drawings that must be submitted for approval.
+11.Species at Risk
+The approach to the protection of Species at Risk (SAR) and SAR habitat during Project construction will be avoidance, mitigation and meeting the commitments in the ESA permit (ESA permit #CN-D-001-21) and conditions outlined in schedule A-9. Protection and mitigation will also be developed in accordance with the overarching requirements provided in the Vegetation, Wildlife, and Species at Risk Management Plan (VWSARMP). The ESA permit (#CN-D-001-21) has been obtained and covers all activities necessary to construct the project within the Study Area including site preparation and restoration, vegetation clearing, grading, filling, excavation, and stockpiling of soil or other materials, construction of bridges, retaining walls, rails and roads, electrification and signaling works, and relocation of existing infrastructure. However, the existing permit does not cover the entire Project limits. An amendment to the permit to include additional project areas (Kitchener Stages 11-21, Richmond Hill Stage 1) will be required. The species-specific conditions outlined in the permit will inform design and construction considerations. Further amendments to the permit may be needed to include SAR found within the Project Area which were not initially included under the permit.
+Targeted Species at Risk (SAR) surveys will be conducted based on observed and documented SAR habitat throughout the Project areas (as identified in the Environmental Gap and Constraint Analysis and Planned Investigations Reports) including additional permitting requirements or mitigation measures during construction where gaps have been identified. Prior to the commencement of construction or operations and maintenance services, SAR Reports will be submitted and will include SAR survey results and impact assessments where the Project occurs on federal lands and has an impact to a federally designated species under the Species at Risk Act (SARA) consultation with the overseeing agency will be required (DFO, Parks Canada, Environment and Climate Change Canada (ECCC).
+The approach to the protection of natural heritage features (wetlands, vegetation communities, designated natural heritage areas, and wildlife species and habitat) and during Project construction will be avoidance, mitigation and be developed in accordance with the overarching requirements provided in the VWSARMP. Detailed information related to identification of features to be protected will be developed in the site specific EMPs and translated to contract packages.
+Gaps identified through the Environmental Gap and Constraint Analysis and Planned Investigations Reports will be documented through field investigations and assessment and any potential permitting requirements or approvals will be identified and obtained. Clearance for work impacting natural heritage features will be provided prior to the commencement of construction or operations and maintenance services. Investigations conducted, assessment of impact and mitigation will be documented in a technical memo.
+12.Tree Removal and Protection
+Metrolinx, as a Provincial Agency, is not subject to municipal permits and approvals, including compensation requirements, for tree removals within Metrolinx owned property. Metrolinx will work with and abide by municipal By-laws and compensation requirements for trees outside of Metrolinx property. Metrolinx has developed their own Vegetation Guideline (2020) which provides Metrolinx’s approach to managing vegetation on Metrolinx Lands, including removal and compensation of trees. It is an updated approach to managing vegetation that will allow Metrolinx to address the need to provide safe and reliable transport in addition to providing social, economic and ecological benefits (Metrolinx, 2020). The Vegetation Guideline (2020) includes direction on:
+Vegetation Compensation
+Tree End Use
+Integrated Vegetation Management.
+For non-Metrolinx owned lands, Metrolinx works within the respective applicable Tree By-laws set out by local municipalities for tree removal and protection. Tree protection requirements, including specifications for the implementation of a tree protection zone, such as the necessary tree protection zone distances, restricted activities within a tree protection zone, tree protection barriers and signage. Details of requirements of the following Tree By-laws are outlined in the Arborist Report Methodology and Execution Management Plan (ONC-CJV-5090-SWS-ENV-CNT-PLN-00010).
+Table 7: Applicable Tree By-Laws
+Jurisdiction Type
+Jurisdiction
+Applicable By-Law
+Single Tier Municipality
+City of Barrie
+Tree Preservation Bylaw 2014-1150.
+Public Tree Bylaw 2014-116.
+City of Barrie Tree Protection Manual.
+
+City of Guelph
+Tree By-law 19058.
+City of Guelph Tree Technical Manual.
+
+City of Toronto
+Private Tree Bylaw (Article III of Chapter 813).
+Ravine and Natural Feature Protection Bylaw (Municipal Code, Chapter 658).
+City Street Bylaw (Article II of Chapter 813).
+Parks Bylaw (Article VII of Chapter 608).
+Upper Tier Municipality
+York Region
+Forest Conservation Bylaw Bill No. 70 Bylaw No. 2013-68.
+Street Tree and Forest Preservation Guidelines.
+
+County of Simcoe
+The Forest Conservation Bylaw #5635.
+
+County of Wellington
+Conservation and Sustainable Use of Woodlands By-law 5115-09.
+
+Region of Durham
+The Regional Tree Bylaw 30-2020.
+
+Region of Peel
+N/A.
+
+Region of Halton
+Halton Region Tree Bylaw 121-05.
+LPS31-08 – Tree Canopy Replacement Policy on Regionally Owned Lands.
+Lower Tier Municipality
+Township of King
+Site Alteration By-law 2021-039.
+
+Township of Oro-Medonte
+Site Alteration By-law 2016-056.
+
+Township of Uxbridge
+Fill (Site Alteration) By-law No. 2010-084.
+
+Township of Woolwich
+Site Alteration By-law 86-2020.
+
+City of Brampton
+Park Lands Bylaw 161-83.
+Tree Preservation Bylaw 317-2012.
+Woodlot Conservation Bylaw 316-212.
+
+City of Burlington
+Public Tree Bylaw 068-2013.
+Private Tree Bylaw 0402022.
+
+Township of Guelph / Eramosa
+Fill By-law (Site Alteration By-law) 42-2010.
+Public Tree Bylaw 2014-116.
+
+City of Kitchener
+Tree Conservation Bylaw – Property Maintenance Chapter 692.
+Tree Management Policy.
+
+City of Mississauga
+Private Tree Protection Bylaw 0021-2022.
+Encroachment Bylaw 0057-2004.
+
+City of Vaughan
+Tree Protection Bylaw 052-2018.
+
+Town of Aurora
+Private Tree Protection Bylaw Number 5850-16.
+
+Town of Markham
+Tree Preservation Bylaw 2008-96.
+
+Town of Newmarket
+Public Tree Protection Bylaw 2017-59.
+Woodlot Bylaw 2007-71.
+Private Tree Protection Bylaw 2022-10.
+Tree Preservation, Protection, Replacement and Enhancement Policy.
+
+Town of Oakville
+Municipal Tree Bylaw 2009-025.
+Parks Bylaw 2013-013.
+Private Tree Protection Bylaw 2017-038.
+Tree Protection and Tree Canopy Preservation Policy.
+
+Town of Whitby
+Tree Protection Bylaw No. 4640-00.
+
+Town of Whitchurch-Stouffville
+Bylaw Number 2020-086-RE.
+
+City of Oshawa
+By-law 78-2008.
+
+City of Pickering
+Tree Protection By-law 6108/03.
+
+Town of Ajax
+Tree Protection By-Law 137-2006.
+Boulevard Tree Protection By-law 138-2006.
+Urban Forest Management Plan.
+
+Town of East Gwillimbury
+N/A
+
+Town of Bradford West Gwillimbury
+N/A
+
+Town of Halton Hills
+N/A
+
+Town of Innisfil
+N/A
+13.Fish and Fish Habitat
+Construction on bridges and culverts may impact fish passage, especially if the structure alters channel dimensions and/or requires work in the water. Impacts to fish passage should be based upon the fish community present in the watercourse along with any management recommendations that identify species-specific targets such as ensuring that a target species can successfully pass the culvert. These assessments will be required to obtain permits from various regulatory bodies.
+Bridges should be designed to span the bankfull width of a watercourse to avoid impacting fish passage. Should bridge abutments and/or piers be required on the banks or in the channel below the high-water line, changes to flow velocities under the 2-year storm event should be assessed to ensure that the work does not affect fish passage.
+Culverts should be designed in accordance with the Fisheries and Oceans Canada (DFO) Swimming Performance Online Tools (SPOT) to ensure that the culvert is designed appropriately to allow local fish species to pass through the culvert. The SPOT website can be accessed here: Welcome to SPOT (fishprotectiontools.ca), and fish community information can be found in background reports and online databases.
+Additional design measure to maintain fish passage include a minimum depth of 0.2 m with a minimum culvert embedment of 10% of the culvert diameter to ensure that fish can swim through the culvert during low flow conditions.
+Where applicable, CCME, PWQG and Conservation Authority guidelines will be adhered to during construction and operational phase of the Project. Although, the operational phase is generally not a concern assuming proper stormwater control either currently exist or is built into the project. Generally, TRCA’s 2019 ESC Guide for Urban Construction can be used to guide design with the environmental team providing specific guidance for individual water crossings. In relation to water qualities, objectives and constraints are dependent on the waterbody being potentially affected. Whereas an existing natural type coldwater stream may have additional sensitivities and therefore more stringent design criteria, potentially requiring additional construction and operational mitigations. In contrast, a heavily urbanized warmwater stream that could potentially receive higher temperature / turbid waters without having significant impact. Should any aquatic species at risk be present to a certain crossing, the environmental team should be engaged immediately as the design basis will be dependent on the species and circumstance more so than the standardized guidance noted above.
+14.Noise and Vibration
+14.1Assessments Leading to the Design of Noise and Vibration Controls
+The methodology and design criteria used as the basis for the assessment of construction noise and vibration impacts are outlined in the Project Wide Construction Noise and Vibration Management Plan (ONC-CJV-5090-SWS-ENV-CNT-PLN-00014). The Project Wide Construction Noise and Vibration Management Plan outlines requirements for baselining, monitoring, and the design/specification of temporary controls to achieve compliance with the Project Agreement Schedule A-9, Environmental Obligations, with supporting submissions under Schedule C-2, Initial Works Review Procedure.
+The methodology and design criteria that will be used as the basis for the assessment of operational noise and vibration impacts will be outlined in the Project Wide Operational Noise and Vibration Management Plan. The Project Wide Operational Noise and Vibration Management Plan will outline requirements for baselining, modeling, and the design /specification of permanent controls to achieve compliance with the Project Agreement Schedule A-9, Environmental Obligations with supporting submissions under Schedule B1-3, Operations, Maintenance, and Fleet Review Procedures.
+14.2Permanent Noise and Vibration Control Design
+14.2.1Noise Barriers
+Noise barriers shall be designed and constructed as noise mitigation measures to achieve a minimum of a 5 dB sound level reduction. The noise barriers shall be a minimum of 5 meters in height in reference from the top of rail. If a 5-meter noise barrier does not achieve the required sound level reduction, the noise barrier can be up to 7 meters in height. The length and height of the noise barriers shall be designed in accordance with the list provided in Project Agreement Schedule C-6, Section B.4.6 (f). The noise barriers shall be manufactured by a MTO approved manufacturer of absorptive type noise barriers (Designated Sources for Materials List #5.50.20) and have a minimum of 5 years proven experience in the design, manufacture, and supply of absorptive panels for noise barriers within the Greater Toronto Hamilton Area (GTHA) Region. The selection of permanent noise barriers shall follow Metrolinx Design Guideline DGL-01 and be specified as per Metrolinx Design Specification DS-28. Guidance for the positioning of noise barriers within the right of way shall follow Metrolinx GO Electrification Enabling Works ET Standards, MX-ELEC-TRAC EW-DW-2106 REV 0, drawing no: 14724-EW-ET-0225-Layout1.
+14.2.2Ballast Mats
+Ballast mats shall be specified and installed to control ground borne vibration. As a minimum, ballast mats are to be installed across all bridges, overpasses, and atop leading and ending transition zones to these structures in accordance with Metrolinx General Guidelines for the Design of Railway Bridges and Structures, RC-0506-04STR. The minimum material selection of Ballast Mats shall further follow the requirements outlined in RC-0506-04STR.
+15.Soil and Excavated Material Management
+The management of soil and excavated materials during Project construction will be designed in accordance with the overarching requirements provided in the Soil and Excavated Material Management Plan (SEMMP) and Soil Importation Plan (SIP). This detailed design will include the preparation of site-specific SEMMPs and SIPs for each of the Project Scope of Work defined Project Areas or Sub-Project Areas.
+The site-specific SEMMP and site-specific SIP will be prepared by the Soil and Groundwater Contamination and Management Specialist who maintains a designation as a “Qualified Person” (QP) as per Ontario Regulation 153/04 (as amended). The site-specific SEMMP will be prepared in general accordance with the requirements of with the relevant soil regulations and guidance documents listed in Table 3.
+Ontario Regulation 406/19 (as amended) defines a Project Area as “a single property or adjoining properties on which the project is carried out”. For this Project, the Project Area is the entire On-Corridor Works rail network and relevant properties directly adjacent to the rail network that have ongoing projects related to the operation of the network or will be used for management of soil or excavated materials. Due to the size of the Project Area, it will further be subdivided into sub-Project Areas based on the On-Corridor Works defined corridors, subdivisions, and stages as well as the properties associated with Stations, TPFs, Grade Separations, Bridge Modification, Logistic Yards, and Soil Management Yards. Subdividing the overall Project Area will facilitate efficient design of the site-specific SEMMPs and SIPs including the management of data acquired and/or decisions made over the duration of the Project.
+Using the subsurface soil and groundwater investigation data collected for the Project, the subsurface model, the detailed design and planned construction methods, the site-specific SEMMPs will document the management of excavated soil and material from the Project, including handling, storage stockpiling and locations for stockpiles, transportation, testing, reuse wherever feasible and applicable, disposal and/or ultimate disposition of the excavated soil and material generated as part of the execution of the Project Co Responsibilities.
+The site-specific SIPs will document the management of soil and/or other fill materials such as aggregates that will be imported to the Project Area required to satisfy the Project design requirements, including receipt of imported trucks and/or rail cars, temporary storage stockpiling and locations for stockpiles, testing (if required) and transfer from temporary storage locations for use within the Project Area as part of the execution of the Project Co Responsibilities.
+In addition, the design criteria for the management of soil and excavated materials is provided in the Geo-Engineering Basis of Design (ONC-ECW-5090-SWS-PWS-EGM-DCR-00001). This document includes the design principles and assumptions to be implemented in the approach to geotechnical, hydrogeological, and geo-environmental (excess soils and groundwater) design, as well as pavement and materials design for the program.
+16.Groundwater Management
+The management of groundwater during Project construction will be designed in accordance with the overarching requirements provided in the Groundwater Management and Dewatering Plan (GWMDP) and the Well Decommissioning and Protection Plan (WDPP). This will include the preparation of site-specific GWMDPs and WDPPs for each of the Project Scope of Work defined Project Areas or Sub-Project Areas.
+The site-specific GWMDP will be prepared by the Project Hydrogeologist. The site-specific GWMDPs and WDPPs will be prepared in general accordance with the relevant groundwater regulations and guidance documents listed in Table 5.
+As noted in Section 12, the On-Corridor Works Project Area will be subdivided into sub-Project Areas based on the On-Corridor Works defined corridors, subdivisions, and stages as well as the properties associated with Stations, TPFs, Grade Separations, Bridge Modification, Logistic Yards, and Soil Management Yards.
+Using the subsurface groundwater investigation data collected for the Project, the subsurface model, the detailed design and planned construction methods, the site-specific GWMDP and WDPP will address the management of excess water, groundwater and dewatering effluent generated by the Project.
+In addition, the design criteria for the management of groundwater and dewatering effluent is provided in the Geo-Engineering Basis of Design (ONC-ECW-5090-SWS-PWS-EGM-DCR-00001). This document includes the design principles and assumptions to be implemented in the approach to geotechnical, hydrogeological, and geo-environmental (excess soils and groundwater) design, as well as pavement and materials design for the program.
+17.Waste Diversion and Management
+The management of defined wastes generated by the Project during either investigations or construction will be designed in accordance with the overarching requirements provided in the Soil and Excavated Materials Management Plan (SEMMP). This will include the preparation of site-specific SEMMPs for each of the Project Scope of Work defined Project Areas or Sub-Project Areas.
+The site-specific SEMMP will be prepared by a “Qualified Person” (QP) as per Ontario Regulation 153/04 (as amended). The site-specific SEMMP will be prepared in general accordance with the relevant waste regulations and guidance documents listed in Table 5.
+As noted in Section 1.1, the On-Corridor Works Project Area will be subdivided into sub-Project Areas based on the On-Corridor Works defined corridors, subdivisions and stages as well as the properties associated with Stations, TPFs, Grade Separations, Bridge Modification, Logistic Yards and Soil Management Yards.
+Using the subsurface soil and groundwater investigation data collected for the Project, the subsurface model, the detailed design and planned construction methods, the site-specific SEMMPs will document the identification, classification, diversion and management of wastes in the Project, including handling, storage, stockpiling, transportation, testing, recycling wherever feasible and applicable, disposal and/or ultimate disposition of the wastes generated or found as part of the execution of the Project Co Responsibilities.
+18.Climate Change and Vulnerability Assessment
+A climate change vulnerability and resiliency assessment are required under the Project Agreement (PA) Part A Schedule A-9 – Section 7, to assess the infrastructure component responses to impacts of changing climate.
+The Climate Change Vulnerability and Resiliency Assessment is a two-step process:
+Climate Change Vulnerability Assessment (CCVA)
+Climate Change Resiliency Assessment (CCRA).
+The main objective of the CCVA is to evaluate infrastructure components of the project that may be at risk due to the impacts of climate change and extreme climate events. The CCVA will be compatible with the Climate Lens – General Guidance developed by Infrastructure Canada, and the Public Infrastructure Engineering Vulnerability Committee (PIEVC) Protocol to assess the vulnerabilities of infrastructure to the impacts of climate change.
+The CCRA will inform design on the measures required to implement the recommendations of the CCVA.
+19.Sustainability
+Considerations for sustainability have been captured in the Sustainability Management Plan (ONC-ECW-5090-SWS-SLR-DES-RPT-00002.docx).
+
+
+Appendix A
+Requirement Allocation Table
+
+
+ID
+Source module
+Num Heading
+ForeignID
+Primary Text
+Artifact Type
+Responsible Segment
+Applicable section(s) &
+ Basis of Design Document Number
+559471
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.1
+38712
+Project Co shall prepare and submit an Additional Environmental Report in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, CJV, O&M, PCO
+Environmental BoD
+
+Section 4.3.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559475
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.3
+67571
+Project Co shall prepare and submit a Climate Change Vulnerability Assessment Report in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, O&M, CJV, PCO
+Environmental BoD
+
+Section 18
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559477
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.4
+67573
+Project Co shall prepare and submit a Soil and Excavated Material Management Plan in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+CJV
+Environmental BoD
+
+Section 15
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559483
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.7
+67579
+Project Co shall prepare and submit an Erosion and Sediment Control Plan in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+CJV
+Environmental BoD
+Section 10
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559489
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.10
+67585
+Project Co shall prepare and submit a Phase II Environmental Site Assessment in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, CJV, PCO
+Geo-Engineering BoD
+
+ONC-ECW-5090-SWS-PWS-EGM-DCR-00001
+559511
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.21
+67607
+Project Co shall prepare and submit a report of all ground-borne and air-borne noise and vibration assessments conducted in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+CJV
+Environmental BoD
+
+Section 14.1
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559517
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.24
+67613
+Project Co shall prepare and submit an Archaeological Risk Management Plan in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+CJV
+Environmental BoD
+
+Section 8
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559521
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.26
+67617
+Project Co shall prepare and submit a Cultural Heritage Risk Management Plan in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, CJV
+Environmental BoD
+
+Section 9
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559527
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.29
+67623
+Project Co shall prepare and submit an Integrated Vegetation Management Plan in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, CJV
+Environmental BoD
+
+Section 4.1
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559533
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.32
+67629
+Project Co shall prepare and submit an impact assessment report in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, CJV
+Environmental BoD
+
+Section 6
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+559545
+Schedule C-2 - Initial Works Review Procedure
+13.1.10.38
+67641
+Project Co shall prepare and submit a Phase II Environmental Site Assessment in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, CJV
+Geo-Engineering BoD
+ONC-ECW-5090-SWS-PWS-EGM-DCR-00001
+562785
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.3.3 (c)
+2457
+(c) Project Co shall prepare and implement a Designated Substances and Hazardous Materials Management Plan in accordance with Schedule A-9 – Environmental Obligations.
+Requirement
+E&M, CJV
+Environmental BoD
+
+Section 4.3.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+562887
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.3.5 (a) Table A.3-1
+15103
+Asset: Noise Barriers
+Design Life Required (years): 50
+Requirement
+CJV
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+562920
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.5.1 (a)
+2485
+(a) Project Co shall prepare and implement all noise and vibration management and mitigations in compliance with Schedule A-9 – Environmental Obligations.
+Requirement
+CJV
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+563108
+Schedule C-6 - Initial Works Output Specifications - PART A - General Requirements
+A.8.4 (b)
+2593
+(i) C. that where noise barriers are required in the Municipal ROW to comply with Schedule A-9 Environmental Obligations, such noise barriers are provided in compliance with the applicable Municipal Standards;
+Requirement
+CJV
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+563619
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.1.3 (a)
+2757
+(a) Project Co shall provide noise and vibration analysis, monitoring, and mitigation measures for the Initial Works in accordance with the requirements of Schedule A-9 – Environmental Obligations and the Project Agreement.
+Requirement
+CJV
+Environmental BoD
+
+Section 14.1
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+563631
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.2.2 (d)
+38302
+(d) Notwithstanding Section B.2.2(c), culverts shall be designed for peak flow plus an additional 25% as defined in Schedule A-9 – Environmental Obligations.
+Requirement
+CJV
+Civil Infrastructure Line Works BoD
+
+Section 10
+
+ONC-ECW-0000-SWS-PWS-EGM-DCR-00001
+563926
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.1 (b)
+14290
+(v) F. Project Co shall obtain all Permits to Take Water (PTTWs) from the MECP required for the Initial Works,
+Requirement
+CJV
+Geo-Engineering BoD
+
+ONC-ECW-5090-SWS-PWS-EGM-DCR-00001
+563931
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.1 (b)
+2914
+(v) G. iv. potential impacts of the Initial Works on the existing drainage system and on any environmentally sensitive areas, in consultation with the Governmental Authority;
+Requirement
+CJV
+Environmental BoD
+
+Section 4
+
+ONC-ECW-5090-SWS-PWS-EGM-DCR-00003
+564452
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.2 (l)
+14338
+(iv) F. i. 4. Project Co shall design the dewatering system in compliance with the requirements of Section B.4.1; and as noted below.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 16
+
+ONC-ECW-5090-SWS-PWS-EGM-DCR-00001
+564872
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.3 (b)
+37664
+(ii) A. ix. 4. Erosion and Sediment Control Guidelines for Urban
+Construction (2019)
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 10
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+564877
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.3 (b)
+37668
+(ii) A. ix. 9. Seed Mix Guidelines
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 10
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+564878
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.3 (b)
+37669
+(ii) A. ix. 10. Environmental Impacts Statement Guidelines.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 10
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565403
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15143
+(ii) Project Co shall provide the noise barriers to meet the following requirements:
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565405
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15145
+(ii) A. noise barrier heights identified in Section B.4.6 (c) shall be referenced from top of rail;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565414
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15146
+(ii) I. Project Co shall ensure 20% of the total area of the Noise Barrier shall be transparent infill panels based on the site-specific requirements;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565415
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15147
+(ii) J. Project Co shall coordinate and coordinate with Contractor Authority for the infill panel design and location of the infill panel within the Noise Barrier;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565425
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15157
+(ii) K. Project Co shall ensure that Noise Barriers constructed on retaining walls have base plate connections to the concrete retaining wall cap and all elements of the base plate connection, including base plate and anchorages, shall be designed by Project Co to comply with the AREMA Manual design criteria;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565426
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15158
+(ii) L. Project Co shall provide design drawings in accordance with Schedule C-2 – Initial Works Review Procedure;
+Requirement
+CJV, O&M
+Geo-Engineering BoD
+
+Section 6.5.3
+
+ONC-ECW-5090-SWS-PWS-EGM-DCR-00001
+565427
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15159
+(ii) M. Project Co shall ensure that the manufacturer of the Noise Barriers shall be listed in the Ministry of Transportation (MTO) Designated Sources for Materials (DSM) Manual as an approved manufacturer of absorptive type Noise Barriers (ref. DSM List #5.50.20) and the Noise Barrier manufacturer shall have a minimum of 5 years proven experience in the design, manufacture, and supply of absorptive panels for Noise Barriers within the Greater Toronto Hamilton Area (GTHA) Region;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565429
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15160
+(ii) N. Project Co shall provide the raw materials used for the sound absorbing material to be moisture resistant and the sound absorbing material shall drain freely and not trap or wick moisture into the sound absorbing panel;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565431
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15161
+(ii) O. all exposed steel shall be galvanized;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565432
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (a)
+15162
+(ii) P. anti-graffiti coating shall be applied to the absorptive side of the noise barrier for all instances of pre-cast concrete or wood fiber reinforced concrete;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565438
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (b)
+15167
+(i) Project Co shall provide the noise barriers in accordance with the following standards and specifications: 
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565458
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15168
+(vii) Project Co shall ensure any stains, paints, and anti-graffiti coatings be applied at the Noise Barrier manufacturing plant.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565462
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15169
+(viii) Project Co shall ensure the Flame Spread Index (FSI) of the Noise Barrier panels shall be less than 10 as determined in accordance with ASTM E84 requirements;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565463
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15170
+(ix) Project Co shall ensure the smoke development (SD) of the Noise Barrier panels shall be less than 12 as determined in accordance with ASTM E84 requirements. 4.2.6 Weather Exposure;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565465
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15613
+(x) A. Noise Barriers shall not display any significant deterioration, delaminating, disfigurement or failure for a minimum 10-year period;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565466
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15614
+(xi) Project Co shall provide Noise Barrier panels that shall be a rigid monolithic sheet, and comply with the following requirements:
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565467
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15615
+(xi) A. transparent Noise Barriers shall be assembled within a frame, to provide a transparent panel assembly;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565468
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15618
+(xi) B. transparent panels used for the Noise Barrier shall be shatter resistant, when the sheet is to be mounted on a structure or in such a way that if damaged they could pose a hazard to road users, the public or authorized personnel. The transparent panel shall be required to retain all broken pieces by employing either an internal or external restraint system;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565469
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15617
+(xi) C. transparent panels of the Noise Barrier shall include bird deterrence by providing pattern capable of preventing in excess of 90% of bird impacts;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565470
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15616
+(xi) D. deterring pattern must be an integral part of the transparent panel, capable of withstanding graffiti removal. Application of films in a secondary, postproduction process, are not acceptable;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565471
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15619
+(xi) E. transparent panels of the Noise Barrier shall have wind load resistance that meets a maximum elastic deflection, (dmax), under the design wind load shall be less than 75 mm;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565472
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15171
+(xi) F. transparent panel used for the noise barrier shall meet the following performance requirements and ASTM testing standards:
+{IMAGE id=558339 title="Part_C-Project_Requirements_O15171_inline.png" 
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565473
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15172
+(xi) G. transparent panel used for the noise barrier after exposure to outdoor weathering for a period of ten years or accelerated weathering in accordance with ASTM G155 for a period of 10,000 hours, panels shall show no evidence of cracking or crazing and shall comply with the following:
+{IMAGE id=558341 title="Part_C-Project_Requirements_O15172_inline.png"}
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565474
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (c)
+15173
+(xi) H. transparent panel used for the noise barrier shall meet the flammability requirements of the following when tested in accordance with the associated test method:{IMAGE id=558343 title="Part_C-Project_Requirements_O15173_inline.png" 
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565512
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15176
+(i) A. barrier_01 is 483 m in length from MP 2.39 to MP 2.69 of the Oakville Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565514
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15659
+(i) B. barrier_02 is 338 m in length from MP 3.04 to MP 3.25 of the Oakville Subdivision 1 (one) noise barriers shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565515
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15658
+(i) C. barrier_03 is 241 m in length from MP 4.54 to MP 4.69 of the Oakville Subdivision 1 (one) noise barriers shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565516
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15657
+(i) D. barrier_04 is 274 m in length from MP 10.84 to MP 11.01 of the Oakville Subdivision 1 (one) noise barriers shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565517
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15656
+(i) E. barrier_05 is 354 m in length from MP 13.79 to MP 14.01 of the Oakville Subdivision 1 (one) noise barriers shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565518
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15660
+(i) F. barrier_06 is 659 m in length from MP 14.55 to MP 14.96 of the Oakville Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565519
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15661
+(i) G. barrier_07 is 482 m in length from MP 15.04 to MP 15.34 of the Oakville Subdivision 1 (one) noise barriers shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565521
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15178
+(ii) A. barrier 01 is 273 m in length from MP 330.76 to MP 330.93 of the Kingston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565522
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15179
+(ii) B. barrier 02 is 708 m in length from MP 327.49 to MP 327.93 of the Kingston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565523
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15662
+(ii) C. barrier 03 is 306 m in length from MP 327.30 to MP 327.49 of the Kingston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565524
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15663
+(ii) D. barrier 04 is 805 m in length from MP 324.40 to MP 324.90 of the Kingston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565532
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15671
+(ii) E. enhanced barrier_07 is 145 m in length from MP 330.69 to MP 330.78 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565533
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15670
+(ii) F. enhanced barrier_08 is 628 m in length from MP 330.27 to MP 330.66 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565534
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15678
+(ii) G. enhanced barrier_09 is 402 m in length from MP 330.41 to MP 330.66 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565535
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15677
+(ii) H. enhanced barrier_10 is 901 m in length from MP 329.22 to MP 329.78 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565536
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15676
+(ii) I. enhanced barrier_11 is 724 m in length from MP 329.80 to MP 330.25 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565537
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15675
+(ii) J. enhanced barrier_12 is 901 m in length from MP 329.22 to MP 329.78 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565538
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15674
+(ii) K. enhanced barrier_13 is 1609 m in length from MP 328.21 to MP 329.21 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565539
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15673
+(ii) L. enhanced barrier_14 is 789 m in from MP 328.72 to MP 329.21 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565540
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15679
+(ii) M. enhanced barrier_16 is 322 m in from MP 328.01 to MP 328.21 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565544
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15680
+(ii) N. enhanced barrier_17 is 250 m in length from MP 326.80 to MP 326.95 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565545
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15683
+(ii) O. enhanced barrier_18 is 370 m in from MP 326.75 to MP 326.98 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565546
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15682
+(ii) P. enhanced Barrier_19 is 200 m in from MP 326.51 to MP 326.63 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565547
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15681
+(ii) Q. enhanced barrier_20 is 515 m in length from MP 326.17 to MP 326.49 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565548
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15689
+(ii) R. enhanced barrier_21 is 740 m in length from MP 325.77 to MP 326.23 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565549
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15688
+(ii) S. enhanced barrier_22 is 306 m in length from MP 325.43 to MP 325.62 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565550
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15687
+(ii) T. enhanced barrier_23 is 274 m in length from MP 324.99 to MP 325.16 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565551
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15686
+(ii) U. enhanced barrier_24 is 756 m in length from MP 322.69 to MP 323.16 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565552
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15685
+(ii) V. enhanced barrier_25 is 418 m in length from MP 322.67 to MP 322.93 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565553
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15684
+(ii) W. enhanced barrier_26 is 225 m in length from MP 320.54 to MP 320.68 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565554
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15692
+(ii) X. enhanced barrier_27 is 386 m in length from MP 320.69 to MP 320.93 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565555
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15691
+(ii) Y. enhanced barrier_28 is 418 m in length from MP 320.42 to MP 320.68 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565556
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15690
+(ii) Z. enhanced barrier_29 is 628 m in length from MP 317.68 to MP 318.07 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565557
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15693
+(ii) AA. enhanced barrier_30 is 258 m in length from MP 315.33 to MP 315.49 of the Kingston Subdivision, 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565559
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15184
+(iii) A.  barrier 041 is 1,336 m in length from MP 30.05 to MP 30.88 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565560
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15185
+(iii) B. barrier 052 is 1,255 m in length from MP 32.77 to MP 33.55 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 6 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565561
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15694
+(iii) C. barrier 054S is 113 m in length from MP 33.57 to MP 33.64 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 7 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565562
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15699
+(iii) D. barrier 054M is 258 m in length from MP 33.69 to MP 33.85 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 7 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565563
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15698
+(iii) E. barrier 054N is 161 m in length from MP 33.85 to MP 33.95 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 7 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565564
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15697
+(iii) F. barrier 057 is 708 m in length from MP 34.43 to MP 34.87 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 6 meters in height above the adjacent top of rail, on the east side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565565
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15696
+(iii) G. barrier 133 is 402 m in length from MP 62.51 to MP 62.76 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the southwest side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565567
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15700
+(iii) H. enhanced barrier_02 is 1,223 m in length from MP 59.53 to MP 60.29 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the east side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565568
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15701
+(iii) I. enhanced barrier_03 is 628 m in length from MP 60.32 to MP 60.71 of the Newmarket Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the east side of the railway right of way.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565570
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15702
+(iv) A. Mit_BARR_01 is 515 m in length from MP 1.64 to MP 1.96 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565571
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15710
+(iv) B. Mit_BARR_03 is 306 m in length from MP 2.19 to MP 2.38 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565572
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15709
+(iv) C. Mit_BARR_06 is 129 m in length from MP 3.39 to MP 3.47 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565575
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15706
+(iv) D. Mit_BARR_19 is 483 m in length from MP 6.49 to MP 6.79 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565576
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15705
+(iv) E. Mit_BARR_20 is 177 m in length from MP 7.41 to MP 7.52 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565577
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15704
+(iv) F. Mit_BARR_23 is 241 m in length from MP 7.98 to MP 8.13 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565578
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15703
+(iv) G. Mit_BARR_27 is 274 m in length from MP 9.33 to MP 9.50 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565579
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15711
+(iv) H. Mit_BARR_33 is 322 m in length from MP 15.05 to MP 15.25 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565580
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15712
+(iv) I. Mit_BARR_36 is 386 m in length from MP 15.27 to MP 15.51 of the Weston Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565582
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+67372
+(v) A. enhanced barrier _04 is 45 m in length from MP 51.14 to MP 51.17 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the east side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565583
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+67373
+(v) B. enhanced barrier_05 is 45 m in length from MP51.14 to MP 51.17 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565584
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15713
+(v) C. Barr_Mitt_09 is 451 m in length from MP 48.80 to MP 49.08 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the south side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565585
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15720
+(v) D. Barr_Mitt_10 is 628 m in length from MP 47.74 to MP 48.13 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the north side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565587
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15718
+(v) E. Barr_Mitt_26 is 129 m in length from MP 41.74 to MP 41.82 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565588
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15717
+(v) F. Barr_Mitt_27 is 596 m in length from MP 41.34 to MP 41.71 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 6 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565589
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15716
+(v) G. Barr_Mitt_28 is 596 m in length from MP 41.34 to MP 41.71 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 6 meters in height above the adjacent top of rail, on the east side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565590
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15715
+(v) H. Barr_Mitt_29 is 64 m in length from MP 41.24 to MP 41.28 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565591
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15714
+(v) I. Barr_Mitt_30 is 97 m in length from MP 41.19 to MP 41.25 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565592
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15723
+(v) J. Barr_Mitt_32 is 708 m in length from MP 40.72 to MP 41.16 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the west side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565593
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15722
+(v) K. Barr_Mitt_36 is 338 m in length from MP 40.04 to MP 40.25 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the east side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565595
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15725
+(v) L. enhanced barrier_02 is 370 m in length from MP 40.26 to MP 40.49 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the east side of the railway right of way;
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
+565596
+Schedule C-6 - Initial Works Output Specifications - PART B - Track And Civil Works
+B.4.6 (f)
+15724
+(v) M. enhanced barrier_03 is 563 m in length from MP 39.51 to MP 39.86 of the Uxbridge Subdivision 1 (one) noise barrier shall be a minimum of 5 meters in height above the adjacent top of rail, on the east side of the railway right of way.
+Requirement
+CJV, O&M
+Environmental BoD
+
+Section 14.2
+
+ONC-ECW-5090-SWS-ENV-DES-DCR-00001
