@@ -1,39 +1,5 @@
-﻿ 
-
-
-
-
-04/12/2023
-D01.03
-DDD Interdisciplinary Review
-S. Ismail
-S. Palmer
-J. Malik
-R. Orsi
-Date
-Rev.
-Status
-Prepared By
-Checked By
-Approved By
-Approved By
-MM/DD/YYYY
-
-
-
 Basis of Design
 Geo-Engineering
-
-
-
-DISCLAIMER
-© 2022. This document has been produced and distributed for members of ONXPRESS CIVILS CONTRACTOR GP’s purposes in respect of the GO Rail Expansion – On Corridor (RER Package 3) project only. No part of this document may be reproduced, published, converted, or stored in any data retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording or otherwise) without the prior written permission of the Designers, ONXPRESS CJV ENGINEERING. This document must not be used by the ONXPRESS CIVILS CONTRACTOR GP (or any of its constituent members) for any other purpose, or provided to, relied upon or used by any other person without ONXPRESS CJV ENGINEERING’s prior written consent.
-All Confidential Information shall remain the sole property of the applicable Sponsor or the ONXPRESS CIVILS CONTRACTOR GP or ONXPRESS CJV ENGINEERING and each party shall treat it as confidential. Confidential Information shall not be used by for any purpose other than for performing their respective duties on the GO Rail Expansion – On Corridor (RER Package 3) Project.
-This report contains the expression of the opinion of, ONXPRESS CJV ENGINEERING using its professional judgment and reasonable care based on information available and conditions existing at the time of preparation. The use of, or reliance upon this report is subject to the relevant Design Services Agreement between ONXPRESS CJV ENGINEERING and the ONXPRESS CIVILS CONTRACTOR GP (the “DSA”) and the following:
-This report is to be read in the context of and subject to the terms of the DSA, including any methodologies, procedures, techniques, assumptions and other relevant terms or conditions specified in the DSA.
-This report is meant to be read as a whole, and sections of the report must not be read or relied upon out of context. This report is meant to be used in its unaltered form, as delivered by ONXPRESS CJV ENGINEERING, and any modifications to the report, or the methodologies, procedures, techniques, assumptions used, without the consent of ONXPRESS CJV ENGINEERING may invalidate the conclusions, outputs or expressions of opinion, ONXPRESS CJV ENGINEERING does not accept any liability in connection with such altered information; and
-Unless expressly stated otherwise in this report, ONXPRESS CJV ENGINEERING has not verified the accuracy, completeness or validity of any information provided to ONXPRESS CJV ENGINEERING by or on behalf of the ONXPRESS CIVILS CONTRACTOR GP and ONXPRESS CJV ENGINEERING does not accept any liability in connection with such information.
-
 
 Table of Contents
 1.	Introduction	1
@@ -2764,30 +2730,6 @@ The Georgian Bay, Blue Mountain and Billings Formations are grey to black shales
 The Blue Mountain Formation (colloquially known as the Whitby Formation) is found in Durham Region and York and Simcoe Counties. The Blue Mountain Formation consists of three members: a lower black shale, middle brown shale, and upper grey and blue shale member (Hewitt, 1972). The Whitby Formation ranges in thickness from approximately 50 m along the Nottawasaga Bay to 90 m near Lake Ontario.
 In the Toronto and Whitby areas, shales of the Blue Mountain and Georgian Bay Formations are known to contain pockets of methane. Based on existing information, gases encountered in bedrock may lead to borehole blowout in extreme cases where appropriate care and monitoring are not adopted.
 The Queenston Formation consists of red and grey shale of the Upper Ordovician age, interbedded with thin layers of siltstone, limestone, and calcareous sandstone. Post-depositional oxidation and reduction processes contribute to the colouration of oxidation of hematite minerals and localized green banding found in the Formation.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Appendix C
 Properties for Geo-Engineering Design
-
-
 Table D: Properties for Geo-Engineering Design
-
-
