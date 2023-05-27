@@ -1,0 +1,101 @@
+﻿Denis Erlich, B.Sc., PMP
+BIM (Project Information Modelling) Systems Manager
+	Education
+Technion, Israel Institute of technology Haifa, Israel 1996 – 2000, Bachelor of Science (B.Sc.)
+* Structural Engineering and Construction Management Undergraduate Program.
+Ryerson University, Toronto, ON; 2012 – 2012
+* KPM 202 Fundamentals of Project Management
+* CKPM 213 Management of Projects in the AEC
+Years of Experience 
+With Hatch:        1.5
+With Other Firms:        20
+	
+
+	Professional Affiliations
+Register Of Engineers And Architects Tel Aviv, Israel 2003
+* Registered Civil Engineer in the Civil Engineering branch in the General Civil section, Number of Certificate 00116107
+Project Management Institute
+Toronto, ON 2014-present
+* Project Management Professional in good standing, PMP Number: 1730719
+CanBIM Professional Certification
+* Certified Professional (CP) designation #PC25739
+	  
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	Summary
+Denis is a BIM/VDC Manager with 10+ years of experience in Building Information modelling and 15+ years in Construction Industry – BSc of Technion- Israeli Institute of Technology. Experienced in ICI and Civil Infrastructure Projects. Promoter of use of data in construction.
+
+Project Experience
+Hatch Canada, Digital Project Delivery Group, 2020- Present
+BIM Systems Manager
+* Responsible for setup, configuration, and implementation of BIM for Design Joint Venture for Pursuit Phase of RER P3 Program with Metrolinx.
+* Providing and developing specifications, design coordination support and technical assistance and advice on various BIM and CADD topics.
+* Support for various BIM - related corporate initiatives.
+
+
+AECOM Canada, Buildings + Places; 2018- 2020
+BIM Manager, B+P
+* Responsible for setup, implementation, and support of BIM programs on Government-funded design projects during various stages, clients, including Toronto Transit Commission, Metrolinx, CNL, P3 Partnerships.
+* Providing and developing specifications, design coordination support and technical assistance and advice on various BIM and CADD topics.
+* Developing BIM and CADD Software training programs; Coordinating training sessions for the Design Teams during project delivery.
+
+
+Crosslinx Transit Solutions (CTS), Toronto; 2015 – 2018
+BIM Manager, CTS Constructors
+* Responsible for setup and implementation of BIM program for the ECLRT (Eglinton Crosstown Light Rail Transit) (6.5 billion RTI project) during design and construction.
+* Providing and developing specifications for BIM, CADD and Surveying, Document Control and As-Built programs, BIM /CADD Software training program, in accordance with BIM Execution Plan.
+* Managing 6 Segment BIM teams with total reporting personnel of 12 people and dozens of BIM users across the project.
+
+
+Ellis Don Inc., Toronto; 2010 – 2015 
+BIM Deployment Manager
+* Responsible for the set-up of BIM field operations, including execution plans, BIM manuals, contract addenda. Led the team in setup and integration of the VDC process with trade agreements, document control, design coordination and change management.
+* As BIM/VDC deployment manager, functionally managed and oversaw BIM program on the large P3 Hospital projects (Krembil Discovery Centre, Sick Kids Hospital, COT, Calgary International Airport, New Oakville Hospital, Surrey Memorial Hospital – Critical Care Tower, Waterpark Place Phase 3 Tower, Providence Health Care Hospital), Civil Infrastructure projects (VivaNext H3, H2, H2VMC Highway 7 East Rapid way), with extensive experience leading and supporting BIM teams.
+* Developed and operationalized scanning services for Ellisdon’s Geomatics Group, profit-and-loss group engaged in laser scanning of existing conditions for major renovation projects (Yorkdale Mall, Markham Mall Expansion, YYZ T3 Renovation etc.).
+
+
+PCL Constructors, Toronto; 2009 – 2010
+BIM/VDC Coordinator
+* Emerged to the Niagara Health Care System Centre project in early Design Development Stage as BIM coordinator.
+* Maintained and updated Building Envelope Model of the project, generated BIM RFIs, analyzed and presented interferences for weekly Envelope Design Meetings with architects and precast panel contractor.
+* Developed procedures for Virtual Construction Workflow focused on 2D consultant input.
+* Utilized Envelope Model for structural interference studies, AB/VR analysis
+
+
+PCL Constructors, Toronto; 2008 – 2009
+Project Coordinator, Bell LightBox Project
+* Coordination work on Bell Lightbox ICI Project as part of experienced PCL team, performing under CM contract.
+* Wrote Tender Packages, initiated Tender Process with Subcontractors, Processed Submittals and RFI& Maintained Document Control System, Supervised modelling of A+S
+* Model for MEP Interference; later emerged as BIM Coordinator for the project, maintained and updated model, analyzed and presented interferences for weekly clash detection meetings with subcontractors.
+
+
+BAZIS International Inc., Toronto; 2005 – 2008
+Project Coordinator
+* Design coordination, code compliance review and value engineering for residential construction in Kazakhstan.
+* Assistance with Construction planning and scheduling for Hi-Rise Residential Crystal Blue Project in Downtown Toronto, ON.
+
+
+IAF Building Division, Tel-Aviv, Israel; 2000 – 2005
+Technology And Research Department Officer, Civil Engineering Division
+* Planning, staging, execution and analysis of the annual experimental program between IAF and USACE.
+* Coordination of engineering consultants' services.
+* Involvement in Testing of Rapid Runway Repair kit for deployment and anchoring.
+* Development and revision contract documentation for IAF Infrastructure Annual Maintenance Program.
+* Development of Quality Control Management Procedures,
+
+BIM Software Experience
+BIM Management Tools: Bentley ProjectWise. Autodesk BIM360 Docs/ACC, Autodesk Navisworks Manage, Autodesk Dynamo for Revit and Civil3D. 
+Design tools: Autodesk Revit, Autodesk AutoCAD, Autodesk Civil3D, Civil3D Subassembly Composer, Bentley MicroStation, Bentley AECOSim, Bentley Inroads, Bentley Descartes; Sketchup; Autodesk Inventor, Autodesk Infraworks, GlobalMapper.
+Point cloud Authoring and editing tools: Recap, Faro Scene, Cloud Compare, PointFuse;
+Other specialized BIM software: Solibri Model Checker, SimpleBIM, Tekla BIMSight, Synchro4D, Clarity.
+Denis Erlich
+Page  of
