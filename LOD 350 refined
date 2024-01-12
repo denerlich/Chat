@@ -1,0 +1,55 @@
+I am for having a new tool to bring increased capability to what we know is a fairly limited and restrictive set of software. I have some concerns that I think should be perhaps further addressed in the summary.
+
+1)	The pressure only approach is going to be a very big problem. The inherit issue with pressure systems is that they are static elements and any change in elevation of the connecting pipes would mean a new model being created to support this. On a project that is still well into its design infancy, that would mean trying to accommodate and built a very extensive library of 10s or 100s of variation of a single object. For example, on a MH, you have a few items that are dynamic but within parameters. The body has a max/min height, you have a cone vs flat top, you have lid placements, you have collars. All items that dynamically can change adjust with gravity parameters but are static on pressure. 
+2)	If you can somehow get past the requirement of above, its been noted that with C3D 2024 you have interoperability between pressure and gravity. This would need to be seriously tested for stability and functionality but could serve as a bridge gap to these pressure appurtenances. Theoretically you could have a MH appearance and connect this to the gravity pipes. How well this works, how well this reports is unclear right now without having that period to test.
+3)	Model size and stability. We are introducing mode complexity to elements in the models. We currently in many cases are struggling with file sizing and federation. There is a very good case to be made that this will greatly increase file sizes and with that mean more file segmentation and adjusted workflows to work in even smaller areas to maintain usable files. This also would need to be tested heavily before implementation on the program. If we currently don’t have stable models, we surely would be increasing that level of unreliability with this.
+4)	Timeline impact. If we are to get a tool in 6months, there would need to 3-4 months (or more) after that redeveloping all the existing libraries. You also need to add in testing of the tool, implementation, troubleshooting. Finally, you would need to take all the existing models and either redo them all OR have a way to swap all the parts out. The latter we currently have but its not been tested with any of the above. 
+
+Overall, while I feel we are trying to force Civil3D into something it was never intended for, I’m excited to see how much we can innovate and push those limits.
+
+At the inception of the project, and prior to entering contractual agreement with the Client, anticipation of the design element detail, required by the Client was not entirely clear, and both parties had ongoing discussion of LOD Matrix and definitions of the elements;
+We had numerous conversation with the client trying to clarify what level of detail and level of information should be  for various design elements.
+However, it was reasonable to start work with tools and design processes that were considered to be an industry standard for BIM project at that time.
+Specifically, it was reasonably assumed by EJV Design and Engineering team, that industry standard, established by referencing to current acceptable practices on other similar project and by other firms, would be Civil3D as BIM Design Authoring tool.
+Civil3D 2020 has advertised BIM design capabilities and has available modules to produce specific gravity and pressure designs.
+EJV researched and found libraries of Country Kits of Gravity and Pressure parts, that were available in EMEA and NA regional catalogues. These fairly represent level of detail, required to achieve final design representation, and were, therefore,  reasonably considered to be LOD 300 from the standpoint of the level of detail. 
+It also have been cross referenced with BIMForum LOD document, which is as well represents acceptable industry reference for BIM Definitions.
+
+In summer 2023, following numerous comments from Client’s model mockup review, we set a call with the client to clarify Client’s ambition in design element representation of Gravity and Pipe Network elements of various disciplines ( Utilities, Cable Containment, Drainage).
+We reached out to the Hatch Case Manager of the Autodesk Consultancy Team, Khris Lundry, to organize meeting with Autodesk Civil3D developers, and with technical subject matter expert from the Client, resulting in formulated requirements of what civil design element should contain in terms of sizes, details and information. Since it appeared after investigation with Autodesk representatives, that both modules ( pressure pipe and gravity pipe networks), cannot achieve that specific level of performance, explained by the client, it became apparent, that Client request is probably more ambitious than the LOD 300, that market is accustomed to , and EJV started to discover what can be done with the help of Autodesk Consulting above and beyond the current capabilities of the software to produce required level of detail.
+
+During July and August  2023 EJV in collaboration with the Client organized multiple meetings with Autodesk Development Team to define scope, definition, feasibility, timelines and effort required to satisfy Client’s requests. After series of discussions and discovery over the course of September to December 2023, EJV had a call  with Autodesk Team:
+ 
+Autodesk Team presented 6 use cases with their relative feasibility, level of effort, Timeframe, risks and assumptions, as well as scored them in terms of likelihood of success, as per below:
+
+ 
+Initial options A and B that looked promising in August, have been discarded due to their limitation and timeline required to produce viable software solution, that would satisfy Client’s aggressive timelines of 60% submission ( currently standing to be pens down on July 2024, which is in 6 months from today).
+Autodesk team suggested that option C will be the most promising among others, due to its timeframe, level of effort and resulting functionality of the element.
+I will summarize pros and cons of this option in context of the project and clients expectations below:
+Pros:
+1: Built on existing application
+Autodesk will utilize existing application MID, currently available for Revit workflow, which will result in viable workflow, requiring modelling of the element and its parameters in Revit ( which is popular tool), and injecting element and parameters to Civil3D Pressure Network.
+2: Reasonable effort
+Autodesk will have enough resources to produce the application within Spring 2024.
+3: future-proof:
+Autodesk will potentially have ability to roll this functionality into the main product in couple of years, making this workflow accessible for future designs and providing improvements to this tool independently of this project in the future.
+
+Cons:
+1: Total timeline
+Workflow timeframe does not include for content library creation, and that will take time and effort by the project only after software deployment, and cannot be contemplated concurrently. This brings us realistically too close to submission deadline.
+2: Limited application
+Solution will only be available to Pressure Networks ( Gas and some of Cable Containment) , and not for Gravity Systems ( which are mosltyl requiring the level of detail, and the ones that EJV was planning to use to represent linear structure elements across linear design domains). If implemented for Gravity Pipe Networks, this solution is beyond the 60% submission.
+3: Disruption of the workflow due to switch to new element ecosystem.
+If we are to try to implement design using exclusively pressure pipe networks, that would go against practical design process; as gravity elements have their own way of application and representation beyond 3d representation of element itself; that might be impossible or very time consuming to rebuild processes of placement, annotation and drawing composition; will be annulling all benefits of BIM aspect of continuous elaboration concept that we anticipated to gain.
+Please provide your recommendation on how to proceed in context of timelines and above listed concerns.
+
+
+
+.
+
+
+
+Denis Erlich, B. Sc, PPMP, CanBIM CP 
+BIM Subject Matter Expert- Linear Disciplines – ONxpress EJV Engineering 
+
+ONxpress – EJV Engineering 
